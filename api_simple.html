@@ -1,0 +1,1650 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+<meta name="generator" content="pdoc 0.9.2" />
+<title>dearpygui.simple API documentation</title>
+<meta name="description" content="" />
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/sanitize.min.css" integrity="sha256-PK9q560IAAa6WVRRh76LtCaI8pjTJ2z11v0miyNNjrs=" crossorigin>
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/typography.min.css" integrity="sha256-7l/o7C8jubJiy74VsKTidCy1yBkRtiUGbVkYBylBqUg=" crossorigin>
+<link rel="stylesheet preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/github.min.css" crossorigin>
+<style>:root{--highlight-color:#fe9}.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:30px;overflow:hidden}#sidebar > *:last-child{margin-bottom:2cm}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:1em 0 .50em 0}h3{font-size:1.4em;margin:25px 0 10px 0}h4{margin:0;font-size:105%}h1:target,h2:target,h3:target,h4:target,h5:target,h6:target{background:var(--highlight-color);padding:.2em 0}a{color:#058;text-decoration:none;transition:color .3s ease-in-out}a:hover{color:#e82}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900}pre code{background:#f8f8f8;font-size:.8em;line-height:1.4em}code{background:#f2f2f1;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{background:#f8f8f8;border:0;border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0;padding:1ex}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-weight:bold;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}dt:target .name{background:var(--highlight-color)}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary > *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}td{padding:0 .5em}.admonition{padding:.1em .5em;margin-bottom:1em}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%;height:100vh;overflow:auto;position:sticky;top:0}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.item .name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul{padding-left:1.5em}.toc > ul > li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js" integrity="sha256-Uv3H6lx7dJmRfRvH8TH6kJD1TSK1aFcwgx+mdg3epi8=" crossorigin></script>
+<script>window.addEventListener('DOMContentLoaded', () => hljs.initHighlighting())</script>
+</head>
+<h1><a href="index.html">Dear PyGui</a></h1>
+</header>
+<hr>
+<body>
+<main>
+<article id="content">
+<header>
+<h1 class="title">Module <code>dearpygui.simple</code></h1>
+</header>
+<section id="section-intro">
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">from typing import List, Any, Callable, Union
+import dearpygui.core as internal_dpg
+
+def start_dearpygui():
+    vp = internal_dpg.create_viewport()
+    internal_dpg.setup_dearpygui(viewport=vp)
+    internal_dpg.show_viewport(vp)
+    while(internal_dpg.is_dearpygui_running()):
+        internal_dpg.render_dearpygui_frame()   
+    internal_dpg.cleanup_dearpygui()
+
+########################################################################################################################
+# Old Commands
+########################################################################################################################
+
+
+# window configure
+def set_window_pos(window: str, x: int, y: int):
+    &#34;&#34;&#34;Sets the top left corner of the window to the specified position.
+
+    Args:
+        window: window to position
+        x: The x position.
+        y: The y position.
+
+    Returns:
+        None
+    &#34;&#34;&#34;
+    internal_dpg.configure_item(window, x_pos=x, y_pos=y)
+
+
+def get_window_pos(window: str) -&gt; Union[List[int], None]:
+    &#34;&#34;&#34;Gets the top left corner of the window to the specified position.
+
+    Args:
+        window: window to retrieve position
+        x: The x position.
+        y: The y position.
+
+    Returns:
+        list as [x,y] or None
+    &#34;&#34;&#34;
+    config = internal_dpg.get_item_configuration(window)
+    return [config[&#34;x_pos&#34;], config[&#34;y_pos&#34;]]
+
+
+def show_item(item: str):
+    &#34;&#34;&#34;Shows the item.
+
+    Args:
+        item: Item to show.
+
+    Returns:
+        None
+    &#34;&#34;&#34;
+    internal_dpg.configure_item(item, show=True)
+
+
+def hide_item(item: str, *, children_only: bool = False):
+    &#34;&#34;&#34;Hides the item.
+
+    Args:
+        **item: Item to hide.
+
+    Returns:
+        None
+    &#34;&#34;&#34;
+    if children_only:
+        children = get_item_children(item)
+        for child in children:
+            internal_dpg.configure_item(child, show=False)
+    else:
+        internal_dpg.configure_item(item, show=False)
+
+def enable_item(item: str):
+    &#34;&#34;&#34;Enables the item.
+
+    Args:
+        **item: Item to enable.
+
+    Returns:
+        None
+    &#34;&#34;&#34;
+    internal_dpg.configure_item(item, enabled=True)
+
+
+def disable_item(item: str):
+    &#34;&#34;&#34;Disables the item.
+
+    Args:
+        **item: Item to disable.
+
+    Returns:
+        None
+    &#34;&#34;&#34;
+    internal_dpg.configure_item(item, enable=False)
+
+
+def is_item_shown(item: str) -&gt; Union[bool, None]:
+    &#34;&#34;&#34;Checks if item is shown.
+
+    Returns:
+        status as a bool
+    &#34;&#34;&#34;
+    return internal_dpg.get_item_configuration(item)[&#34;show&#34;]
+
+def is_item_enabled(item: str) -&gt; Union[bool, None]:
+    &#34;&#34;&#34;Checks if item is enabled.
+
+    Returns:
+        status as a bool
+    &#34;&#34;&#34;
+    return internal_dpg.get_item_configuration(item)[&#34;enabled&#34;]
+
+
+def is_item_container(item: str) -&gt; Union[bool, None]:
+    &#34;&#34;&#34;Checks if item is a container.
+
+    Returns:
+        status as a bool
+    &#34;&#34;&#34;
+    return internal_dpg.get_item_info(item)[&#34;container&#34;]
+
+def is_item_hovered(item: str) -&gt; Union[bool, None]:
+    &#34;&#34;&#34;Checks if item is hovered.
+
+    Returns:
+        status as a bool
+    &#34;&#34;&#34;
+    return internal_dpg.get_item_state(item)[&#34;hovered&#34;]
+
+
+def is_item_active(item: str) -&gt; Union[bool, None]:
+    &#34;&#34;&#34;Checks if item is active.
+
+    Returns:
+        status as a bool
+    &#34;&#34;&#34;
+    return internal_dpg.get_item_state(item)[&#34;active&#34;]
+
+def is_item_focused(item: str) -&gt; Union[bool, None]:
+    &#34;&#34;&#34;Checks if item is focused.
+
+    Returns:
+        status as a bool
+    &#34;&#34;&#34;
+    return internal_dpg.get_item_state(item)[&#34;focused&#34;]
+
+def is_item_clicked(item: str) -&gt; Union[bool, None]:
+    &#34;&#34;&#34;Checks if item is clicked.
+
+    Returns:
+        status as a bool
+    &#34;&#34;&#34;
+    return internal_dpg.get_item_state(item)[&#34;clicked&#34;]
+
+def is_item_visible(item: str) -&gt; Union[bool, None]:
+    &#34;&#34;&#34;Checks if item is visible.
+
+    Returns:
+        status as a bool
+    &#34;&#34;&#34;
+    return internal_dpg.get_item_state(item)[&#34;visible&#34;]
+
+
+def is_item_edited(item: str) -&gt; Union[bool, None]:
+    &#34;&#34;&#34;Checks if item is edited.
+
+    Returns:
+        status as a bool
+    &#34;&#34;&#34;
+    return internal_dpg.get_item_state(item)[&#34;edited&#34;]
+
+
+def is_item_activated(item: str) -&gt; Union[bool, None]:
+    &#34;&#34;&#34;Checks if item is activated.
+
+    Returns:
+        status as a bool
+    &#34;&#34;&#34;
+    return internal_dpg.get_item_state(item)[&#34;activated&#34;]
+
+
+def is_item_deactivated(item: str) -&gt; Union[bool, None]:
+    &#34;&#34;&#34;Checks if item is deactivated.
+
+    Returns:
+        status as a bool
+    &#34;&#34;&#34;
+    return internal_dpg.get_item_state(item)[&#34;deactivated&#34;]
+
+
+def is_item_deactivated_after_edit(item: str) -&gt; Union[bool, None]:
+    &#34;&#34;&#34;Checks if item is deactivated_after_edit.
+
+    Returns:
+        status as a bool
+    &#34;&#34;&#34;
+    return internal_dpg.get_item_state(item)[&#34;deactivated_after_edit&#34;]
+
+
+def is_item_toggled_open(item: str) -&gt; Union[bool, None]:
+    &#34;&#34;&#34;Checks if item is toggled_open.
+
+    Returns:
+        status as a bool
+    &#34;&#34;&#34;
+    return internal_dpg.get_item_state(item)[&#34;toggled_open&#34;]
+
+
+def is_item_ok(item: str) -&gt; Union[bool, None]:
+    &#34;&#34;&#34;Checks if item is a ok.
+
+    Returns:
+        status as a bool
+    &#34;&#34;&#34;
+    return internal_dpg.get_item_state(item)[&#34;ok&#34;]
+
+
+def set_item_label(item: str, label: str):
+    &#34;&#34;&#34;Sets the item&#39;s displayed label, anything after the characters &#34;##&#34; in the name will not be shown.
+
+    Args:
+        item: Item label will be applied to.
+        label: Displayed name to be applied.
+
+    Returns:
+        None
+    &#34;&#34;&#34;
+    internal_dpg.configure_item(item, label=label)
+
+
+def set_item_source(item: str, source: str):
+    &#34;&#34;&#34;Sets the item&#39;s value, to the source&#39;s value. Widget&#39;s value will now be &#34;linked&#34; to source&#39;s value.
+
+    Args:
+        item: Item to me linked.
+        source: Source to link to.
+
+    Returns:
+        None
+    &#34;&#34;&#34;
+    internal_dpg.configure_item(item, source=source)
+
+
+def set_item_width(item: str, width: int):
+    &#34;&#34;&#34;Sets the item&#39;s width.
+
+    Args:
+        item: Item the Width will be applied to.
+        width: Width to be applied.
+
+    Returns:
+        None
+    &#34;&#34;&#34;
+    internal_dpg.configure_item(item, width=width)
+
+
+def set_item_height(item: str, height: int):
+    &#34;&#34;&#34;Sets the item&#39;s height.
+
+    Args:
+        item: Item the Height will be applied to.
+        height: Height to be applied.
+
+    Returns:
+        None
+    &#34;&#34;&#34;
+    internal_dpg.configure_item(item, height=height)
+
+def set_item_callback(item: str, callback: Callable):
+    &#34;&#34;&#34;Sets the item&#39;s callack.
+
+    Args:
+        item: Item the callback will be applied to.
+        callback: Callback to be applied.
+
+    Returns:
+        None
+    &#34;&#34;&#34;
+    internal_dpg.configure_item(item, callback=callback)
+
+
+def set_item_user_data(item: str, user_data: Any):
+    &#34;&#34;&#34;Sets the item&#39;s callack_data to any python object.
+
+    Args:
+        item: Item the callback will be applied to.
+        user_data: Callback_data to be applied.
+
+    Returns:
+        None
+    &#34;&#34;&#34;
+    internal_dpg.configure_item(item, user_data=user_data)
+
+
+def get_item_label(item: str) -&gt; Union[str, None]:
+    &#34;&#34;&#34;Gets the item&#39;s label.
+
+    Returns:
+        label as a string or None
+    &#34;&#34;&#34;
+    return internal_dpg.get_item_configuration(item)[&#34;label&#34;]
+
+
+def get_item_width(item: str) -&gt; Union[int, None]:
+    &#34;&#34;&#34;Gets the item&#39;s width.
+
+    Returns:
+        width as a int or None
+    &#34;&#34;&#34;
+    return internal_dpg.get_item_configuration(item)[&#34;width&#34;]
+
+
+def get_item_height(item: str) -&gt; Union[int, None]:
+    &#34;&#34;&#34;Gets the item&#39;s height.
+
+    Returns:
+        height as a int or None
+    &#34;&#34;&#34;
+    return internal_dpg.get_item_configuration(item)[&#34;height&#34;]
+
+def get_item_callback(item: str) -&gt; Union[str, None]:
+    &#34;&#34;&#34;Gets the item&#39;s callback.
+
+    Returns:
+        callback as a string or None
+    &#34;&#34;&#34;
+    return internal_dpg.get_item_configuration(item)[&#34;callback&#34;]
+
+def get_item_user_data(item: str) -&gt; Union[Any, None]:
+    &#34;&#34;&#34;Gets the item&#39;s callback data.
+
+    Returns:
+        callback data as a python object or None
+    &#34;&#34;&#34;
+    return internal_dpg.get_item_configuration(item)[&#34;user_data&#34;]
+
+def get_item_source(item: str) -&gt; Union[str, None]:
+    &#34;&#34;&#34;Gets the item&#39;s source.
+
+    Returns:
+        source as a string or None
+    &#34;&#34;&#34;
+    return internal_dpg.get_item_configuration(item)[&#34;source&#34;]
+
+
+def get_item_parent(item: str) -&gt; Union[str, None]:
+    &#34;&#34;&#34;Gets the item&#39;s parent.
+
+    Returns:
+        parent as a string or None
+    &#34;&#34;&#34;
+    return internal_dpg.get_item_info(item)[&#34;parent&#34;]
+
+
+def get_item_children(item: str) -&gt; Union[List[str], None]:
+    &#34;&#34;&#34;Gets the item&#39;s children.
+
+    Returns:
+        children as a list of string or None
+    &#34;&#34;&#34;
+    return internal_dpg.get_item_info(item)[&#34;children&#34;]
+
+
+def get_item_type(item: str) -&gt; Union[str]:
+    &#34;&#34;&#34;Gets the item&#39;s type.
+
+    Returns:
+        type as a string or None
+    &#34;&#34;&#34;
+    return internal_dpg.get_item_info(item)[&#34;type&#34;]
+
+
+def get_item_rect_size(item: str) -&gt; Union[List[int]]:
+    &#34;&#34;&#34;Gets the item&#39;s current size.
+
+    Returns:
+        size as a float list
+    &#34;&#34;&#34;
+    return internal_dpg.get_item_state(item)[&#34;rect_size&#34;]
+
+
+def get_item_rect_min(item: str) -&gt; Union[List[int]]:
+    &#34;&#34;&#34;Gets the item&#39;s current rect_min.
+
+    Returns:
+        rect_min as a float
+    &#34;&#34;&#34;
+    return internal_dpg.get_item_state(item)[&#34;rect_min&#34;]
+
+
+def get_item_rect_max(item: str) -&gt; Union[List[int]]:
+    &#34;&#34;&#34;Gets the item&#39;s current rect_max.
+
+    Returns:
+        rect_max as a float
+    &#34;&#34;&#34;
+    return internal_dpg.get_item_state(item)[&#34;rect_max&#34;]
+
+
+def get_item_pos(item: str) -&gt; Union[List[int]]:
+    &#34;&#34;&#34;Gets the item&#39;s current pos.
+
+    Returns:
+        pos as a float
+    &#34;&#34;&#34;
+    return internal_dpg.get_item_state(item)[&#34;pos&#34;]
+
+
+def show_style_editor(sender: str=&#34;&#34;, data: Any=None) -&gt; None:
+    &#34;&#34;&#34;Shows the standard style editor window
+
+    Returns:
+        None
+    &#34;&#34;&#34;
+    internal_dpg.show_tool(internal_dpg.mvTool_Style)
+
+def show_metrics(sender: str=&#34;&#34;, data: Any=None) -&gt; None:
+    &#34;&#34;&#34;Shows the standard metrics window
+
+    Returns:
+        None
+    &#34;&#34;&#34;
+    internal_dpg.show_tool(internal_dpg.mvTool_Metrics)
+
+def show_about(sender: str=&#34;&#34;, data: Any=None) -&gt; None:
+    &#34;&#34;&#34;Shows the standard about window
+
+    Returns:
+        None
+    &#34;&#34;&#34;
+    internal_dpg.show_tool(internal_dpg.mvTool_About)
+
+def show_debug(sender: str=&#34;&#34;, data: Any=None) -&gt; None:
+    &#34;&#34;&#34;Shows the standard debug window
+
+    Returns:
+        None
+    &#34;&#34;&#34;
+    internal_dpg.show_tool(internal_dpg.mvTool_Debug)
+
+def show_documentation(sender: str=&#34;&#34;, data: Any=None) -&gt; None:
+    &#34;&#34;&#34;Shows the standard documentation window
+
+    Returns:
+        None
+    &#34;&#34;&#34;
+    internal_dpg.show_tool(internal_dpg.mvTool_Doc)
+
+def show_font_manager(sender: str=&#34;&#34;, data: Any=None) -&gt; None:
+    &#34;&#34;&#34;Shows the standard documentation window
+
+    Returns:
+        None
+    &#34;&#34;&#34;
+    internal_dpg.show_tool(internal_dpg.mvTool_Font)
+
+def show_item_registry(sender: str=&#34;&#34;, data: Any=None) -&gt; None:
+    &#34;&#34;&#34;Shows the standard documentation window
+
+    Returns:
+        None
+    &#34;&#34;&#34;
+    internal_dpg.show_tool(internal_dpg.mvTool_ItemRegistry)</code></pre>
+</details>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-functions">Functions</h2>
+<dl>
+<dt id="dearpygui.simple.disable_item"><code class="name flex">
+<span>def <span class="ident">disable_item</span></span>(<span>item: str)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Disables the item.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>**item</code></strong></dt>
+<dd>Item to disable.</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<p>None</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def disable_item(item: str):
+    &#34;&#34;&#34;Disables the item.
+
+    Args:
+        **item: Item to disable.
+
+    Returns:
+        None
+    &#34;&#34;&#34;
+    internal_dpg.configure_item(item, enable=False)</code></pre>
+</details>
+</dd>
+<dt id="dearpygui.simple.enable_item"><code class="name flex">
+<span>def <span class="ident">enable_item</span></span>(<span>item: str)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Enables the item.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>**item</code></strong></dt>
+<dd>Item to enable.</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<p>None</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def enable_item(item: str):
+    &#34;&#34;&#34;Enables the item.
+
+    Args:
+        **item: Item to enable.
+
+    Returns:
+        None
+    &#34;&#34;&#34;
+    internal_dpg.configure_item(item, enabled=True)</code></pre>
+</details>
+</dd>
+<dt id="dearpygui.simple.get_item_callback"><code class="name flex">
+<span>def <span class="ident">get_item_callback</span></span>(<span>item: str) ‑> Optional[str]</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Gets the item's callback.</p>
+<h2 id="returns">Returns</h2>
+<p>callback as a string or None</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def get_item_callback(item: str) -&gt; Union[str, None]:
+    &#34;&#34;&#34;Gets the item&#39;s callback.
+
+    Returns:
+        callback as a string or None
+    &#34;&#34;&#34;
+    return internal_dpg.get_item_configuration(item)[&#34;callback&#34;]</code></pre>
+</details>
+</dd>
+<dt id="dearpygui.simple.get_item_children"><code class="name flex">
+<span>def <span class="ident">get_item_children</span></span>(<span>item: str) ‑> Optional[List[str]]</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Gets the item's children.</p>
+<h2 id="returns">Returns</h2>
+<p>children as a list of string or None</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def get_item_children(item: str) -&gt; Union[List[str], None]:
+    &#34;&#34;&#34;Gets the item&#39;s children.
+
+    Returns:
+        children as a list of string or None
+    &#34;&#34;&#34;
+    return internal_dpg.get_item_info(item)[&#34;children&#34;]</code></pre>
+</details>
+</dd>
+<dt id="dearpygui.simple.get_item_height"><code class="name flex">
+<span>def <span class="ident">get_item_height</span></span>(<span>item: str) ‑> Optional[int]</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Gets the item's height.</p>
+<h2 id="returns">Returns</h2>
+<p>height as a int or None</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def get_item_height(item: str) -&gt; Union[int, None]:
+    &#34;&#34;&#34;Gets the item&#39;s height.
+
+    Returns:
+        height as a int or None
+    &#34;&#34;&#34;
+    return internal_dpg.get_item_configuration(item)[&#34;height&#34;]</code></pre>
+</details>
+</dd>
+<dt id="dearpygui.simple.get_item_label"><code class="name flex">
+<span>def <span class="ident">get_item_label</span></span>(<span>item: str) ‑> Optional[str]</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Gets the item's label.</p>
+<h2 id="returns">Returns</h2>
+<p>label as a string or None</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def get_item_label(item: str) -&gt; Union[str, None]:
+    &#34;&#34;&#34;Gets the item&#39;s label.
+
+    Returns:
+        label as a string or None
+    &#34;&#34;&#34;
+    return internal_dpg.get_item_configuration(item)[&#34;label&#34;]</code></pre>
+</details>
+</dd>
+<dt id="dearpygui.simple.get_item_parent"><code class="name flex">
+<span>def <span class="ident">get_item_parent</span></span>(<span>item: str) ‑> Optional[str]</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Gets the item's parent.</p>
+<h2 id="returns">Returns</h2>
+<p>parent as a string or None</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def get_item_parent(item: str) -&gt; Union[str, None]:
+    &#34;&#34;&#34;Gets the item&#39;s parent.
+
+    Returns:
+        parent as a string or None
+    &#34;&#34;&#34;
+    return internal_dpg.get_item_info(item)[&#34;parent&#34;]</code></pre>
+</details>
+</dd>
+<dt id="dearpygui.simple.get_item_pos"><code class="name flex">
+<span>def <span class="ident">get_item_pos</span></span>(<span>item: str) ‑> List[int]</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Gets the item's current pos.</p>
+<h2 id="returns">Returns</h2>
+<p>pos as a float</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def get_item_pos(item: str) -&gt; Union[List[int]]:
+    &#34;&#34;&#34;Gets the item&#39;s current pos.
+
+    Returns:
+        pos as a float
+    &#34;&#34;&#34;
+    return internal_dpg.get_item_state(item)[&#34;pos&#34;]</code></pre>
+</details>
+</dd>
+<dt id="dearpygui.simple.get_item_rect_max"><code class="name flex">
+<span>def <span class="ident">get_item_rect_max</span></span>(<span>item: str) ‑> List[int]</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Gets the item's current rect_max.</p>
+<h2 id="returns">Returns</h2>
+<p>rect_max as a float</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def get_item_rect_max(item: str) -&gt; Union[List[int]]:
+    &#34;&#34;&#34;Gets the item&#39;s current rect_max.
+
+    Returns:
+        rect_max as a float
+    &#34;&#34;&#34;
+    return internal_dpg.get_item_state(item)[&#34;rect_max&#34;]</code></pre>
+</details>
+</dd>
+<dt id="dearpygui.simple.get_item_rect_min"><code class="name flex">
+<span>def <span class="ident">get_item_rect_min</span></span>(<span>item: str) ‑> List[int]</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Gets the item's current rect_min.</p>
+<h2 id="returns">Returns</h2>
+<p>rect_min as a float</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def get_item_rect_min(item: str) -&gt; Union[List[int]]:
+    &#34;&#34;&#34;Gets the item&#39;s current rect_min.
+
+    Returns:
+        rect_min as a float
+    &#34;&#34;&#34;
+    return internal_dpg.get_item_state(item)[&#34;rect_min&#34;]</code></pre>
+</details>
+</dd>
+<dt id="dearpygui.simple.get_item_rect_size"><code class="name flex">
+<span>def <span class="ident">get_item_rect_size</span></span>(<span>item: str) ‑> List[int]</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Gets the item's current size.</p>
+<h2 id="returns">Returns</h2>
+<p>size as a float list</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def get_item_rect_size(item: str) -&gt; Union[List[int]]:
+    &#34;&#34;&#34;Gets the item&#39;s current size.
+
+    Returns:
+        size as a float list
+    &#34;&#34;&#34;
+    return internal_dpg.get_item_state(item)[&#34;rect_size&#34;]</code></pre>
+</details>
+</dd>
+<dt id="dearpygui.simple.get_item_source"><code class="name flex">
+<span>def <span class="ident">get_item_source</span></span>(<span>item: str) ‑> Optional[str]</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Gets the item's source.</p>
+<h2 id="returns">Returns</h2>
+<p>source as a string or None</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def get_item_source(item: str) -&gt; Union[str, None]:
+    &#34;&#34;&#34;Gets the item&#39;s source.
+
+    Returns:
+        source as a string or None
+    &#34;&#34;&#34;
+    return internal_dpg.get_item_configuration(item)[&#34;source&#34;]</code></pre>
+</details>
+</dd>
+<dt id="dearpygui.simple.get_item_type"><code class="name flex">
+<span>def <span class="ident">get_item_type</span></span>(<span>item: str) ‑> str</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Gets the item's type.</p>
+<h2 id="returns">Returns</h2>
+<p>type as a string or None</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def get_item_type(item: str) -&gt; Union[str]:
+    &#34;&#34;&#34;Gets the item&#39;s type.
+
+    Returns:
+        type as a string or None
+    &#34;&#34;&#34;
+    return internal_dpg.get_item_info(item)[&#34;type&#34;]</code></pre>
+</details>
+</dd>
+<dt id="dearpygui.simple.get_item_user_data"><code class="name flex">
+<span>def <span class="ident">get_item_user_data</span></span>(<span>item: str) ‑> Optional[Any]</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Gets the item's callback data.</p>
+<h2 id="returns">Returns</h2>
+<p>callback data as a python object or None</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def get_item_user_data(item: str) -&gt; Union[Any, None]:
+    &#34;&#34;&#34;Gets the item&#39;s callback data.
+
+    Returns:
+        callback data as a python object or None
+    &#34;&#34;&#34;
+    return internal_dpg.get_item_configuration(item)[&#34;user_data&#34;]</code></pre>
+</details>
+</dd>
+<dt id="dearpygui.simple.get_item_width"><code class="name flex">
+<span>def <span class="ident">get_item_width</span></span>(<span>item: str) ‑> Optional[int]</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Gets the item's width.</p>
+<h2 id="returns">Returns</h2>
+<p>width as a int or None</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def get_item_width(item: str) -&gt; Union[int, None]:
+    &#34;&#34;&#34;Gets the item&#39;s width.
+
+    Returns:
+        width as a int or None
+    &#34;&#34;&#34;
+    return internal_dpg.get_item_configuration(item)[&#34;width&#34;]</code></pre>
+</details>
+</dd>
+<dt id="dearpygui.simple.get_window_pos"><code class="name flex">
+<span>def <span class="ident">get_window_pos</span></span>(<span>window: str) ‑> Optional[List[int]]</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Gets the top left corner of the window to the specified position.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>window</code></strong></dt>
+<dd>window to retrieve position</dd>
+<dt><strong><code>x</code></strong></dt>
+<dd>The x position.</dd>
+<dt><strong><code>y</code></strong></dt>
+<dd>The y position.</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<p>list as [x,y] or None</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def get_window_pos(window: str) -&gt; Union[List[int], None]:
+    &#34;&#34;&#34;Gets the top left corner of the window to the specified position.
+
+    Args:
+        window: window to retrieve position
+        x: The x position.
+        y: The y position.
+
+    Returns:
+        list as [x,y] or None
+    &#34;&#34;&#34;
+    config = internal_dpg.get_item_configuration(window)
+    return [config[&#34;x_pos&#34;], config[&#34;y_pos&#34;]]</code></pre>
+</details>
+</dd>
+<dt id="dearpygui.simple.hide_item"><code class="name flex">
+<span>def <span class="ident">hide_item</span></span>(<span>item: str, *, children_only: bool = False)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Hides the item.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>**item</code></strong></dt>
+<dd>Item to hide.</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<p>None</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def hide_item(item: str, *, children_only: bool = False):
+    &#34;&#34;&#34;Hides the item.
+
+    Args:
+        **item: Item to hide.
+
+    Returns:
+        None
+    &#34;&#34;&#34;
+    if children_only:
+        children = get_item_children(item)
+        for child in children:
+            internal_dpg.configure_item(child, show=False)
+    else:
+        internal_dpg.configure_item(item, show=False)</code></pre>
+</details>
+</dd>
+<dt id="dearpygui.simple.is_item_activated"><code class="name flex">
+<span>def <span class="ident">is_item_activated</span></span>(<span>item: str) ‑> Optional[bool]</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Checks if item is activated.</p>
+<h2 id="returns">Returns</h2>
+<p>status as a bool</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def is_item_activated(item: str) -&gt; Union[bool, None]:
+    &#34;&#34;&#34;Checks if item is activated.
+
+    Returns:
+        status as a bool
+    &#34;&#34;&#34;
+    return internal_dpg.get_item_state(item)[&#34;activated&#34;]</code></pre>
+</details>
+</dd>
+<dt id="dearpygui.simple.is_item_active"><code class="name flex">
+<span>def <span class="ident">is_item_active</span></span>(<span>item: str) ‑> Optional[bool]</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Checks if item is active.</p>
+<h2 id="returns">Returns</h2>
+<p>status as a bool</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def is_item_active(item: str) -&gt; Union[bool, None]:
+    &#34;&#34;&#34;Checks if item is active.
+
+    Returns:
+        status as a bool
+    &#34;&#34;&#34;
+    return internal_dpg.get_item_state(item)[&#34;active&#34;]</code></pre>
+</details>
+</dd>
+<dt id="dearpygui.simple.is_item_clicked"><code class="name flex">
+<span>def <span class="ident">is_item_clicked</span></span>(<span>item: str) ‑> Optional[bool]</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Checks if item is clicked.</p>
+<h2 id="returns">Returns</h2>
+<p>status as a bool</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def is_item_clicked(item: str) -&gt; Union[bool, None]:
+    &#34;&#34;&#34;Checks if item is clicked.
+
+    Returns:
+        status as a bool
+    &#34;&#34;&#34;
+    return internal_dpg.get_item_state(item)[&#34;clicked&#34;]</code></pre>
+</details>
+</dd>
+<dt id="dearpygui.simple.is_item_container"><code class="name flex">
+<span>def <span class="ident">is_item_container</span></span>(<span>item: str) ‑> Optional[bool]</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Checks if item is a container.</p>
+<h2 id="returns">Returns</h2>
+<p>status as a bool</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def is_item_container(item: str) -&gt; Union[bool, None]:
+    &#34;&#34;&#34;Checks if item is a container.
+
+    Returns:
+        status as a bool
+    &#34;&#34;&#34;
+    return internal_dpg.get_item_info(item)[&#34;container&#34;]</code></pre>
+</details>
+</dd>
+<dt id="dearpygui.simple.is_item_deactivated"><code class="name flex">
+<span>def <span class="ident">is_item_deactivated</span></span>(<span>item: str) ‑> Optional[bool]</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Checks if item is deactivated.</p>
+<h2 id="returns">Returns</h2>
+<p>status as a bool</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def is_item_deactivated(item: str) -&gt; Union[bool, None]:
+    &#34;&#34;&#34;Checks if item is deactivated.
+
+    Returns:
+        status as a bool
+    &#34;&#34;&#34;
+    return internal_dpg.get_item_state(item)[&#34;deactivated&#34;]</code></pre>
+</details>
+</dd>
+<dt id="dearpygui.simple.is_item_deactivated_after_edit"><code class="name flex">
+<span>def <span class="ident">is_item_deactivated_after_edit</span></span>(<span>item: str) ‑> Optional[bool]</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Checks if item is deactivated_after_edit.</p>
+<h2 id="returns">Returns</h2>
+<p>status as a bool</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def is_item_deactivated_after_edit(item: str) -&gt; Union[bool, None]:
+    &#34;&#34;&#34;Checks if item is deactivated_after_edit.
+
+    Returns:
+        status as a bool
+    &#34;&#34;&#34;
+    return internal_dpg.get_item_state(item)[&#34;deactivated_after_edit&#34;]</code></pre>
+</details>
+</dd>
+<dt id="dearpygui.simple.is_item_edited"><code class="name flex">
+<span>def <span class="ident">is_item_edited</span></span>(<span>item: str) ‑> Optional[bool]</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Checks if item is edited.</p>
+<h2 id="returns">Returns</h2>
+<p>status as a bool</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def is_item_edited(item: str) -&gt; Union[bool, None]:
+    &#34;&#34;&#34;Checks if item is edited.
+
+    Returns:
+        status as a bool
+    &#34;&#34;&#34;
+    return internal_dpg.get_item_state(item)[&#34;edited&#34;]</code></pre>
+</details>
+</dd>
+<dt id="dearpygui.simple.is_item_enabled"><code class="name flex">
+<span>def <span class="ident">is_item_enabled</span></span>(<span>item: str) ‑> Optional[bool]</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Checks if item is enabled.</p>
+<h2 id="returns">Returns</h2>
+<p>status as a bool</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def is_item_enabled(item: str) -&gt; Union[bool, None]:
+    &#34;&#34;&#34;Checks if item is enabled.
+
+    Returns:
+        status as a bool
+    &#34;&#34;&#34;
+    return internal_dpg.get_item_configuration(item)[&#34;enabled&#34;]</code></pre>
+</details>
+</dd>
+<dt id="dearpygui.simple.is_item_focused"><code class="name flex">
+<span>def <span class="ident">is_item_focused</span></span>(<span>item: str) ‑> Optional[bool]</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Checks if item is focused.</p>
+<h2 id="returns">Returns</h2>
+<p>status as a bool</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def is_item_focused(item: str) -&gt; Union[bool, None]:
+    &#34;&#34;&#34;Checks if item is focused.
+
+    Returns:
+        status as a bool
+    &#34;&#34;&#34;
+    return internal_dpg.get_item_state(item)[&#34;focused&#34;]</code></pre>
+</details>
+</dd>
+<dt id="dearpygui.simple.is_item_hovered"><code class="name flex">
+<span>def <span class="ident">is_item_hovered</span></span>(<span>item: str) ‑> Optional[bool]</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Checks if item is hovered.</p>
+<h2 id="returns">Returns</h2>
+<p>status as a bool</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def is_item_hovered(item: str) -&gt; Union[bool, None]:
+    &#34;&#34;&#34;Checks if item is hovered.
+
+    Returns:
+        status as a bool
+    &#34;&#34;&#34;
+    return internal_dpg.get_item_state(item)[&#34;hovered&#34;]</code></pre>
+</details>
+</dd>
+<dt id="dearpygui.simple.is_item_ok"><code class="name flex">
+<span>def <span class="ident">is_item_ok</span></span>(<span>item: str) ‑> Optional[bool]</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Checks if item is a ok.</p>
+<h2 id="returns">Returns</h2>
+<p>status as a bool</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def is_item_ok(item: str) -&gt; Union[bool, None]:
+    &#34;&#34;&#34;Checks if item is a ok.
+
+    Returns:
+        status as a bool
+    &#34;&#34;&#34;
+    return internal_dpg.get_item_state(item)[&#34;ok&#34;]</code></pre>
+</details>
+</dd>
+<dt id="dearpygui.simple.is_item_shown"><code class="name flex">
+<span>def <span class="ident">is_item_shown</span></span>(<span>item: str) ‑> Optional[bool]</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Checks if item is shown.</p>
+<h2 id="returns">Returns</h2>
+<p>status as a bool</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def is_item_shown(item: str) -&gt; Union[bool, None]:
+    &#34;&#34;&#34;Checks if item is shown.
+
+    Returns:
+        status as a bool
+    &#34;&#34;&#34;
+    return internal_dpg.get_item_configuration(item)[&#34;show&#34;]</code></pre>
+</details>
+</dd>
+<dt id="dearpygui.simple.is_item_toggled_open"><code class="name flex">
+<span>def <span class="ident">is_item_toggled_open</span></span>(<span>item: str) ‑> Optional[bool]</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Checks if item is toggled_open.</p>
+<h2 id="returns">Returns</h2>
+<p>status as a bool</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def is_item_toggled_open(item: str) -&gt; Union[bool, None]:
+    &#34;&#34;&#34;Checks if item is toggled_open.
+
+    Returns:
+        status as a bool
+    &#34;&#34;&#34;
+    return internal_dpg.get_item_state(item)[&#34;toggled_open&#34;]</code></pre>
+</details>
+</dd>
+<dt id="dearpygui.simple.is_item_visible"><code class="name flex">
+<span>def <span class="ident">is_item_visible</span></span>(<span>item: str) ‑> Optional[bool]</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Checks if item is visible.</p>
+<h2 id="returns">Returns</h2>
+<p>status as a bool</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def is_item_visible(item: str) -&gt; Union[bool, None]:
+    &#34;&#34;&#34;Checks if item is visible.
+
+    Returns:
+        status as a bool
+    &#34;&#34;&#34;
+    return internal_dpg.get_item_state(item)[&#34;visible&#34;]</code></pre>
+</details>
+</dd>
+<dt id="dearpygui.simple.set_item_callback"><code class="name flex">
+<span>def <span class="ident">set_item_callback</span></span>(<span>item: str, callback: Callable)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Sets the item's callack.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>item</code></strong></dt>
+<dd>Item the callback will be applied to.</dd>
+<dt><strong><code>callback</code></strong></dt>
+<dd>Callback to be applied.</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<p>None</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def set_item_callback(item: str, callback: Callable):
+    &#34;&#34;&#34;Sets the item&#39;s callack.
+
+    Args:
+        item: Item the callback will be applied to.
+        callback: Callback to be applied.
+
+    Returns:
+        None
+    &#34;&#34;&#34;
+    internal_dpg.configure_item(item, callback=callback)</code></pre>
+</details>
+</dd>
+<dt id="dearpygui.simple.set_item_height"><code class="name flex">
+<span>def <span class="ident">set_item_height</span></span>(<span>item: str, height: int)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Sets the item's height.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>item</code></strong></dt>
+<dd>Item the Height will be applied to.</dd>
+<dt><strong><code>height</code></strong></dt>
+<dd>Height to be applied.</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<p>None</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def set_item_height(item: str, height: int):
+    &#34;&#34;&#34;Sets the item&#39;s height.
+
+    Args:
+        item: Item the Height will be applied to.
+        height: Height to be applied.
+
+    Returns:
+        None
+    &#34;&#34;&#34;
+    internal_dpg.configure_item(item, height=height)</code></pre>
+</details>
+</dd>
+<dt id="dearpygui.simple.set_item_label"><code class="name flex">
+<span>def <span class="ident">set_item_label</span></span>(<span>item: str, label: str)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Sets the item's displayed label, anything after the characters "##" in the name will not be shown.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>item</code></strong></dt>
+<dd>Item label will be applied to.</dd>
+<dt><strong><code>label</code></strong></dt>
+<dd>Displayed name to be applied.</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<p>None</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def set_item_label(item: str, label: str):
+    &#34;&#34;&#34;Sets the item&#39;s displayed label, anything after the characters &#34;##&#34; in the name will not be shown.
+
+    Args:
+        item: Item label will be applied to.
+        label: Displayed name to be applied.
+
+    Returns:
+        None
+    &#34;&#34;&#34;
+    internal_dpg.configure_item(item, label=label)</code></pre>
+</details>
+</dd>
+<dt id="dearpygui.simple.set_item_source"><code class="name flex">
+<span>def <span class="ident">set_item_source</span></span>(<span>item: str, source: str)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Sets the item's value, to the source's value. Widget's value will now be "linked" to source's value.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>item</code></strong></dt>
+<dd>Item to me linked.</dd>
+<dt><strong><code>source</code></strong></dt>
+<dd>Source to link to.</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<p>None</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def set_item_source(item: str, source: str):
+    &#34;&#34;&#34;Sets the item&#39;s value, to the source&#39;s value. Widget&#39;s value will now be &#34;linked&#34; to source&#39;s value.
+
+    Args:
+        item: Item to me linked.
+        source: Source to link to.
+
+    Returns:
+        None
+    &#34;&#34;&#34;
+    internal_dpg.configure_item(item, source=source)</code></pre>
+</details>
+</dd>
+<dt id="dearpygui.simple.set_item_user_data"><code class="name flex">
+<span>def <span class="ident">set_item_user_data</span></span>(<span>item: str, user_data: Any)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Sets the item's callack_data to any python object.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>item</code></strong></dt>
+<dd>Item the callback will be applied to.</dd>
+<dt><strong><code>user_data</code></strong></dt>
+<dd>Callback_data to be applied.</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<p>None</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def set_item_user_data(item: str, user_data: Any):
+    &#34;&#34;&#34;Sets the item&#39;s callack_data to any python object.
+
+    Args:
+        item: Item the callback will be applied to.
+        user_data: Callback_data to be applied.
+
+    Returns:
+        None
+    &#34;&#34;&#34;
+    internal_dpg.configure_item(item, user_data=user_data)</code></pre>
+</details>
+</dd>
+<dt id="dearpygui.simple.set_item_width"><code class="name flex">
+<span>def <span class="ident">set_item_width</span></span>(<span>item: str, width: int)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Sets the item's width.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>item</code></strong></dt>
+<dd>Item the Width will be applied to.</dd>
+<dt><strong><code>width</code></strong></dt>
+<dd>Width to be applied.</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<p>None</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def set_item_width(item: str, width: int):
+    &#34;&#34;&#34;Sets the item&#39;s width.
+
+    Args:
+        item: Item the Width will be applied to.
+        width: Width to be applied.
+
+    Returns:
+        None
+    &#34;&#34;&#34;
+    internal_dpg.configure_item(item, width=width)</code></pre>
+</details>
+</dd>
+<dt id="dearpygui.simple.set_window_pos"><code class="name flex">
+<span>def <span class="ident">set_window_pos</span></span>(<span>window: str, x: int, y: int)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Sets the top left corner of the window to the specified position.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>window</code></strong></dt>
+<dd>window to position</dd>
+<dt><strong><code>x</code></strong></dt>
+<dd>The x position.</dd>
+<dt><strong><code>y</code></strong></dt>
+<dd>The y position.</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<p>None</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def set_window_pos(window: str, x: int, y: int):
+    &#34;&#34;&#34;Sets the top left corner of the window to the specified position.
+
+    Args:
+        window: window to position
+        x: The x position.
+        y: The y position.
+
+    Returns:
+        None
+    &#34;&#34;&#34;
+    internal_dpg.configure_item(window, x_pos=x, y_pos=y)</code></pre>
+</details>
+</dd>
+<dt id="dearpygui.simple.show_about"><code class="name flex">
+<span>def <span class="ident">show_about</span></span>(<span>sender: str = '', data: Any = None) ‑> NoneType</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Shows the standard about window</p>
+<h2 id="returns">Returns</h2>
+<p>None</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def show_about(sender: str=&#34;&#34;, data: Any=None) -&gt; None:
+    &#34;&#34;&#34;Shows the standard about window
+
+    Returns:
+        None
+    &#34;&#34;&#34;
+    internal_dpg.show_tool(internal_dpg.mvTool_About)</code></pre>
+</details>
+</dd>
+<dt id="dearpygui.simple.show_debug"><code class="name flex">
+<span>def <span class="ident">show_debug</span></span>(<span>sender: str = '', data: Any = None) ‑> NoneType</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Shows the standard debug window</p>
+<h2 id="returns">Returns</h2>
+<p>None</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def show_debug(sender: str=&#34;&#34;, data: Any=None) -&gt; None:
+    &#34;&#34;&#34;Shows the standard debug window
+
+    Returns:
+        None
+    &#34;&#34;&#34;
+    internal_dpg.show_tool(internal_dpg.mvTool_Debug)</code></pre>
+</details>
+</dd>
+<dt id="dearpygui.simple.show_documentation"><code class="name flex">
+<span>def <span class="ident">show_documentation</span></span>(<span>sender: str = '', data: Any = None) ‑> NoneType</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Shows the standard documentation window</p>
+<h2 id="returns">Returns</h2>
+<p>None</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def show_documentation(sender: str=&#34;&#34;, data: Any=None) -&gt; None:
+    &#34;&#34;&#34;Shows the standard documentation window
+
+    Returns:
+        None
+    &#34;&#34;&#34;
+    internal_dpg.show_tool(internal_dpg.mvTool_Doc)</code></pre>
+</details>
+</dd>
+<dt id="dearpygui.simple.show_font_manager"><code class="name flex">
+<span>def <span class="ident">show_font_manager</span></span>(<span>sender: str = '', data: Any = None) ‑> NoneType</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Shows the standard documentation window</p>
+<h2 id="returns">Returns</h2>
+<p>None</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def show_font_manager(sender: str=&#34;&#34;, data: Any=None) -&gt; None:
+    &#34;&#34;&#34;Shows the standard documentation window
+
+    Returns:
+        None
+    &#34;&#34;&#34;
+    internal_dpg.show_tool(internal_dpg.mvTool_Font)</code></pre>
+</details>
+</dd>
+<dt id="dearpygui.simple.show_item"><code class="name flex">
+<span>def <span class="ident">show_item</span></span>(<span>item: str)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Shows the item.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>item</code></strong></dt>
+<dd>Item to show.</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<p>None</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def show_item(item: str):
+    &#34;&#34;&#34;Shows the item.
+
+    Args:
+        item: Item to show.
+
+    Returns:
+        None
+    &#34;&#34;&#34;
+    internal_dpg.configure_item(item, show=True)</code></pre>
+</details>
+</dd>
+<dt id="dearpygui.simple.show_item_registry"><code class="name flex">
+<span>def <span class="ident">show_item_registry</span></span>(<span>sender: str = '', data: Any = None) ‑> NoneType</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Shows the standard documentation window</p>
+<h2 id="returns">Returns</h2>
+<p>None</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def show_item_registry(sender: str=&#34;&#34;, data: Any=None) -&gt; None:
+    &#34;&#34;&#34;Shows the standard documentation window
+
+    Returns:
+        None
+    &#34;&#34;&#34;
+    internal_dpg.show_tool(internal_dpg.mvTool_ItemRegistry)</code></pre>
+</details>
+</dd>
+<dt id="dearpygui.simple.show_metrics"><code class="name flex">
+<span>def <span class="ident">show_metrics</span></span>(<span>sender: str = '', data: Any = None) ‑> NoneType</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Shows the standard metrics window</p>
+<h2 id="returns">Returns</h2>
+<p>None</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def show_metrics(sender: str=&#34;&#34;, data: Any=None) -&gt; None:
+    &#34;&#34;&#34;Shows the standard metrics window
+
+    Returns:
+        None
+    &#34;&#34;&#34;
+    internal_dpg.show_tool(internal_dpg.mvTool_Metrics)</code></pre>
+</details>
+</dd>
+<dt id="dearpygui.simple.show_style_editor"><code class="name flex">
+<span>def <span class="ident">show_style_editor</span></span>(<span>sender: str = '', data: Any = None) ‑> NoneType</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Shows the standard style editor window</p>
+<h2 id="returns">Returns</h2>
+<p>None</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def show_style_editor(sender: str=&#34;&#34;, data: Any=None) -&gt; None:
+    &#34;&#34;&#34;Shows the standard style editor window
+
+    Returns:
+        None
+    &#34;&#34;&#34;
+    internal_dpg.show_tool(internal_dpg.mvTool_Style)</code></pre>
+</details>
+</dd>
+<dt id="dearpygui.simple.start_dearpygui"><code class="name flex">
+<span>def <span class="ident">start_dearpygui</span></span>(<span>)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def start_dearpygui():
+    vp = internal_dpg.create_viewport()
+    internal_dpg.setup_dearpygui(viewport=vp)
+    internal_dpg.show_viewport(vp)
+    while(internal_dpg.is_dearpygui_running()):
+        internal_dpg.render_dearpygui_frame()   
+    internal_dpg.cleanup_dearpygui()</code></pre>
+</details>
+</dd>
+</dl>
+</section>
+<section>
+</section>
+</article>
+<nav id="sidebar">
+<h1>Index</h1>
+<div class="toc">
+<ul></ul>
+</div>
+<ul id="index">
+<li><h3>Super-module</h3>
+<ul>
+<li><code><a title="dearpygui" href="index.html">dearpygui</a></code></li>
+</ul>
+</li>
+<li><h3><a href="#header-functions">Functions</a></h3>
+<ul class="">
+<li><code><a title="dearpygui.simple.disable_item" href="#dearpygui.simple.disable_item">disable_item</a></code></li>
+<li><code><a title="dearpygui.simple.enable_item" href="#dearpygui.simple.enable_item">enable_item</a></code></li>
+<li><code><a title="dearpygui.simple.get_item_callback" href="#dearpygui.simple.get_item_callback">get_item_callback</a></code></li>
+<li><code><a title="dearpygui.simple.get_item_children" href="#dearpygui.simple.get_item_children">get_item_children</a></code></li>
+<li><code><a title="dearpygui.simple.get_item_height" href="#dearpygui.simple.get_item_height">get_item_height</a></code></li>
+<li><code><a title="dearpygui.simple.get_item_label" href="#dearpygui.simple.get_item_label">get_item_label</a></code></li>
+<li><code><a title="dearpygui.simple.get_item_parent" href="#dearpygui.simple.get_item_parent">get_item_parent</a></code></li>
+<li><code><a title="dearpygui.simple.get_item_pos" href="#dearpygui.simple.get_item_pos">get_item_pos</a></code></li>
+<li><code><a title="dearpygui.simple.get_item_rect_max" href="#dearpygui.simple.get_item_rect_max">get_item_rect_max</a></code></li>
+<li><code><a title="dearpygui.simple.get_item_rect_min" href="#dearpygui.simple.get_item_rect_min">get_item_rect_min</a></code></li>
+<li><code><a title="dearpygui.simple.get_item_rect_size" href="#dearpygui.simple.get_item_rect_size">get_item_rect_size</a></code></li>
+<li><code><a title="dearpygui.simple.get_item_source" href="#dearpygui.simple.get_item_source">get_item_source</a></code></li>
+<li><code><a title="dearpygui.simple.get_item_type" href="#dearpygui.simple.get_item_type">get_item_type</a></code></li>
+<li><code><a title="dearpygui.simple.get_item_user_data" href="#dearpygui.simple.get_item_user_data">get_item_user_data</a></code></li>
+<li><code><a title="dearpygui.simple.get_item_width" href="#dearpygui.simple.get_item_width">get_item_width</a></code></li>
+<li><code><a title="dearpygui.simple.get_window_pos" href="#dearpygui.simple.get_window_pos">get_window_pos</a></code></li>
+<li><code><a title="dearpygui.simple.hide_item" href="#dearpygui.simple.hide_item">hide_item</a></code></li>
+<li><code><a title="dearpygui.simple.is_item_activated" href="#dearpygui.simple.is_item_activated">is_item_activated</a></code></li>
+<li><code><a title="dearpygui.simple.is_item_active" href="#dearpygui.simple.is_item_active">is_item_active</a></code></li>
+<li><code><a title="dearpygui.simple.is_item_clicked" href="#dearpygui.simple.is_item_clicked">is_item_clicked</a></code></li>
+<li><code><a title="dearpygui.simple.is_item_container" href="#dearpygui.simple.is_item_container">is_item_container</a></code></li>
+<li><code><a title="dearpygui.simple.is_item_deactivated" href="#dearpygui.simple.is_item_deactivated">is_item_deactivated</a></code></li>
+<li><code><a title="dearpygui.simple.is_item_deactivated_after_edit" href="#dearpygui.simple.is_item_deactivated_after_edit">is_item_deactivated_after_edit</a></code></li>
+<li><code><a title="dearpygui.simple.is_item_edited" href="#dearpygui.simple.is_item_edited">is_item_edited</a></code></li>
+<li><code><a title="dearpygui.simple.is_item_enabled" href="#dearpygui.simple.is_item_enabled">is_item_enabled</a></code></li>
+<li><code><a title="dearpygui.simple.is_item_focused" href="#dearpygui.simple.is_item_focused">is_item_focused</a></code></li>
+<li><code><a title="dearpygui.simple.is_item_hovered" href="#dearpygui.simple.is_item_hovered">is_item_hovered</a></code></li>
+<li><code><a title="dearpygui.simple.is_item_ok" href="#dearpygui.simple.is_item_ok">is_item_ok</a></code></li>
+<li><code><a title="dearpygui.simple.is_item_shown" href="#dearpygui.simple.is_item_shown">is_item_shown</a></code></li>
+<li><code><a title="dearpygui.simple.is_item_toggled_open" href="#dearpygui.simple.is_item_toggled_open">is_item_toggled_open</a></code></li>
+<li><code><a title="dearpygui.simple.is_item_visible" href="#dearpygui.simple.is_item_visible">is_item_visible</a></code></li>
+<li><code><a title="dearpygui.simple.set_item_callback" href="#dearpygui.simple.set_item_callback">set_item_callback</a></code></li>
+<li><code><a title="dearpygui.simple.set_item_height" href="#dearpygui.simple.set_item_height">set_item_height</a></code></li>
+<li><code><a title="dearpygui.simple.set_item_label" href="#dearpygui.simple.set_item_label">set_item_label</a></code></li>
+<li><code><a title="dearpygui.simple.set_item_source" href="#dearpygui.simple.set_item_source">set_item_source</a></code></li>
+<li><code><a title="dearpygui.simple.set_item_user_data" href="#dearpygui.simple.set_item_user_data">set_item_user_data</a></code></li>
+<li><code><a title="dearpygui.simple.set_item_width" href="#dearpygui.simple.set_item_width">set_item_width</a></code></li>
+<li><code><a title="dearpygui.simple.set_window_pos" href="#dearpygui.simple.set_window_pos">set_window_pos</a></code></li>
+<li><code><a title="dearpygui.simple.show_about" href="#dearpygui.simple.show_about">show_about</a></code></li>
+<li><code><a title="dearpygui.simple.show_debug" href="#dearpygui.simple.show_debug">show_debug</a></code></li>
+<li><code><a title="dearpygui.simple.show_documentation" href="#dearpygui.simple.show_documentation">show_documentation</a></code></li>
+<li><code><a title="dearpygui.simple.show_font_manager" href="#dearpygui.simple.show_font_manager">show_font_manager</a></code></li>
+<li><code><a title="dearpygui.simple.show_item" href="#dearpygui.simple.show_item">show_item</a></code></li>
+<li><code><a title="dearpygui.simple.show_item_registry" href="#dearpygui.simple.show_item_registry">show_item_registry</a></code></li>
+<li><code><a title="dearpygui.simple.show_metrics" href="#dearpygui.simple.show_metrics">show_metrics</a></code></li>
+<li><code><a title="dearpygui.simple.show_style_editor" href="#dearpygui.simple.show_style_editor">show_style_editor</a></code></li>
+<li><code><a title="dearpygui.simple.start_dearpygui" href="#dearpygui.simple.start_dearpygui">start_dearpygui</a></code></li>
+</ul>
+</li>
+</ul>
+</nav>
+</main>
+<footer id="footer">
+<p>Generated by <a href="https://pdoc3.github.io/pdoc"><cite>pdoc</cite> 0.9.2</a>.</p>
+</footer>
+</body>
+</html>
