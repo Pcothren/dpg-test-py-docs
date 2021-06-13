@@ -1,0 +1,2536 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+<meta name="generator" content="pdoc 0.9.2" />
+<title>dearpygui.contexts API documentation</title>
+<meta name="description" content="" />
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/sanitize.min.css" integrity="sha256-PK9q560IAAa6WVRRh76LtCaI8pjTJ2z11v0miyNNjrs=" crossorigin>
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/typography.min.css" integrity="sha256-7l/o7C8jubJiy74VsKTidCy1yBkRtiUGbVkYBylBqUg=" crossorigin>
+<link rel="stylesheet preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/github.min.css" crossorigin>
+<style>:root{--highlight-color:#fe9}.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:30px;overflow:hidden}#sidebar > *:last-child{margin-bottom:2cm}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:1em 0 .50em 0}h3{font-size:1.4em;margin:25px 0 10px 0}h4{margin:0;font-size:105%}h1:target,h2:target,h3:target,h4:target,h5:target,h6:target{background:var(--highlight-color);padding:.2em 0}a{color:#058;text-decoration:none;transition:color .3s ease-in-out}a:hover{color:#e82}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900}pre code{background:#f8f8f8;font-size:.8em;line-height:1.4em}code{background:#f2f2f1;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{background:#f8f8f8;border:0;border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0;padding:1ex}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-weight:bold;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}dt:target .name{background:var(--highlight-color)}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary > *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}td{padding:0 .5em}.admonition{padding:.1em .5em;margin-bottom:1em}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%;height:100vh;overflow:auto;position:sticky;top:0}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.item .name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul{padding-left:1.5em}.toc > ul > li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js" integrity="sha256-Uv3H6lx7dJmRfRvH8TH6kJD1TSK1aFcwgx+mdg3epi8=" crossorigin></script>
+<script>window.addEventListener('DOMContentLoaded', () => hljs.initHighlighting())</script>
+</head>
+<h1><a href="index.html">Dear PyGui</a></h1>
+</header>
+<hr>
+<body>
+<main>
+<article id="content">
+<header>
+<h1 class="title">Module <code>dearpygui.contexts</code></h1>
+</header>
+<section id="section-intro">
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">from contextlib import contextmanager
+from typing import List, Any, Callable, Union
+import dearpygui.core as internal_dpg
+
+########################################################################################################################
+# context manager container wrappers
+########################################################################################################################
+
+@contextmanager
+def mutex():
+   
+   try:
+        yield internal_dpg.lock_mutex()
+   finally:
+        internal_dpg.unlock_mutex()
+
+@contextmanager
+def theme(*args, id:int=0, default_theme: bool = False, label:str=None):
+   
+   try:
+        widget = internal_dpg.add_theme(*args, id=id, default_theme=default_theme, label=label)
+        internal_dpg.push_container_stack(widget)
+        yield widget
+   finally:
+        internal_dpg.pop_container_stack()
+
+@contextmanager
+def font_registry(*args, id:int=0, show: bool =True, label:str=None):
+   
+   try:
+        widget = internal_dpg.add_font_registry(*args, id=id, show=show, label=label)
+        internal_dpg.push_container_stack(widget)
+        yield widget
+   finally:
+        internal_dpg.pop_container_stack()
+
+@contextmanager
+def clipper(*args, id:int=0, show: bool =True, parent: int=0, width: int = 0, before: int=0,
+           indent:int=-1, delay_search: bool = False, label:str=None):
+   
+   try:
+        widget = internal_dpg.add_clipper(*args, id=id, show=show, parent=parent, width=width, before=before,
+                                         indent=indent, delay_search=delay_search, label=label)
+        internal_dpg.push_container_stack(widget)
+        yield widget
+   finally:
+        internal_dpg.pop_container_stack()
+
+@contextmanager
+def filter_set(*args, id:int=0, show: bool =True, parent: int=0, width: int = 0, before: int=0,
+           indent:int=-1, delay_search: bool = False, label:str=None):
+   
+   try:
+        widget = internal_dpg.add_filter_set(*args, id=id, show=show, parent=parent, width=width, before=before,
+                                         indent=indent, delay_search=delay_search, label=label)
+        internal_dpg.push_container_stack(widget)
+        yield widget
+   finally:
+        internal_dpg.pop_container_stack()
+
+@contextmanager
+def drag_payload(*args, id:int=0, show: bool =True, parent: int=0, payload_type: str=&#39;$$DPG_PAYLOAD&#39;, drag_data: Any = None, label:str=None):
+   
+   try:
+        widget = internal_dpg.add_drag_payload(*args, id=id, show=show, parent=parent, payload_type=payload_type,
+                                               drag_data=drag_data, label=label)
+        internal_dpg.push_container_stack(widget)
+        yield widget
+   finally:
+        internal_dpg.pop_container_stack()
+
+@contextmanager
+def handler_registry(*args, id:int=0, show: bool =True, label:str=None):
+   
+   try:
+        widget = internal_dpg.add_handler_registry(*args, id=id, show=show, label=label)
+        internal_dpg.push_container_stack(widget)
+        yield widget
+   finally:
+        internal_dpg.pop_container_stack()
+
+@contextmanager
+def file_dialog(*args, id:int=0, width: int =0, height: int =0, label: str =&#39;&#39;, callback: Callable =None, show: bool =True, 
+                                        default_path: str =&#39;&#39;, default_filename: str =&#39;.&#39;, file_count: int =0, modal: bool =False, directory_selector: bool =False):
+   
+   try:
+        widget = internal_dpg.add_file_dialog(*args, id=id, width=width, height=height, label=label, callback=callback, show=show,
+                                              default_path=default_path, default_filename=default_filename, file_count=file_count,
+                                              modal=modal, directory_selector=directory_selector)
+        internal_dpg.push_container_stack(widget)
+        yield widget
+   finally:
+        internal_dpg.pop_container_stack()
+
+
+@contextmanager
+def table(*args, header_row: bool = True, width: int = 0, height: int = 0, inner_width: int = 0, show: bool = True, parent: int = 0,
+                before: int = 0, resizable: bool = False, reorderable: bool = False, hideable: bool = False, sortable: bool = False,   
+                context_menu_in_body: bool = False, row_background: bool = False, borders_innerH: bool = False, borders_outerH: bool = False,
+                borders_innerV: bool = False, borders_outerV: bool = False, policy: int = 0, no_host_extendX: bool = False,
+                no_host_extendY: bool = False, no_keep_columns_visible: bool = False, precise_widths: bool = False, no_clip: bool = False,
+                pad_outerX: bool = False, no_pad_outerX: bool = False, no_pad_innerX: bool = False, scrollX: bool = False, scrollY: bool = False,
+        id:int=0, indent=-1, callback: Callable = None, sort_multi: bool = False, sort_tristate: bool = False, pos=[], freeze_rows:int = 0,
+        freeze_columns:int = 0, delay_search: bool = False, label:str=None):
+
+    try:
+        widget = internal_dpg.add_table(*args, header_row=header_row, width = width, height = height, inner_width = inner_width,
+                    show = show, parent = parent, before = before, resizable = resizable, reorderable = reorderable, hideable = hideable,
+                    sortable = sortable, context_menu_in_body = context_menu_in_body, row_background = row_background,
+                    borders_innerH = borders_innerH, borders_outerH = borders_outerH, borders_innerV = borders_innerV,
+                    borders_outerV = borders_outerV, policy = policy, no_host_extendX = no_host_extendX,
+                    no_host_extendY = no_host_extendY, no_keep_columns_visible = no_keep_columns_visible, precise_widths = precise_widths,
+                    no_clip = no_clip, pad_outerX = pad_outerX, no_pad_outerX = no_pad_outerX, no_pad_innerX = no_pad_innerX,
+                    scrollX = scrollX, scrollY = scrollY, id=id, indent=indent, callback=callback, sort_multi=sort_multi,
+            sort_tristate=sort_tristate, pos=pos, freeze_rows=freeze_rows, freeze_columns=freeze_columns, delay_search=delay_search, label=label)
+        internal_dpg.push_container_stack(widget)
+        yield widget
+    finally:
+        internal_dpg.pop_container_stack()
+
+@contextmanager
+def drawlist(*args, id:int=0, width: int = 0, height: int = 0, show: bool = True, parent: int = 0, before: int = 0,
+             callback: Callable = None, user_data: Any = None, pos=[], delay_search: bool = False, label:str=None):
+    try:
+        widget = internal_dpg.add_drawlist(*args, id=id, width = width, height = height, show=show, parent=parent, before=before,
+                                           callback=callback, user_data=user_data, pos=pos, delay_search=delay_search, label=label)
+        internal_dpg.push_container_stack(widget)
+        yield widget
+
+    finally:
+        internal_dpg.pop_container_stack()
+
+@contextmanager
+def viewport_drawlist(*args, id:int=0, front: bool = True, show: bool = True, delay_search: bool = False, label:str=None):
+    try:
+        widget = internal_dpg.add_viewport_drawlist(*args, id=id, show=show, front=fronts, delay_search=delay_search, label=label)
+        internal_dpg.push_container_stack(widget)
+        yield widget
+
+    finally:
+        internal_dpg.pop_container_stack()
+
+@contextmanager
+def table_row(*args, id:int=0, show: bool = True, parent: int = 0, before: int = 0, height: int = 0, label:str=None):
+    try:
+        widget = internal_dpg.add_table_row(*args, id=id, show=show, parent=parent, before=before, height=height, label=label)
+        internal_dpg.push_container_stack(widget)
+        yield widget
+
+    finally:
+        internal_dpg.pop_container_stack()
+
+@contextmanager
+def draw_layer(*args, id:int=0, show: bool = True, parent: int = 0, before: int = 0, label:str=None):
+    try:
+        widget = internal_dpg.add_draw_layer(*args, id=id, show=show, parent=parent, before=before, label=label)
+        internal_dpg.push_container_stack(widget)
+        yield widget
+
+    finally:
+        internal_dpg.pop_container_stack()
+
+@contextmanager
+def window(*args, label: str = None, id: int=0, width: int = 200, height: int = 200, indent: int = -1, 
+           user_data: Any = None, show: bool = True, delay_search: str = False, min_size: List[int] = [32, 32], 
+           max_size: List[int] = [30000, 30000], menubar: bool = False, collapsed: bool = False, 
+           autosize: bool = False, no_resize: bool = False, no_title_bar: bool = False, no_move: bool = False, 
+           no_scrollbar: bool = False, no_collapse: bool = False, horizontal_scrollbar: bool = False, 
+           no_focus_on_appearing: bool = False, no_bring_to_front_on_focus: bool = False, no_close: bool = False, 
+           no_background: bool = False, modal: bool = False, popup: bool = False, on_close: Callable = None) -&gt; int:
+    &#34;&#34;&#34;Wraps add_window() and automates calling end().
+
+    Args:
+        **label: Overrides &#39;id&#39; as label.
+        **id: Unique id used to programmatically refer to the item. If label is unused this will be the label.
+        **width: Width of the item.
+        **height: Height of the item.
+        **user_data: User data for callbacks.
+        **show: Attempt to render widget.
+        **delay_search: Delays searching container for specified items until the end of the app. 
+            Possible optimization when a container has many children that are not accessed often.
+        **min_size: Minimum window size.
+        **max_size: Maximum window size.
+        **menubar: Decides if the menubar is shown or not.
+        **collapsed: Collapse the window.
+        **autosize: Autosized the window to fit it&#39;s items.
+        **no_resize: Allows for the window size to be changed or fixed.
+        **no_title_bar: Title name for the title bar of the window.
+        **no_move: Allows for the window&#39;s position to be changed or fixed.
+        **no_scrollbar: Disable scrollbars. (window can still scroll with mouse or programmatically)
+        **no_collapse: Disable user collapsing window by double-clicking on it.
+        **horizontal_scrollbar: Allow horizontal scrollbar to appear. (off by default)
+        **no_focus_on_appearing: Disable taking focus when transitioning from hidden to visible state.
+        **no_bring_to_front_on_focus: Disable bringing window to front when taking focus. (e.g. clicking on it or
+            programmatically giving it focus)
+        **no_close: Disable user closing the window by removing the close button.
+        **no_background: Sets Background and border alpha to transparent.
+        **modal: Fills area behind window according to the theme and disables user ability to interact with 
+            anything except the window.
+        **popup: Fills area behind window according to the theme, removes title bar, collapse and close. Window can 
+            be closed by selecting area in the background behind the window.
+        **on_close: Callback ran when window is closed.
+
+    Returns:
+        UUID as int
+    &#34;&#34;&#34;
+    try:
+
+        widget = internal_dpg.add_window(*args, width=width, height=height, autosize=autosize,
+                                        no_resize=no_resize, no_title_bar=no_title_bar, no_move=no_move,
+                                        no_scrollbar=no_scrollbar, no_collapse=no_collapse,
+                                        horizontal_scrollbar=horizontal_scrollbar,
+                                        no_focus_on_appearing=no_focus_on_appearing,
+                                        no_bring_to_front_on_focus=no_bring_to_front_on_focus,
+                                        menubar=menubar, no_close=no_close, user_data=user_data,
+                                        no_background=no_background, label=label, show=show, 
+                                        collapsed=collapsed, on_close=on_close,
+                                        min_size=min_size, max_size=max_size, id=id, modal=modal,
+                                        popup=popup, delay_search=delay_search)
+        internal_dpg.push_container_stack(widget)
+        yield widget
+
+    finally:
+        internal_dpg.pop_container_stack()
+
+
+@contextmanager
+def menu_bar(*args, label: str=None, id: int=0, indent: int = -1, parent: int = 0, show: bool = True, delay_search: bool = False) -&gt; int:
+    &#34;&#34;&#34;Wraps add_menu_bar() and automates calling end().
+
+    Args:
+        **label: Overrides &#39;id&#39; as label.
+        **id: Unique id used to programmatically refer to the item. If label is unused this will be the label.
+        **indent: Offsets the widget to the right the specified number multiplied by the indent style.
+        **parent: Parent this item will be added to. (runtime adding)
+        **show: Attempt to render widget.
+        **delay_search: Delays searching container for specified items until the end of the app. 
+            Possible optimization when a container has many children that are not accessed often.
+    Returns:
+        UUID as int
+    &#34;&#34;&#34;
+    try:
+        widget = internal_dpg.add_menu_bar(*args, show=show, parent=parent, id=id, indent=indent, delay_search=delay_search, label=label)
+        internal_dpg.push_container_stack(widget)
+        yield widget
+    finally:
+        internal_dpg.pop_container_stack()
+
+
+@contextmanager
+def menu(*args, label: str = None, id: int=0, indent: int = -1, parent: int = 0, before: int = 0,
+        payload_type: str = &#39;$$DPG_PAYLOAD&#39;, drag_callback: Callable = None, drop_callback: Callable = None, show: bool = True, 
+        enabled: bool = True, filter_key: str = &#39;&#39;, delay_search: bool = False, tracked: bool = False, track_offset: float = 0.5) -&gt; int:
+    &#34;&#34;&#34;Wraps add_menu() and automates calling end().
+
+    Args:
+        **label: Overrides &#39;id&#39; as label.
+        **id: Unique id used to programmatically refer to the item. If label is unused this will be the label.
+        **indent: Offsets the widget to the right the specified number multiplied by the indent style.
+        **parent: Parent this item will be added to. (runtime adding)
+        **before: Parent this item will be added to. (runtime adding)
+        **payload_type: Sender string type must be the same as the target for the target to run the payload_callback.
+        **drag_callback: Registers a drag callback for drag and drop.
+        **drop_callback: Registers a drop callback for drag and drop.
+        **show: Attempt to render widget.
+        **enabled: Turns off functionality of widget and applies the disabled theme.
+        **filter_key: Used by filter widget.
+        **delay_search: Delays searching container for specified items until the end of the app. 
+            Possible optimization when a container has many children that are not accessed often.
+        **tracked: Scroll tracking.
+        **track_offset : 0.0f:top, 0.5f:center, 1.0f:bottom.
+
+    Returns:
+        UUID as int
+    &#34;&#34;&#34;
+    try: 
+        widget = internal_dpg.add_menu(*args, label=label, id=id, indent=indent, parent=parent, before=before, 
+                                       payload_type=payload_type, drag_callback=drag_callback, drop_callback=drop_callback, 
+                                       show=show, enabled=enabled, filter_key=filter_key, delay_search=delay_search,
+                                       tracked=tracked, track_offset=track_offset)
+        internal_dpg.push_container_stack(widget)
+        yield widget
+    finally:
+        internal_dpg.pop_container_stack()
+
+
+@contextmanager
+def child(*args, label: str = None, id: int=0, width: int = 0, height: int = 0, indent: int = -1, parent: int = 0, before: int = 0,
+          payload_type: str = &#39;$$DPG_PAYLOAD&#39;, drag_callback: Callable = None, drop_callback: Callable = None, show: bool = True, pos: List[int] = [],
+          filter_key: str = &#39;&#39;, delay_search: bool = False, tracked: bool = False, track_offset: float = 0.5, border: bool = True, 
+          autosize_x: bool = False, autosize_y: bool = False, no_scrollbar: bool = False, horizontal_scrollbar: bool = False, 
+          menubar: bool = False, ) -&gt; int:
+    &#34;&#34;&#34;Wraps add_child() and automates calling end().
+
+    Args:
+        **label: Overrides &#39;id&#39; as label.
+        **id: Unique id used to programmatically refer to the item. If label is unused this will be the label.
+        **width: Width of the item.
+        **height: Height of the item.
+        **indent: Offsets the widget to the right the specified number multiplied by the indent style.
+        **parent: Parent this item will be added to. (runtime adding)
+        **before: Parent this item will be added to. (runtime adding)
+        **payload_type: Sender string type must be the same as the target for the target to run the payload_callback.
+        **drag_callback: Registers a drag callback for drag and drop.
+        **drop_callback: Registers a drop callback for drag and drop.
+        **show: Attempt to render widget.
+        **pos: Places the item relative to window coordinates, [0,0] is top left.
+        **filter_key: Used by filter widget.
+        **delay_search: Delays searching container for specified items until the end of the app. 
+            Possible optimization when a container has many children that are not accessed often.
+        **tracked: Scroll tracking.
+        **track_offset : 0.0f:top, 0.5f:center, 1.0f:bottom.
+        **border: Shows/Hides the border around the sides.
+        **autosize_x: Autosize the window to fit its items in the x.
+        **autosize_y: Autosize the window to fit its items in the y.
+        **no_scrollbar: Disable scrollbars (window can still scroll with mouse or programmatically)
+        **horizontal_scrollbar: Allow horizontal scrollbar to appear (off by default)
+        **menubar: Shows/Hides the menubar at the top.
+
+    Returns:
+        UUID as int
+    &#34;&#34;&#34;
+
+    try: 
+        widget = internal_dpg.add_child(*args, label=label, id=id, width=width, height=height, indent=indent, 
+                                        parent=parent, before=before, payload_type=payload_type, drag_callback=drag_callback, 
+                                        drop_callback=drop_callback, show=show, pos=pos, filter_key=filter_key, delay_search=delay_search,
+                                        tracked=tracked, track_offset=track_offset, border=border, autosize_x=autosize_x, 
+                                        autosize_y=autosize_y, no_scrollbar=no_scrollbar, horizontal_scrollbar=horizontal_scrollbar,
+                                        menubar=menubar)
+        internal_dpg.push_container_stack(widget)
+        yield widget
+    finally:
+        internal_dpg.pop_container_stack()
+
+
+@contextmanager
+def collapsing_header(*args, label: str = None, id: int=0, indent: int = -1, parent: int = 0, before: int = 0,
+                      payload_type: str = &#39;$$DPG_PAYLOAD&#39;, drag_callback: Callable = None, drop_callback: Callable = None, show: bool = True, pos: List[int] = [],
+                      filter_key: str = &#39;&#39;, delay_search: bool = False, tracked: bool = False, track_offset: float = 0.5,
+                      closable: bool = False, default_open: bool = False, open_on_double_click: bool = False, open_on_arrow: bool = False, 
+                      leaf: bool = False, bullet: bool = False, ) -&gt; int:
+    &#34;&#34;&#34;Wraps add_collapsing_header() and automates calling end().
+
+    Args:
+        **label: Overrides &#39;id&#39; as label.
+        **id: Unique id used to programmatically refer to the item. If label is unused this will be the label.
+        **indent: Offsets the widget to the right the specified number multiplied by the indent style.
+        **parent: Parent this item will be added to. (runtime adding)
+        **before: Parent this item will be added to. (runtime adding)
+        **payload_type: Sender string type must be the same as the target for the target to run the payload_callback.
+        **drag_callback: Registers a drag callback for drag and drop.
+        **drop_callback: Registers a drop callback for drag and drop.
+        **show: Attempt to render widget.
+        **pos: Places the item relative to window coordinates, [0,0] is top left.
+        **filter_key: Used by filter widget.
+        **delay_search: Delays searching container for specified items until the end of the app. 
+            Possible optimization when a container has many children that are not accessed often.
+        **tracked: Scroll tracking.
+        **track_offset : 0.0f:top, 0.5f:center, 1.0f:bottom.
+        **closable: Decides if the header can be collapsed.
+        **default_open: Decides if item is open by default.
+        **open_on_double_click: Need double-click to open node.
+        **open_on_arrow: Only open when clicking on the arrow part.
+        **leaf: No collapsing, no arrow (use as a convenience for leaf nodes).
+        **bullet: Display a bullet instead of arrow.
+
+    Returns:
+        UUID as int
+    &#34;&#34;&#34;
+
+    try:
+        widget = internal_dpg.add_collapsing_header(*args, label=label, id=id, indent=indent, parent=parent, before=before, payload_type=payload_type, 
+                                                    drag_callback=drag_callback, drop_callback=drop_callback, show=show, pos=pos, 
+                                                    filter_key=filter_key, delay_search=delay_search, tracked=tracked, track_offset=track_offset, 
+                                                    closable=closable, default_open=default_open, open_on_double_click=open_on_double_click,
+                                                    open_on_arrow=open_on_arrow, leaf=leaf, bullet=bullet)
+        internal_dpg.push_container_stack(widget)
+        yield widget
+    finally:
+        internal_dpg.pop_container_stack()
+
+
+@contextmanager
+def group(*args, label: str = None, id: int=0, width: int = 0, indent: int = -1, parent: int = 0, before: int = 0,
+          payload_type: str = &#39;$$DPG_PAYLOAD&#39;, drag_callback: Callable = None, drop_callback: Callable = None, show: bool = True, pos: List[int] = [],
+          filter_key: str = &#39;&#39;, delay_search: bool = False, tracked: bool = False, track_offset: float = 0.5,
+          horizontal: bool = False, horizontal_spacing: float = -1.0) -&gt; int:
+    &#34;&#34;&#34;Wraps add_group() and automates calling end().
+
+    Args:
+        **label: Overrides &#39;id&#39; as label.
+        **id: Unique id used to programmatically refer to the item. If label is unused this will be the label.
+        **width: Width of the item.
+        **indent: Offsets the widget to the right the specified number multiplied by the indent style.
+        **parent: Parent this item will be added to. (runtime adding)
+        **before: Parent this item will be added to. (runtime adding)
+        **payload_type: Sender string type must be the same as the target for the target to run the payload_callback.
+        **drag_callback: Registers a drag callback for drag and drop.
+        **drop_callback: Registers a drop callback for drag and drop.
+        **show: Attempt to render widget.
+        **pos: Places the item relative to window coordinates, [0,0] is top left.
+        **filter_key: Used by filter widget.
+        **delay_search: Delays searching container for specified items until the end of the app. 
+            Possible optimization when a container has many children that are not accessed often.
+        **tracked: Scroll tracking.
+        **track_offset : 0.0f:top, 0.5f:center, 1.0f:bottom.
+        **horizontal: Adds the items on the same row by default.
+        **horizontal_spacing: Decides the spacing for the items.
+
+    Returns:
+        UUID as int
+    &#34;&#34;&#34;
+
+    try:
+        widget = internal_dpg.add_group(*args, label=label, id=id, width=width, indent=indent, 
+                                        parent=parent, before=before, payload_type=payload_type, drag_callback=drag_callback, 
+                                        drop_callback=drop_callback, show=show, pos=pos, filter_key=filter_key, delay_search=delay_search,
+                                        tracked=tracked, track_offset=track_offset, 
+                                        horizontal=horizontal, horizontal_spacing=horizontal_spacing)
+        internal_dpg.push_container_stack(widget)
+        yield widget
+    finally:
+        internal_dpg.pop_container_stack()
+
+@contextmanager
+def node(*args, label: str = None, id: int=0, parent: int = 0, before: int = 0,
+         payload_type: str = &#39;$$DPG_PAYLOAD&#39;, drag_callback: Callable = None, drop_callback: Callable = None, show: bool = True, pos: List[int] = [],
+         filter_key: str = &#39;&#39;, delay_search: bool = False, tracked: bool = False, track_offset: float = 0.5,
+         draggable: bool = True) -&gt; int:
+    &#34;&#34;&#34;Wraps add_node() and automates calling end().
+
+    Args:
+        **label: Overrides &#39;id&#39; as label.
+        **id: Unique id used to programmatically refer to the item. If label is unused this will be the label.
+        **parent: Parent this item will be added to. (runtime adding)
+        **before: Parent this item will be added to. (runtime adding)
+        **payload_type: Sender string type must be the same as the target for the target to run the payload_callback.
+        **drag_callback: Registers a drag callback for drag and drop.
+        **drop_callback: Registers a drop callback for drag and drop.
+        **show: Attempt to render widget.
+        **pos: Places the item relative to window coordinates, [0,0] is top left.
+        **filter_key: Used by filter widget.
+        **delay_search: Delays searching container for specified items until the end of the app. 
+            Possible optimization when a container has many children that are not accessed often.
+        **tracked: Scroll tracking.
+        **track_offset : 0.0f:top, 0.5f:center, 1.0f:bottom.
+        **draggable: Allow node to be draggable.
+
+    Returns:
+        UUID as int
+    &#34;&#34;&#34;
+
+    try:
+        widget = internal_dpg.add_node(*args, label=label, id=id, parent=parent, before=before, payload_type=payload_type, 
+                                       drag_callback=drag_callback, drop_callback=drop_callback, show=show, pos=pos, filter_key=filter_key, 
+                                       delay_search=delay_search, tracked=tracked, track_offset=track_offset,
+                                       draggable=draggable)
+        internal_dpg.push_container_stack(widget)
+        yield widget
+    finally:
+        internal_dpg.pop_container_stack()
+
+@contextmanager
+def node_attribute(*args, label: str = None, id: int=0, indent: int = -1, parent: int = 0, before: int = 0,
+                   payload_type: str = &#39;$$DPG_PAYLOAD&#39;, drag_callback: Callable = None, drop_callback: Callable = None, show: bool = True,
+                   filter_key: str = &#39;&#39;, tracked: bool = False, track_offset: float = 0.5, 
+                   output: bool = False, static: bool = False, shape: int = 0,) -&gt; int:
+    &#34;&#34;&#34;Wraps add_node_attribute() and automates calling end().
+
+    Args:
+        **label: Overrides &#39;id&#39; as label.
+        **id: Unique id used to programmatically refer to the item. If label is unused this will be the label.
+        **indent: Offsets the widget to the right the specified number multiplied by the indent style.
+        **parent: Parent this item will be added to. (runtime adding)
+        **before: Parent this item will be added to. (runtime adding)
+        **payload_type: Sender string type must be the same as the target for the target to run the payload_callback.
+        **drag_callback: Registers a drag callback for drag and drop.
+        **drop_callback: Registers a drop callback for drag and drop.
+        **show: Attempt to render widget.
+        **filter_key: Used by filter widget.
+        **tracked: Scroll tracking.
+        **track_offset : 0.0f:top, 0.5f:center, 1.0f:bottom.
+        **output: Set as output attribute.
+        **static: Set as static attribute.
+        **shape : Pin shape.
+
+    Returns:
+        UUID as int
+    &#34;&#34;&#34;
+
+    try:
+        widget = internal_dpg.add_node_attribute(*args, label=label, id=id, indent=indent, parent=parent, before=before, payload_type=payload_type, 
+                                       drag_callback=drag_callback, drop_callback=drop_callback, show=show, filter_key=filter_key, 
+                                       tracked=tracked, track_offset=track_offset, 
+                                       output=output, static=static, shape=shape)
+        internal_dpg.push_container_stack(widget)
+        yield widget
+    finally:
+        internal_dpg.pop_container_stack()
+
+@contextmanager
+def node_editor(*args, label: str = None, id: int=0, parent: int = 0, before: int = 0, payload_type: str = &#39;$$DPG_PAYLOAD&#39;, 
+                callback: Callable = None, drag_callback: Callable = None, drop_callback: Callable = None, show: bool = True,
+                filter_key: str = &#39;&#39;, delay_search: bool = False, tracked: bool = False, track_offset: float = 0.5, 
+                delink_callback: Callable = None) -&gt; int:
+    &#34;&#34;&#34;Wraps add_node_editor() and automates calling end().
+
+    Args:
+        **label: Overrides &#39;id&#39; as label.
+        **id: Unique id used to programmatically refer to the item. If label is unused this will be the label.
+        **parent: Parent this item will be added to. (runtime adding)
+        **before: Parent this item will be added to. (runtime adding)
+        **payload_type: Sender string type must be the same as the target for the target to run the payload_callback.
+        **callback: Registers a callback.
+        **drag_callback: Registers a drag callback for drag and drop.
+        **drop_callback: Registers a drop callback for drag and drop.
+        **show: Attempt to render widget.
+        **filter_key: Used by filter widget.
+        **delay_search: Delays searching container for specified items until the end of the app. 
+            Possible optimization when a container has many children that are not accessed often.
+        **tracked: Scroll tracking.
+        **track_offset : 0.0f:top, 0.5f:center, 1.0f:bottom.
+        **delink_callback: Callback ran when a link is detached.
+
+    Returns:
+        UUID as int
+    &#34;&#34;&#34;
+
+    try:
+        widget = internal_dpg.add_node_editor(*args, label=label, id=id, parent=parent, before=before, payload_type=payload_type, callback=callback,
+                                              drag_callback=drag_callback, drop_callback=drop_callback, show=show, filter_key=filter_key, 
+                                              delay_search=delay_search, tracked=tracked, track_offset=track_offset,
+                                              delink_callback=delink_callback)
+        internal_dpg.push_container_stack(widget)
+        yield widget
+    finally:
+        internal_dpg.pop_container_stack()
+
+@contextmanager
+def staging_container(*args, id:int=0, label:str=None):
+
+    try:
+        widget = internal_dpg.add_staging_container(id=id)
+        internal_dpg.push_container_stack(widget)
+        yield widget
+    finally:
+        internal_dpg.pop_container_stack()
+
+@contextmanager
+def tab_bar(*args, label: str = None, id: int=0, indent: int = -1, parent: int = 0, before: int = 0, payload_type: str = &#39;$$DPG_PAYLOAD&#39;, 
+            callback: Callable = None, drag_callback: Callable = None, drop_callback: Callable = None, user_data: Any = None, show: bool = True,
+            pos: List[int] = [], filter_key: str = &#39;&#39;, delay_search: bool = False, tracked: bool = False, track_offset: float = 0.5, 
+            reorderable: bool = False) -&gt; int:
+    &#34;&#34;&#34;Wraps add_tab_bar() and automates calling end().
+
+    Args:
+        **label: Overrides &#39;id&#39; as label.
+        **id: Unique id used to programmatically refer to the item. If label is unused this will be the label.
+        **indent: Offsets the widget to the right the specified number multiplied by the indent style.
+        **parent: Parent this item will be added to. (runtime adding)
+        **before: Parent this item will be added to. (runtime adding)
+        **payload_type: Sender string type must be the same as the target for the target to run the payload_callback.
+        **callback: Registers a callback.
+        **drag_callback: Registers a drag callback for drag and drop.
+        **drop_callback: Registers a drop callback for drag and drop.
+        **user_data: User data for callbacks.
+        **show: Attempt to render widget.
+        **pos: Places the item relative to window coordinates, [0,0] is top left.
+        **filter_key: Used by filter widget.
+        **delay_search: Delays searching container for specified items until the end of the app. 
+            Possible optimization when a container has many children that are not accessed often.
+        **tracked: Scroll tracking.
+        **track_offset : 0.0f:top, 0.5f:center, 1.0f:bottom.
+        **reorderable: Allows for moveable tabs.
+
+    Returns:
+        UUID as int
+    &#34;&#34;&#34;
+
+    try:
+        widget = internal_dpg.add_tab_bar(*args, label=label, id=id, indent=indent, parent=parent, before=before, payload_type=payload_type, callback=callback,
+                                              drag_callback=drag_callback, drop_callback=drop_callback, user_data=user_data, show=show, pos=pos, 
+                                              filter_key=filter_key, delay_search=delay_search, tracked=tracked, track_offset=track_offset, 
+                                              reorderable=reorderable)
+        internal_dpg.push_container_stack(widget)
+        yield widget
+    finally:
+        internal_dpg.pop_container_stack()
+
+
+@contextmanager
+def tab(*args, label: str = None, id: int=0, indent: int = -1, parent: int = 0, before: int = 0, payload_type: str = &#39;$$DPG_PAYLOAD&#39;, 
+        drag_callback: Callable = None, drop_callback: Callable = None, show: bool = True, filter_key: str = &#39;&#39;, delay_search: bool = False, 
+        tracked: bool = False, track_offset: float = 0.5, 
+        closable: bool = False, no_reorder: bool = False, leading: bool = False, trailing: bool = False, no_tooltip: bool = False) -&gt; int:
+    &#34;&#34;&#34;Wraps add_tab() and automates calling end().
+
+    Args:
+        **label: Overrides &#39;id&#39; as label.
+        **id: Unique id used to programmatically refer to the item. If label is unused this will be the label.
+        **indent: Offsets the widget to the right the specified number multiplied by the indent style.
+        **parent: Parent this item will be added to. (runtime adding)
+        **before: Parent this item will be added to. (runtime adding)
+        **payload_type: Sender string type must be the same as the target for the target to run the payload_callback.
+        **drag_callback: Registers a drag callback for drag and drop.
+        **drop_callback: Registers a drop callback for drag and drop.
+        **show: Attempt to render widget.
+        **filter_key: Used by filter widget.
+        **delay_search: Delays searching container for specified items until the end of the app. 
+            Possible optimization when a container has many children that are not accessed often.
+        **tracked: Scroll tracking.
+        **track_offset : 0.0f:top, 0.5f:center, 1.0f:bottom.
+        **closable: Creates a button on the tab that can hide the tab.
+        **no_reorder: Disable reordering this tab or having another tab cross over this tab.
+        **leading: Enforce the tab position to the left of the tab bar (after the tab list popup button).
+        **trailing: Enforce the tab position to the right of the tab bar (before the scrolling buttons).
+        **no_tooltip: Disable tooltip for the given tab.
+
+    Returns:
+        UUID as int
+    &#34;&#34;&#34;
+
+    try:
+        widget = internal_dpg.add_tab(*args, label=label, id=id, indent=indent, parent=parent, before=before, payload_type=payload_type,
+                                      drag_callback=drag_callback, drop_callback=drop_callback, show=show, filter_key=filter_key, 
+                                      delay_search=delay_search, tracked=tracked, track_offset=track_offset, 
+                                      closable=closable, no_reorder=no_reorder, leading=leading, trailing=trailing, no_tooltip=no_tooltip)
+        internal_dpg.push_container_stack(widget)
+        yield widget
+    finally:
+        internal_dpg.pop_container_stack()
+
+
+@contextmanager
+def tree_node(*args, label: str = None, id: int=0, indent: int = -1, parent: int = 0, before: int = 0, payload_type: str = &#39;$$DPG_PAYLOAD&#39;, 
+              drag_callback: Callable = None, drop_callback: Callable = None, show: bool = True, pos: List[int] = [], filter_key: str = &#39;&#39;, 
+              delay_search: bool = False, tracked: bool = False, track_offset: float = 0.5, 
+              default_open: bool = False, open_on_double_click: bool = False, open_on_arrow: bool = False, leaf: bool = False, 
+              bullet: bool = False, selectable: bool = False) -&gt; int:
+    &#34;&#34;&#34;Wraps add_tree_node() and automates calling end().
+
+    Args:
+        **label: Overrides &#39;id&#39; as label.
+        **id: Unique id used to programmatically refer to the item. If label is unused this will be the label.
+        **indent: Offsets the widget to the right the specified number multiplied by the indent style.
+        **parent: Parent this item will be added to. (runtime adding)
+        **before: Parent this item will be added to. (runtime adding)
+        **payload_type: Sender string type must be the same as the target for the target to run the payload_callback.
+        **drag_callback: Registers a drag callback for drag and drop.
+        **drop_callback: Registers a drop callback for drag and drop.
+        **show: Attempt to render widget.
+        **pos: Places the item relative to window coordinates, [0,0] is top left.
+        **filter_key: Used by filter widget.
+        **delay_search: Delays searching container for specified items until the end of the app. 
+            Possible optimization when a container has many children that are not accessed often.
+        **tracked: Scroll tracking.
+        **track_offset : 0.0f:top, 0.5f:center, 1.0f:bottom.
+        **default_open: Decides if item is open by default.
+        **open_on_double_click: Need double-click to open node.
+        **open_on_arrow: Only open when clicking on the arrow part.
+        **leaf: No collapsing, no arrow (use as a convenience for leaf nodes).
+        **bullet: Display a bullet instead of arrow.
+        **selectable: Display a selectable instead of arrow.
+
+    Returns:
+        UUID as int
+    &#34;&#34;&#34;
+
+    try:
+        widget = internal_dpg.add_tree_node(*args, label=label, id=id, indent=indent, parent=parent, before=before, payload_type=payload_type,
+                                            drag_callback=drag_callback, drop_callback=drop_callback, show=show, pos=pos, filter_key=filter_key, 
+                                            delay_search=delay_search, tracked=tracked, track_offset=track_offset, 
+                                            default_open=default_open, open_on_double_click=open_on_double_click, 
+                                            open_on_arrow=open_on_arrow, leaf=leaf, bullet=bullet, selectable=selectable)
+        internal_dpg.push_container_stack(widget)
+        yield widget
+    finally:
+        internal_dpg.pop_container_stack()
+
+
+@contextmanager
+def tooltip(*args, label: str=None, id: int=0, show: bool = True, ) -&gt; int:
+    &#34;&#34;&#34;Wraps add_menu_bar() and automates calling end().
+
+    Args:
+        parent: widget that will show the tooltip when hovered.
+        **label: Overrides &#39;id&#39; as label.
+        **id: Unique id used to programmatically refer to the item. If label is unused this will be the label.
+        **show: Attempt to render widget.
+
+    Returns:
+        UUID as int
+    &#34;&#34;&#34;
+
+    try:
+        widget = internal_dpg.add_tooltip(*args, label=label, id=id, show=show)
+        internal_dpg.push_container_stack(widget)
+        yield widget
+    finally:
+        internal_dpg.pop_container_stack()
+
+@contextmanager
+def texture_container(*args, show: bool = False, id:int=0, label:str=None):
+
+    try:
+        widget = internal_dpg.add_texture_container(*args, show=show, id=id, label=label)
+        internal_dpg.push_container_stack(widget)
+        yield widget
+    finally:
+        internal_dpg.pop_container_stack()
+
+
+@contextmanager
+def popup(*args, label: str = None, id: int=0, width: int = 200, height: int = 200, parent: int = 0,  show: bool = True, pos: List[int] = [],
+         mousebutton: int = 1, modal: bool = False) -&gt; int:
+    &#34;&#34;&#34;Wraps add_group() and automates calling end().
+
+    Args:
+        **label: Overrides &#39;id&#39; as label.
+        **id: Unique id used to programmatically refer to the item. If label is unused this will be the label.
+        **width: Width of the item.
+        **height: Height of the item.
+        **parent: Parent this item will be added to. (runtime adding)
+        **show: Attempt to render widget.
+        **pos: Places the item relative to window coordinates, [0,0] is top left.
+        **mousebutton: The mouse code that will trigger the popup.
+        **modal: Fills area behind window according to the theme and disables user ability to interact with 
+            anything except the window.
+
+    Returns:
+        UUID as int
+    &#34;&#34;&#34;
+
+    try:
+        widget = internal_dpg.add_popup(*args, label=label, id=id, width=width, height=height, parent=parent, show=show,
+                                     mousebutton=mousebutton, modal=modal)
+        internal_dpg.push_container_stack(widget)
+        yield widget
+    finally:
+        internal_dpg.pop_container_stack()
+
+@contextmanager
+def plot(*args, label: str = None, id: int=0,  width: int = -1, height: int = 400, indent: int = -1, parent: int = 0, before: int = 0, 
+         payload_type: str = &#39;$$DPG_PAYLOAD&#39;, callback: Callable = None, drag_callback: Callable = None, drop_callback: Callable = None, 
+         user_data: Any = None, show: bool = True, pos: List[int] = [], filter_key: str = &#39;&#39;, delay_search: bool = False, tracked: bool = False, 
+         track_offset: float = 0.5,
+         no_title: bool = False, no_menus: bool = False, no_box_select: bool = False, no_mouse_pos: bool = False,
+         no_highlight: bool = False, no_child: bool = False, query: bool = False, crosshairs: bool = False,
+         anti_aliased: bool = False, equal_aspects: bool = False) -&gt; int:
+    &#34;&#34;&#34;Wraps add_window() and automates calling end().
+
+    Args:
+        **label: Overrides &#39;id&#39; as label.
+        **id: Unique id used to programmatically refer to the item. If label is unused this will be the label.
+        **width: Width of the item.
+        **height: Height of the item.
+        **indent: Offsets the widget to the right the specified number multiplied by the indent style.
+        **parent: Parent this item will be added to. (runtime adding)
+        **before: Parent this item will be added to. (runtime adding)
+        **payload_type: Sender string type must be the same as the target for the target to run the payload_callback.
+        **callback: Registers a callback.
+        **drag_callback: Registers a drag callback for drag and drop.
+        **drop_callback: Registers a drop callback for drag and drop.
+        **user_data: User data for callbacks.
+        **show: Attempt to render widget.
+        **pos: Places the item relative to window coordinates, [0,0] is top left.
+        **filter_key: Used by filter widget.
+        **delay_search: Delays searching container for specified items until the end of the app. 
+            Possible optimization when a container has many children that are not accessed often.
+        **tracked: Scroll tracking.
+        **track_offset : 0.0f:top, 0.5f:center, 1.0f:bottom.
+        **no_title : ...
+        **no_menus : ...
+        **no_box_select : ...
+        **no_mouse_pos : ...
+        **no_highlight : ...
+        **no_child : ...
+        **query : ...
+        **crosshairs : ...
+        **anti_aliased : ...
+        **equal_aspects : ...
+
+    Returns:
+        UUID as int
+    &#34;&#34;&#34;
+
+    try:
+
+        widget = internal_dpg.add_plot(*args, label=label, id=id, width=width, height=height, indent=indent, parent=parent, before=before, 
+                                       payload_type=payload_type, callback=callback, drag_callback=drag_callback, drop_callback=drop_callback,
+                                       user_data=user_data, show=show, pos=pos, filter_key=filter_key, delay_search=delay_search, tracked=tracked, track_offset=track_offset,
+                                       no_title=no_title, no_menus=no_menus, no_box_select=no_box_select, no_mouse_pos=no_mouse_pos,
+                                       no_highlight=no_highlight, no_child=no_child, query=query, crosshairs=crosshairs,
+                                       anti_aliased=anti_aliased, equal_aspects=equal_aspects)
+        internal_dpg.push_container_stack(widget)
+        yield widget
+
+    finally:
+        internal_dpg.pop_container_stack()</code></pre>
+</details>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-functions">Functions</h2>
+<dl>
+<dt id="dearpygui.contexts.child"><code class="name flex">
+<span>def <span class="ident">child</span></span>(<span>*args, label: str = None, id: int = 0, width: int = 0, height: int = 0, indent: int = -1, parent: int = 0, before: int = 0, payload_type: str = '$$DPG_PAYLOAD', drag_callback: Callable = None, drop_callback: Callable = None, show: bool = True, pos: List[int] = [], filter_key: str = '', delay_search: bool = False, tracked: bool = False, track_offset: float = 0.5, border: bool = True, autosize_x: bool = False, autosize_y: bool = False, no_scrollbar: bool = False, horizontal_scrollbar: bool = False, menubar: bool = False) ‑> int</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Wraps add_child() and automates calling end().</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>**label</code></strong></dt>
+<dd>Overrides 'id' as label.</dd>
+<dt><strong><code>**id</code></strong></dt>
+<dd>Unique id used to programmatically refer to the item. If label is unused this will be the label.</dd>
+<dt><strong><code>**width</code></strong></dt>
+<dd>Width of the item.</dd>
+<dt><strong><code>**height</code></strong></dt>
+<dd>Height of the item.</dd>
+<dt><strong><code>**indent</code></strong></dt>
+<dd>Offsets the widget to the right the specified number multiplied by the indent style.</dd>
+<dt><strong><code>**parent</code></strong></dt>
+<dd>Parent this item will be added to. (runtime adding)</dd>
+<dt><strong><code>**before</code></strong></dt>
+<dd>Parent this item will be added to. (runtime adding)</dd>
+<dt><strong><code>**payload_type</code></strong></dt>
+<dd>Sender string type must be the same as the target for the target to run the payload_callback.</dd>
+<dt><strong><code>**drag_callback</code></strong></dt>
+<dd>Registers a drag callback for drag and drop.</dd>
+<dt><strong><code>**drop_callback</code></strong></dt>
+<dd>Registers a drop callback for drag and drop.</dd>
+<dt><strong><code>**show</code></strong></dt>
+<dd>Attempt to render widget.</dd>
+<dt><strong><code>**pos</code></strong></dt>
+<dd>Places the item relative to window coordinates, [0,0] is top left.</dd>
+<dt><strong><code>**filter_key</code></strong></dt>
+<dd>Used by filter widget.</dd>
+<dt><strong><code>**delay_search</code></strong></dt>
+<dd>Delays searching container for specified items until the end of the app.
+Possible optimization when a container has many children that are not accessed often.</dd>
+<dt><strong><code>**tracked</code></strong></dt>
+<dd>Scroll tracking.</dd>
+<dt>**track_offset : 0.0f:top, 0.5f:center, 1.0f:bottom.</dt>
+<dt><strong><code>**border</code></strong></dt>
+<dd>Shows/Hides the border around the sides.</dd>
+<dt><strong><code>**autosize_x</code></strong></dt>
+<dd>Autosize the window to fit its items in the x.</dd>
+<dt><strong><code>**autosize_y</code></strong></dt>
+<dd>Autosize the window to fit its items in the y.</dd>
+<dt><strong><code>**no_scrollbar</code></strong></dt>
+<dd>Disable scrollbars (window can still scroll with mouse or programmatically)</dd>
+<dt><strong><code>**horizontal_scrollbar</code></strong></dt>
+<dd>Allow horizontal scrollbar to appear (off by default)</dd>
+<dt><strong><code>**menubar</code></strong></dt>
+<dd>Shows/Hides the menubar at the top.</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<p>UUID as int</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@contextmanager
+def child(*args, label: str = None, id: int=0, width: int = 0, height: int = 0, indent: int = -1, parent: int = 0, before: int = 0,
+          payload_type: str = &#39;$$DPG_PAYLOAD&#39;, drag_callback: Callable = None, drop_callback: Callable = None, show: bool = True, pos: List[int] = [],
+          filter_key: str = &#39;&#39;, delay_search: bool = False, tracked: bool = False, track_offset: float = 0.5, border: bool = True, 
+          autosize_x: bool = False, autosize_y: bool = False, no_scrollbar: bool = False, horizontal_scrollbar: bool = False, 
+          menubar: bool = False, ) -&gt; int:
+    &#34;&#34;&#34;Wraps add_child() and automates calling end().
+
+    Args:
+        **label: Overrides &#39;id&#39; as label.
+        **id: Unique id used to programmatically refer to the item. If label is unused this will be the label.
+        **width: Width of the item.
+        **height: Height of the item.
+        **indent: Offsets the widget to the right the specified number multiplied by the indent style.
+        **parent: Parent this item will be added to. (runtime adding)
+        **before: Parent this item will be added to. (runtime adding)
+        **payload_type: Sender string type must be the same as the target for the target to run the payload_callback.
+        **drag_callback: Registers a drag callback for drag and drop.
+        **drop_callback: Registers a drop callback for drag and drop.
+        **show: Attempt to render widget.
+        **pos: Places the item relative to window coordinates, [0,0] is top left.
+        **filter_key: Used by filter widget.
+        **delay_search: Delays searching container for specified items until the end of the app. 
+            Possible optimization when a container has many children that are not accessed often.
+        **tracked: Scroll tracking.
+        **track_offset : 0.0f:top, 0.5f:center, 1.0f:bottom.
+        **border: Shows/Hides the border around the sides.
+        **autosize_x: Autosize the window to fit its items in the x.
+        **autosize_y: Autosize the window to fit its items in the y.
+        **no_scrollbar: Disable scrollbars (window can still scroll with mouse or programmatically)
+        **horizontal_scrollbar: Allow horizontal scrollbar to appear (off by default)
+        **menubar: Shows/Hides the menubar at the top.
+
+    Returns:
+        UUID as int
+    &#34;&#34;&#34;
+
+    try: 
+        widget = internal_dpg.add_child(*args, label=label, id=id, width=width, height=height, indent=indent, 
+                                        parent=parent, before=before, payload_type=payload_type, drag_callback=drag_callback, 
+                                        drop_callback=drop_callback, show=show, pos=pos, filter_key=filter_key, delay_search=delay_search,
+                                        tracked=tracked, track_offset=track_offset, border=border, autosize_x=autosize_x, 
+                                        autosize_y=autosize_y, no_scrollbar=no_scrollbar, horizontal_scrollbar=horizontal_scrollbar,
+                                        menubar=menubar)
+        internal_dpg.push_container_stack(widget)
+        yield widget
+    finally:
+        internal_dpg.pop_container_stack()</code></pre>
+</details>
+</dd>
+<dt id="dearpygui.contexts.clipper"><code class="name flex">
+<span>def <span class="ident">clipper</span></span>(<span>*args, id: int = 0, show: bool = True, parent: int = 0, width: int = 0, before: int = 0, indent: int = -1, delay_search: bool = False, label: str = None)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@contextmanager
+def clipper(*args, id:int=0, show: bool =True, parent: int=0, width: int = 0, before: int=0,
+           indent:int=-1, delay_search: bool = False, label:str=None):
+   
+   try:
+        widget = internal_dpg.add_clipper(*args, id=id, show=show, parent=parent, width=width, before=before,
+                                         indent=indent, delay_search=delay_search, label=label)
+        internal_dpg.push_container_stack(widget)
+        yield widget
+   finally:
+        internal_dpg.pop_container_stack()</code></pre>
+</details>
+</dd>
+<dt id="dearpygui.contexts.collapsing_header"><code class="name flex">
+<span>def <span class="ident">collapsing_header</span></span>(<span>*args, label: str = None, id: int = 0, indent: int = -1, parent: int = 0, before: int = 0, payload_type: str = '$$DPG_PAYLOAD', drag_callback: Callable = None, drop_callback: Callable = None, show: bool = True, pos: List[int] = [], filter_key: str = '', delay_search: bool = False, tracked: bool = False, track_offset: float = 0.5, closable: bool = False, default_open: bool = False, open_on_double_click: bool = False, open_on_arrow: bool = False, leaf: bool = False, bullet: bool = False) ‑> int</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Wraps add_collapsing_header() and automates calling end().</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>**label</code></strong></dt>
+<dd>Overrides 'id' as label.</dd>
+<dt><strong><code>**id</code></strong></dt>
+<dd>Unique id used to programmatically refer to the item. If label is unused this will be the label.</dd>
+<dt><strong><code>**indent</code></strong></dt>
+<dd>Offsets the widget to the right the specified number multiplied by the indent style.</dd>
+<dt><strong><code>**parent</code></strong></dt>
+<dd>Parent this item will be added to. (runtime adding)</dd>
+<dt><strong><code>**before</code></strong></dt>
+<dd>Parent this item will be added to. (runtime adding)</dd>
+<dt><strong><code>**payload_type</code></strong></dt>
+<dd>Sender string type must be the same as the target for the target to run the payload_callback.</dd>
+<dt><strong><code>**drag_callback</code></strong></dt>
+<dd>Registers a drag callback for drag and drop.</dd>
+<dt><strong><code>**drop_callback</code></strong></dt>
+<dd>Registers a drop callback for drag and drop.</dd>
+<dt><strong><code>**show</code></strong></dt>
+<dd>Attempt to render widget.</dd>
+<dt><strong><code>**pos</code></strong></dt>
+<dd>Places the item relative to window coordinates, [0,0] is top left.</dd>
+<dt><strong><code>**filter_key</code></strong></dt>
+<dd>Used by filter widget.</dd>
+<dt><strong><code>**delay_search</code></strong></dt>
+<dd>Delays searching container for specified items until the end of the app.
+Possible optimization when a container has many children that are not accessed often.</dd>
+<dt><strong><code>**tracked</code></strong></dt>
+<dd>Scroll tracking.</dd>
+<dt>**track_offset : 0.0f:top, 0.5f:center, 1.0f:bottom.</dt>
+<dt><strong><code>**closable</code></strong></dt>
+<dd>Decides if the header can be collapsed.</dd>
+<dt><strong><code>**default_open</code></strong></dt>
+<dd>Decides if item is open by default.</dd>
+<dt><strong><code>**open_on_double_click</code></strong></dt>
+<dd>Need double-click to open node.</dd>
+<dt><strong><code>**open_on_arrow</code></strong></dt>
+<dd>Only open when clicking on the arrow part.</dd>
+<dt><strong><code>**leaf</code></strong></dt>
+<dd>No collapsing, no arrow (use as a convenience for leaf nodes).</dd>
+<dt><strong><code>**bullet</code></strong></dt>
+<dd>Display a bullet instead of arrow.</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<p>UUID as int</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@contextmanager
+def collapsing_header(*args, label: str = None, id: int=0, indent: int = -1, parent: int = 0, before: int = 0,
+                      payload_type: str = &#39;$$DPG_PAYLOAD&#39;, drag_callback: Callable = None, drop_callback: Callable = None, show: bool = True, pos: List[int] = [],
+                      filter_key: str = &#39;&#39;, delay_search: bool = False, tracked: bool = False, track_offset: float = 0.5,
+                      closable: bool = False, default_open: bool = False, open_on_double_click: bool = False, open_on_arrow: bool = False, 
+                      leaf: bool = False, bullet: bool = False, ) -&gt; int:
+    &#34;&#34;&#34;Wraps add_collapsing_header() and automates calling end().
+
+    Args:
+        **label: Overrides &#39;id&#39; as label.
+        **id: Unique id used to programmatically refer to the item. If label is unused this will be the label.
+        **indent: Offsets the widget to the right the specified number multiplied by the indent style.
+        **parent: Parent this item will be added to. (runtime adding)
+        **before: Parent this item will be added to. (runtime adding)
+        **payload_type: Sender string type must be the same as the target for the target to run the payload_callback.
+        **drag_callback: Registers a drag callback for drag and drop.
+        **drop_callback: Registers a drop callback for drag and drop.
+        **show: Attempt to render widget.
+        **pos: Places the item relative to window coordinates, [0,0] is top left.
+        **filter_key: Used by filter widget.
+        **delay_search: Delays searching container for specified items until the end of the app. 
+            Possible optimization when a container has many children that are not accessed often.
+        **tracked: Scroll tracking.
+        **track_offset : 0.0f:top, 0.5f:center, 1.0f:bottom.
+        **closable: Decides if the header can be collapsed.
+        **default_open: Decides if item is open by default.
+        **open_on_double_click: Need double-click to open node.
+        **open_on_arrow: Only open when clicking on the arrow part.
+        **leaf: No collapsing, no arrow (use as a convenience for leaf nodes).
+        **bullet: Display a bullet instead of arrow.
+
+    Returns:
+        UUID as int
+    &#34;&#34;&#34;
+
+    try:
+        widget = internal_dpg.add_collapsing_header(*args, label=label, id=id, indent=indent, parent=parent, before=before, payload_type=payload_type, 
+                                                    drag_callback=drag_callback, drop_callback=drop_callback, show=show, pos=pos, 
+                                                    filter_key=filter_key, delay_search=delay_search, tracked=tracked, track_offset=track_offset, 
+                                                    closable=closable, default_open=default_open, open_on_double_click=open_on_double_click,
+                                                    open_on_arrow=open_on_arrow, leaf=leaf, bullet=bullet)
+        internal_dpg.push_container_stack(widget)
+        yield widget
+    finally:
+        internal_dpg.pop_container_stack()</code></pre>
+</details>
+</dd>
+<dt id="dearpygui.contexts.drag_payload"><code class="name flex">
+<span>def <span class="ident">drag_payload</span></span>(<span>*args, id: int = 0, show: bool = True, parent: int = 0, payload_type: str = '$$DPG_PAYLOAD', drag_data: Any = None, label: str = None)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@contextmanager
+def drag_payload(*args, id:int=0, show: bool =True, parent: int=0, payload_type: str=&#39;$$DPG_PAYLOAD&#39;, drag_data: Any = None, label:str=None):
+   
+   try:
+        widget = internal_dpg.add_drag_payload(*args, id=id, show=show, parent=parent, payload_type=payload_type,
+                                               drag_data=drag_data, label=label)
+        internal_dpg.push_container_stack(widget)
+        yield widget
+   finally:
+        internal_dpg.pop_container_stack()</code></pre>
+</details>
+</dd>
+<dt id="dearpygui.contexts.draw_layer"><code class="name flex">
+<span>def <span class="ident">draw_layer</span></span>(<span>*args, id: int = 0, show: bool = True, parent: int = 0, before: int = 0, label: str = None)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@contextmanager
+def draw_layer(*args, id:int=0, show: bool = True, parent: int = 0, before: int = 0, label:str=None):
+    try:
+        widget = internal_dpg.add_draw_layer(*args, id=id, show=show, parent=parent, before=before, label=label)
+        internal_dpg.push_container_stack(widget)
+        yield widget
+
+    finally:
+        internal_dpg.pop_container_stack()</code></pre>
+</details>
+</dd>
+<dt id="dearpygui.contexts.drawlist"><code class="name flex">
+<span>def <span class="ident">drawlist</span></span>(<span>*args, id: int = 0, width: int = 0, height: int = 0, show: bool = True, parent: int = 0, before: int = 0, callback: Callable = None, user_data: Any = None, pos=[], delay_search: bool = False, label: str = None)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@contextmanager
+def drawlist(*args, id:int=0, width: int = 0, height: int = 0, show: bool = True, parent: int = 0, before: int = 0,
+             callback: Callable = None, user_data: Any = None, pos=[], delay_search: bool = False, label:str=None):
+    try:
+        widget = internal_dpg.add_drawlist(*args, id=id, width = width, height = height, show=show, parent=parent, before=before,
+                                           callback=callback, user_data=user_data, pos=pos, delay_search=delay_search, label=label)
+        internal_dpg.push_container_stack(widget)
+        yield widget
+
+    finally:
+        internal_dpg.pop_container_stack()</code></pre>
+</details>
+</dd>
+<dt id="dearpygui.contexts.file_dialog"><code class="name flex">
+<span>def <span class="ident">file_dialog</span></span>(<span>*args, id: int = 0, width: int = 0, height: int = 0, label: str = '', callback: Callable = None, show: bool = True, default_path: str = '', default_filename: str = '.', file_count: int = 0, modal: bool = False, directory_selector: bool = False)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@contextmanager
+def file_dialog(*args, id:int=0, width: int =0, height: int =0, label: str =&#39;&#39;, callback: Callable =None, show: bool =True, 
+                                        default_path: str =&#39;&#39;, default_filename: str =&#39;.&#39;, file_count: int =0, modal: bool =False, directory_selector: bool =False):
+   
+   try:
+        widget = internal_dpg.add_file_dialog(*args, id=id, width=width, height=height, label=label, callback=callback, show=show,
+                                              default_path=default_path, default_filename=default_filename, file_count=file_count,
+                                              modal=modal, directory_selector=directory_selector)
+        internal_dpg.push_container_stack(widget)
+        yield widget
+   finally:
+        internal_dpg.pop_container_stack()</code></pre>
+</details>
+</dd>
+<dt id="dearpygui.contexts.filter_set"><code class="name flex">
+<span>def <span class="ident">filter_set</span></span>(<span>*args, id: int = 0, show: bool = True, parent: int = 0, width: int = 0, before: int = 0, indent: int = -1, delay_search: bool = False, label: str = None)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@contextmanager
+def filter_set(*args, id:int=0, show: bool =True, parent: int=0, width: int = 0, before: int=0,
+           indent:int=-1, delay_search: bool = False, label:str=None):
+   
+   try:
+        widget = internal_dpg.add_filter_set(*args, id=id, show=show, parent=parent, width=width, before=before,
+                                         indent=indent, delay_search=delay_search, label=label)
+        internal_dpg.push_container_stack(widget)
+        yield widget
+   finally:
+        internal_dpg.pop_container_stack()</code></pre>
+</details>
+</dd>
+<dt id="dearpygui.contexts.font_registry"><code class="name flex">
+<span>def <span class="ident">font_registry</span></span>(<span>*args, id: int = 0, show: bool = True, label: str = None)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@contextmanager
+def font_registry(*args, id:int=0, show: bool =True, label:str=None):
+   
+   try:
+        widget = internal_dpg.add_font_registry(*args, id=id, show=show, label=label)
+        internal_dpg.push_container_stack(widget)
+        yield widget
+   finally:
+        internal_dpg.pop_container_stack()</code></pre>
+</details>
+</dd>
+<dt id="dearpygui.contexts.group"><code class="name flex">
+<span>def <span class="ident">group</span></span>(<span>*args, label: str = None, id: int = 0, width: int = 0, indent: int = -1, parent: int = 0, before: int = 0, payload_type: str = '$$DPG_PAYLOAD', drag_callback: Callable = None, drop_callback: Callable = None, show: bool = True, pos: List[int] = [], filter_key: str = '', delay_search: bool = False, tracked: bool = False, track_offset: float = 0.5, horizontal: bool = False, horizontal_spacing: float = -1.0) ‑> int</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Wraps add_group() and automates calling end().</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>**label</code></strong></dt>
+<dd>Overrides 'id' as label.</dd>
+<dt><strong><code>**id</code></strong></dt>
+<dd>Unique id used to programmatically refer to the item. If label is unused this will be the label.</dd>
+<dt><strong><code>**width</code></strong></dt>
+<dd>Width of the item.</dd>
+<dt><strong><code>**indent</code></strong></dt>
+<dd>Offsets the widget to the right the specified number multiplied by the indent style.</dd>
+<dt><strong><code>**parent</code></strong></dt>
+<dd>Parent this item will be added to. (runtime adding)</dd>
+<dt><strong><code>**before</code></strong></dt>
+<dd>Parent this item will be added to. (runtime adding)</dd>
+<dt><strong><code>**payload_type</code></strong></dt>
+<dd>Sender string type must be the same as the target for the target to run the payload_callback.</dd>
+<dt><strong><code>**drag_callback</code></strong></dt>
+<dd>Registers a drag callback for drag and drop.</dd>
+<dt><strong><code>**drop_callback</code></strong></dt>
+<dd>Registers a drop callback for drag and drop.</dd>
+<dt><strong><code>**show</code></strong></dt>
+<dd>Attempt to render widget.</dd>
+<dt><strong><code>**pos</code></strong></dt>
+<dd>Places the item relative to window coordinates, [0,0] is top left.</dd>
+<dt><strong><code>**filter_key</code></strong></dt>
+<dd>Used by filter widget.</dd>
+<dt><strong><code>**delay_search</code></strong></dt>
+<dd>Delays searching container for specified items until the end of the app.
+Possible optimization when a container has many children that are not accessed often.</dd>
+<dt><strong><code>**tracked</code></strong></dt>
+<dd>Scroll tracking.</dd>
+<dt>**track_offset : 0.0f:top, 0.5f:center, 1.0f:bottom.</dt>
+<dt><strong><code>**horizontal</code></strong></dt>
+<dd>Adds the items on the same row by default.</dd>
+<dt><strong><code>**horizontal_spacing</code></strong></dt>
+<dd>Decides the spacing for the items.</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<p>UUID as int</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@contextmanager
+def group(*args, label: str = None, id: int=0, width: int = 0, indent: int = -1, parent: int = 0, before: int = 0,
+          payload_type: str = &#39;$$DPG_PAYLOAD&#39;, drag_callback: Callable = None, drop_callback: Callable = None, show: bool = True, pos: List[int] = [],
+          filter_key: str = &#39;&#39;, delay_search: bool = False, tracked: bool = False, track_offset: float = 0.5,
+          horizontal: bool = False, horizontal_spacing: float = -1.0) -&gt; int:
+    &#34;&#34;&#34;Wraps add_group() and automates calling end().
+
+    Args:
+        **label: Overrides &#39;id&#39; as label.
+        **id: Unique id used to programmatically refer to the item. If label is unused this will be the label.
+        **width: Width of the item.
+        **indent: Offsets the widget to the right the specified number multiplied by the indent style.
+        **parent: Parent this item will be added to. (runtime adding)
+        **before: Parent this item will be added to. (runtime adding)
+        **payload_type: Sender string type must be the same as the target for the target to run the payload_callback.
+        **drag_callback: Registers a drag callback for drag and drop.
+        **drop_callback: Registers a drop callback for drag and drop.
+        **show: Attempt to render widget.
+        **pos: Places the item relative to window coordinates, [0,0] is top left.
+        **filter_key: Used by filter widget.
+        **delay_search: Delays searching container for specified items until the end of the app. 
+            Possible optimization when a container has many children that are not accessed often.
+        **tracked: Scroll tracking.
+        **track_offset : 0.0f:top, 0.5f:center, 1.0f:bottom.
+        **horizontal: Adds the items on the same row by default.
+        **horizontal_spacing: Decides the spacing for the items.
+
+    Returns:
+        UUID as int
+    &#34;&#34;&#34;
+
+    try:
+        widget = internal_dpg.add_group(*args, label=label, id=id, width=width, indent=indent, 
+                                        parent=parent, before=before, payload_type=payload_type, drag_callback=drag_callback, 
+                                        drop_callback=drop_callback, show=show, pos=pos, filter_key=filter_key, delay_search=delay_search,
+                                        tracked=tracked, track_offset=track_offset, 
+                                        horizontal=horizontal, horizontal_spacing=horizontal_spacing)
+        internal_dpg.push_container_stack(widget)
+        yield widget
+    finally:
+        internal_dpg.pop_container_stack()</code></pre>
+</details>
+</dd>
+<dt id="dearpygui.contexts.handler_registry"><code class="name flex">
+<span>def <span class="ident">handler_registry</span></span>(<span>*args, id: int = 0, show: bool = True, label: str = None)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@contextmanager
+def handler_registry(*args, id:int=0, show: bool =True, label:str=None):
+   
+   try:
+        widget = internal_dpg.add_handler_registry(*args, id=id, show=show, label=label)
+        internal_dpg.push_container_stack(widget)
+        yield widget
+   finally:
+        internal_dpg.pop_container_stack()</code></pre>
+</details>
+</dd>
+<dt id="dearpygui.contexts.menu"><code class="name flex">
+<span>def <span class="ident">menu</span></span>(<span>*args, label: str = None, id: int = 0, indent: int = -1, parent: int = 0, before: int = 0, payload_type: str = '$$DPG_PAYLOAD', drag_callback: Callable = None, drop_callback: Callable = None, show: bool = True, enabled: bool = True, filter_key: str = '', delay_search: bool = False, tracked: bool = False, track_offset: float = 0.5) ‑> int</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Wraps add_menu() and automates calling end().</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>**label</code></strong></dt>
+<dd>Overrides 'id' as label.</dd>
+<dt><strong><code>**id</code></strong></dt>
+<dd>Unique id used to programmatically refer to the item. If label is unused this will be the label.</dd>
+<dt><strong><code>**indent</code></strong></dt>
+<dd>Offsets the widget to the right the specified number multiplied by the indent style.</dd>
+<dt><strong><code>**parent</code></strong></dt>
+<dd>Parent this item will be added to. (runtime adding)</dd>
+<dt><strong><code>**before</code></strong></dt>
+<dd>Parent this item will be added to. (runtime adding)</dd>
+<dt><strong><code>**payload_type</code></strong></dt>
+<dd>Sender string type must be the same as the target for the target to run the payload_callback.</dd>
+<dt><strong><code>**drag_callback</code></strong></dt>
+<dd>Registers a drag callback for drag and drop.</dd>
+<dt><strong><code>**drop_callback</code></strong></dt>
+<dd>Registers a drop callback for drag and drop.</dd>
+<dt><strong><code>**show</code></strong></dt>
+<dd>Attempt to render widget.</dd>
+<dt><strong><code>**enabled</code></strong></dt>
+<dd>Turns off functionality of widget and applies the disabled theme.</dd>
+<dt><strong><code>**filter_key</code></strong></dt>
+<dd>Used by filter widget.</dd>
+<dt><strong><code>**delay_search</code></strong></dt>
+<dd>Delays searching container for specified items until the end of the app.
+Possible optimization when a container has many children that are not accessed often.</dd>
+<dt><strong><code>**tracked</code></strong></dt>
+<dd>Scroll tracking.</dd>
+</dl>
+<p>**track_offset : 0.0f:top, 0.5f:center, 1.0f:bottom.</p>
+<h2 id="returns">Returns</h2>
+<p>UUID as int</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@contextmanager
+def menu(*args, label: str = None, id: int=0, indent: int = -1, parent: int = 0, before: int = 0,
+        payload_type: str = &#39;$$DPG_PAYLOAD&#39;, drag_callback: Callable = None, drop_callback: Callable = None, show: bool = True, 
+        enabled: bool = True, filter_key: str = &#39;&#39;, delay_search: bool = False, tracked: bool = False, track_offset: float = 0.5) -&gt; int:
+    &#34;&#34;&#34;Wraps add_menu() and automates calling end().
+
+    Args:
+        **label: Overrides &#39;id&#39; as label.
+        **id: Unique id used to programmatically refer to the item. If label is unused this will be the label.
+        **indent: Offsets the widget to the right the specified number multiplied by the indent style.
+        **parent: Parent this item will be added to. (runtime adding)
+        **before: Parent this item will be added to. (runtime adding)
+        **payload_type: Sender string type must be the same as the target for the target to run the payload_callback.
+        **drag_callback: Registers a drag callback for drag and drop.
+        **drop_callback: Registers a drop callback for drag and drop.
+        **show: Attempt to render widget.
+        **enabled: Turns off functionality of widget and applies the disabled theme.
+        **filter_key: Used by filter widget.
+        **delay_search: Delays searching container for specified items until the end of the app. 
+            Possible optimization when a container has many children that are not accessed often.
+        **tracked: Scroll tracking.
+        **track_offset : 0.0f:top, 0.5f:center, 1.0f:bottom.
+
+    Returns:
+        UUID as int
+    &#34;&#34;&#34;
+    try: 
+        widget = internal_dpg.add_menu(*args, label=label, id=id, indent=indent, parent=parent, before=before, 
+                                       payload_type=payload_type, drag_callback=drag_callback, drop_callback=drop_callback, 
+                                       show=show, enabled=enabled, filter_key=filter_key, delay_search=delay_search,
+                                       tracked=tracked, track_offset=track_offset)
+        internal_dpg.push_container_stack(widget)
+        yield widget
+    finally:
+        internal_dpg.pop_container_stack()</code></pre>
+</details>
+</dd>
+<dt id="dearpygui.contexts.menu_bar"><code class="name flex">
+<span>def <span class="ident">menu_bar</span></span>(<span>*args, label: str = None, id: int = 0, indent: int = -1, parent: int = 0, show: bool = True, delay_search: bool = False) ‑> int</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Wraps add_menu_bar() and automates calling end().</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>**label</code></strong></dt>
+<dd>Overrides 'id' as label.</dd>
+<dt><strong><code>**id</code></strong></dt>
+<dd>Unique id used to programmatically refer to the item. If label is unused this will be the label.</dd>
+<dt><strong><code>**indent</code></strong></dt>
+<dd>Offsets the widget to the right the specified number multiplied by the indent style.</dd>
+<dt><strong><code>**parent</code></strong></dt>
+<dd>Parent this item will be added to. (runtime adding)</dd>
+<dt><strong><code>**show</code></strong></dt>
+<dd>Attempt to render widget.</dd>
+<dt><strong><code>**delay_search</code></strong></dt>
+<dd>Delays searching container for specified items until the end of the app.
+Possible optimization when a container has many children that are not accessed often.</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<p>UUID as int</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@contextmanager
+def menu_bar(*args, label: str=None, id: int=0, indent: int = -1, parent: int = 0, show: bool = True, delay_search: bool = False) -&gt; int:
+    &#34;&#34;&#34;Wraps add_menu_bar() and automates calling end().
+
+    Args:
+        **label: Overrides &#39;id&#39; as label.
+        **id: Unique id used to programmatically refer to the item. If label is unused this will be the label.
+        **indent: Offsets the widget to the right the specified number multiplied by the indent style.
+        **parent: Parent this item will be added to. (runtime adding)
+        **show: Attempt to render widget.
+        **delay_search: Delays searching container for specified items until the end of the app. 
+            Possible optimization when a container has many children that are not accessed often.
+    Returns:
+        UUID as int
+    &#34;&#34;&#34;
+    try:
+        widget = internal_dpg.add_menu_bar(*args, show=show, parent=parent, id=id, indent=indent, delay_search=delay_search, label=label)
+        internal_dpg.push_container_stack(widget)
+        yield widget
+    finally:
+        internal_dpg.pop_container_stack()</code></pre>
+</details>
+</dd>
+<dt id="dearpygui.contexts.mutex"><code class="name flex">
+<span>def <span class="ident">mutex</span></span>(<span>)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@contextmanager
+def mutex():
+   
+   try:
+        yield internal_dpg.lock_mutex()
+   finally:
+        internal_dpg.unlock_mutex()</code></pre>
+</details>
+</dd>
+<dt id="dearpygui.contexts.node"><code class="name flex">
+<span>def <span class="ident">node</span></span>(<span>*args, label: str = None, id: int = 0, parent: int = 0, before: int = 0, payload_type: str = '$$DPG_PAYLOAD', drag_callback: Callable = None, drop_callback: Callable = None, show: bool = True, pos: List[int] = [], filter_key: str = '', delay_search: bool = False, tracked: bool = False, track_offset: float = 0.5, draggable: bool = True) ‑> int</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Wraps add_node() and automates calling end().</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>**label</code></strong></dt>
+<dd>Overrides 'id' as label.</dd>
+<dt><strong><code>**id</code></strong></dt>
+<dd>Unique id used to programmatically refer to the item. If label is unused this will be the label.</dd>
+<dt><strong><code>**parent</code></strong></dt>
+<dd>Parent this item will be added to. (runtime adding)</dd>
+<dt><strong><code>**before</code></strong></dt>
+<dd>Parent this item will be added to. (runtime adding)</dd>
+<dt><strong><code>**payload_type</code></strong></dt>
+<dd>Sender string type must be the same as the target for the target to run the payload_callback.</dd>
+<dt><strong><code>**drag_callback</code></strong></dt>
+<dd>Registers a drag callback for drag and drop.</dd>
+<dt><strong><code>**drop_callback</code></strong></dt>
+<dd>Registers a drop callback for drag and drop.</dd>
+<dt><strong><code>**show</code></strong></dt>
+<dd>Attempt to render widget.</dd>
+<dt><strong><code>**pos</code></strong></dt>
+<dd>Places the item relative to window coordinates, [0,0] is top left.</dd>
+<dt><strong><code>**filter_key</code></strong></dt>
+<dd>Used by filter widget.</dd>
+<dt><strong><code>**delay_search</code></strong></dt>
+<dd>Delays searching container for specified items until the end of the app.
+Possible optimization when a container has many children that are not accessed often.</dd>
+<dt><strong><code>**tracked</code></strong></dt>
+<dd>Scroll tracking.</dd>
+<dt>**track_offset : 0.0f:top, 0.5f:center, 1.0f:bottom.</dt>
+<dt><strong><code>**draggable</code></strong></dt>
+<dd>Allow node to be draggable.</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<p>UUID as int</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@contextmanager
+def node(*args, label: str = None, id: int=0, parent: int = 0, before: int = 0,
+         payload_type: str = &#39;$$DPG_PAYLOAD&#39;, drag_callback: Callable = None, drop_callback: Callable = None, show: bool = True, pos: List[int] = [],
+         filter_key: str = &#39;&#39;, delay_search: bool = False, tracked: bool = False, track_offset: float = 0.5,
+         draggable: bool = True) -&gt; int:
+    &#34;&#34;&#34;Wraps add_node() and automates calling end().
+
+    Args:
+        **label: Overrides &#39;id&#39; as label.
+        **id: Unique id used to programmatically refer to the item. If label is unused this will be the label.
+        **parent: Parent this item will be added to. (runtime adding)
+        **before: Parent this item will be added to. (runtime adding)
+        **payload_type: Sender string type must be the same as the target for the target to run the payload_callback.
+        **drag_callback: Registers a drag callback for drag and drop.
+        **drop_callback: Registers a drop callback for drag and drop.
+        **show: Attempt to render widget.
+        **pos: Places the item relative to window coordinates, [0,0] is top left.
+        **filter_key: Used by filter widget.
+        **delay_search: Delays searching container for specified items until the end of the app. 
+            Possible optimization when a container has many children that are not accessed often.
+        **tracked: Scroll tracking.
+        **track_offset : 0.0f:top, 0.5f:center, 1.0f:bottom.
+        **draggable: Allow node to be draggable.
+
+    Returns:
+        UUID as int
+    &#34;&#34;&#34;
+
+    try:
+        widget = internal_dpg.add_node(*args, label=label, id=id, parent=parent, before=before, payload_type=payload_type, 
+                                       drag_callback=drag_callback, drop_callback=drop_callback, show=show, pos=pos, filter_key=filter_key, 
+                                       delay_search=delay_search, tracked=tracked, track_offset=track_offset,
+                                       draggable=draggable)
+        internal_dpg.push_container_stack(widget)
+        yield widget
+    finally:
+        internal_dpg.pop_container_stack()</code></pre>
+</details>
+</dd>
+<dt id="dearpygui.contexts.node_attribute"><code class="name flex">
+<span>def <span class="ident">node_attribute</span></span>(<span>*args, label: str = None, id: int = 0, indent: int = -1, parent: int = 0, before: int = 0, payload_type: str = '$$DPG_PAYLOAD', drag_callback: Callable = None, drop_callback: Callable = None, show: bool = True, filter_key: str = '', tracked: bool = False, track_offset: float = 0.5, output: bool = False, static: bool = False, shape: int = 0) ‑> int</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Wraps add_node_attribute() and automates calling end().</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>**label</code></strong></dt>
+<dd>Overrides 'id' as label.</dd>
+<dt><strong><code>**id</code></strong></dt>
+<dd>Unique id used to programmatically refer to the item. If label is unused this will be the label.</dd>
+<dt><strong><code>**indent</code></strong></dt>
+<dd>Offsets the widget to the right the specified number multiplied by the indent style.</dd>
+<dt><strong><code>**parent</code></strong></dt>
+<dd>Parent this item will be added to. (runtime adding)</dd>
+<dt><strong><code>**before</code></strong></dt>
+<dd>Parent this item will be added to. (runtime adding)</dd>
+<dt><strong><code>**payload_type</code></strong></dt>
+<dd>Sender string type must be the same as the target for the target to run the payload_callback.</dd>
+<dt><strong><code>**drag_callback</code></strong></dt>
+<dd>Registers a drag callback for drag and drop.</dd>
+<dt><strong><code>**drop_callback</code></strong></dt>
+<dd>Registers a drop callback for drag and drop.</dd>
+<dt><strong><code>**show</code></strong></dt>
+<dd>Attempt to render widget.</dd>
+<dt><strong><code>**filter_key</code></strong></dt>
+<dd>Used by filter widget.</dd>
+<dt><strong><code>**tracked</code></strong></dt>
+<dd>Scroll tracking.</dd>
+<dt>**track_offset : 0.0f:top, 0.5f:center, 1.0f:bottom.</dt>
+<dt><strong><code>**output</code></strong></dt>
+<dd>Set as output attribute.</dd>
+<dt><strong><code>**static</code></strong></dt>
+<dd>Set as static attribute.</dd>
+</dl>
+<p>**shape : Pin shape.</p>
+<h2 id="returns">Returns</h2>
+<p>UUID as int</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@contextmanager
+def node_attribute(*args, label: str = None, id: int=0, indent: int = -1, parent: int = 0, before: int = 0,
+                   payload_type: str = &#39;$$DPG_PAYLOAD&#39;, drag_callback: Callable = None, drop_callback: Callable = None, show: bool = True,
+                   filter_key: str = &#39;&#39;, tracked: bool = False, track_offset: float = 0.5, 
+                   output: bool = False, static: bool = False, shape: int = 0,) -&gt; int:
+    &#34;&#34;&#34;Wraps add_node_attribute() and automates calling end().
+
+    Args:
+        **label: Overrides &#39;id&#39; as label.
+        **id: Unique id used to programmatically refer to the item. If label is unused this will be the label.
+        **indent: Offsets the widget to the right the specified number multiplied by the indent style.
+        **parent: Parent this item will be added to. (runtime adding)
+        **before: Parent this item will be added to. (runtime adding)
+        **payload_type: Sender string type must be the same as the target for the target to run the payload_callback.
+        **drag_callback: Registers a drag callback for drag and drop.
+        **drop_callback: Registers a drop callback for drag and drop.
+        **show: Attempt to render widget.
+        **filter_key: Used by filter widget.
+        **tracked: Scroll tracking.
+        **track_offset : 0.0f:top, 0.5f:center, 1.0f:bottom.
+        **output: Set as output attribute.
+        **static: Set as static attribute.
+        **shape : Pin shape.
+
+    Returns:
+        UUID as int
+    &#34;&#34;&#34;
+
+    try:
+        widget = internal_dpg.add_node_attribute(*args, label=label, id=id, indent=indent, parent=parent, before=before, payload_type=payload_type, 
+                                       drag_callback=drag_callback, drop_callback=drop_callback, show=show, filter_key=filter_key, 
+                                       tracked=tracked, track_offset=track_offset, 
+                                       output=output, static=static, shape=shape)
+        internal_dpg.push_container_stack(widget)
+        yield widget
+    finally:
+        internal_dpg.pop_container_stack()</code></pre>
+</details>
+</dd>
+<dt id="dearpygui.contexts.node_editor"><code class="name flex">
+<span>def <span class="ident">node_editor</span></span>(<span>*args, label: str = None, id: int = 0, parent: int = 0, before: int = 0, payload_type: str = '$$DPG_PAYLOAD', callback: Callable = None, drag_callback: Callable = None, drop_callback: Callable = None, show: bool = True, filter_key: str = '', delay_search: bool = False, tracked: bool = False, track_offset: float = 0.5, delink_callback: Callable = None) ‑> int</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Wraps add_node_editor() and automates calling end().</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>**label</code></strong></dt>
+<dd>Overrides 'id' as label.</dd>
+<dt><strong><code>**id</code></strong></dt>
+<dd>Unique id used to programmatically refer to the item. If label is unused this will be the label.</dd>
+<dt><strong><code>**parent</code></strong></dt>
+<dd>Parent this item will be added to. (runtime adding)</dd>
+<dt><strong><code>**before</code></strong></dt>
+<dd>Parent this item will be added to. (runtime adding)</dd>
+<dt><strong><code>**payload_type</code></strong></dt>
+<dd>Sender string type must be the same as the target for the target to run the payload_callback.</dd>
+<dt><strong><code>**callback</code></strong></dt>
+<dd>Registers a callback.</dd>
+<dt><strong><code>**drag_callback</code></strong></dt>
+<dd>Registers a drag callback for drag and drop.</dd>
+<dt><strong><code>**drop_callback</code></strong></dt>
+<dd>Registers a drop callback for drag and drop.</dd>
+<dt><strong><code>**show</code></strong></dt>
+<dd>Attempt to render widget.</dd>
+<dt><strong><code>**filter_key</code></strong></dt>
+<dd>Used by filter widget.</dd>
+<dt><strong><code>**delay_search</code></strong></dt>
+<dd>Delays searching container for specified items until the end of the app.
+Possible optimization when a container has many children that are not accessed often.</dd>
+<dt><strong><code>**tracked</code></strong></dt>
+<dd>Scroll tracking.</dd>
+<dt>**track_offset : 0.0f:top, 0.5f:center, 1.0f:bottom.</dt>
+<dt><strong><code>**delink_callback</code></strong></dt>
+<dd>Callback ran when a link is detached.</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<p>UUID as int</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@contextmanager
+def node_editor(*args, label: str = None, id: int=0, parent: int = 0, before: int = 0, payload_type: str = &#39;$$DPG_PAYLOAD&#39;, 
+                callback: Callable = None, drag_callback: Callable = None, drop_callback: Callable = None, show: bool = True,
+                filter_key: str = &#39;&#39;, delay_search: bool = False, tracked: bool = False, track_offset: float = 0.5, 
+                delink_callback: Callable = None) -&gt; int:
+    &#34;&#34;&#34;Wraps add_node_editor() and automates calling end().
+
+    Args:
+        **label: Overrides &#39;id&#39; as label.
+        **id: Unique id used to programmatically refer to the item. If label is unused this will be the label.
+        **parent: Parent this item will be added to. (runtime adding)
+        **before: Parent this item will be added to. (runtime adding)
+        **payload_type: Sender string type must be the same as the target for the target to run the payload_callback.
+        **callback: Registers a callback.
+        **drag_callback: Registers a drag callback for drag and drop.
+        **drop_callback: Registers a drop callback for drag and drop.
+        **show: Attempt to render widget.
+        **filter_key: Used by filter widget.
+        **delay_search: Delays searching container for specified items until the end of the app. 
+            Possible optimization when a container has many children that are not accessed often.
+        **tracked: Scroll tracking.
+        **track_offset : 0.0f:top, 0.5f:center, 1.0f:bottom.
+        **delink_callback: Callback ran when a link is detached.
+
+    Returns:
+        UUID as int
+    &#34;&#34;&#34;
+
+    try:
+        widget = internal_dpg.add_node_editor(*args, label=label, id=id, parent=parent, before=before, payload_type=payload_type, callback=callback,
+                                              drag_callback=drag_callback, drop_callback=drop_callback, show=show, filter_key=filter_key, 
+                                              delay_search=delay_search, tracked=tracked, track_offset=track_offset,
+                                              delink_callback=delink_callback)
+        internal_dpg.push_container_stack(widget)
+        yield widget
+    finally:
+        internal_dpg.pop_container_stack()</code></pre>
+</details>
+</dd>
+<dt id="dearpygui.contexts.plot"><code class="name flex">
+<span>def <span class="ident">plot</span></span>(<span>*args, label: str = None, id: int = 0, width: int = -1, height: int = 400, indent: int = -1, parent: int = 0, before: int = 0, payload_type: str = '$$DPG_PAYLOAD', callback: Callable = None, drag_callback: Callable = None, drop_callback: Callable = None, user_data: Any = None, show: bool = True, pos: List[int] = [], filter_key: str = '', delay_search: bool = False, tracked: bool = False, track_offset: float = 0.5, no_title: bool = False, no_menus: bool = False, no_box_select: bool = False, no_mouse_pos: bool = False, no_highlight: bool = False, no_child: bool = False, query: bool = False, crosshairs: bool = False, anti_aliased: bool = False, equal_aspects: bool = False) ‑> int</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Wraps add_window() and automates calling end().</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>**label</code></strong></dt>
+<dd>Overrides 'id' as label.</dd>
+<dt><strong><code>**id</code></strong></dt>
+<dd>Unique id used to programmatically refer to the item. If label is unused this will be the label.</dd>
+<dt><strong><code>**width</code></strong></dt>
+<dd>Width of the item.</dd>
+<dt><strong><code>**height</code></strong></dt>
+<dd>Height of the item.</dd>
+<dt><strong><code>**indent</code></strong></dt>
+<dd>Offsets the widget to the right the specified number multiplied by the indent style.</dd>
+<dt><strong><code>**parent</code></strong></dt>
+<dd>Parent this item will be added to. (runtime adding)</dd>
+<dt><strong><code>**before</code></strong></dt>
+<dd>Parent this item will be added to. (runtime adding)</dd>
+<dt><strong><code>**payload_type</code></strong></dt>
+<dd>Sender string type must be the same as the target for the target to run the payload_callback.</dd>
+<dt><strong><code>**callback</code></strong></dt>
+<dd>Registers a callback.</dd>
+<dt><strong><code>**drag_callback</code></strong></dt>
+<dd>Registers a drag callback for drag and drop.</dd>
+<dt><strong><code>**drop_callback</code></strong></dt>
+<dd>Registers a drop callback for drag and drop.</dd>
+<dt><strong><code>**user_data</code></strong></dt>
+<dd>User data for callbacks.</dd>
+<dt><strong><code>**show</code></strong></dt>
+<dd>Attempt to render widget.</dd>
+<dt><strong><code>**pos</code></strong></dt>
+<dd>Places the item relative to window coordinates, [0,0] is top left.</dd>
+<dt><strong><code>**filter_key</code></strong></dt>
+<dd>Used by filter widget.</dd>
+<dt><strong><code>**delay_search</code></strong></dt>
+<dd>Delays searching container for specified items until the end of the app.
+Possible optimization when a container has many children that are not accessed often.</dd>
+<dt><strong><code>**tracked</code></strong></dt>
+<dd>Scroll tracking.</dd>
+</dl>
+<p><strong>track_offset : 0.0f:top, 0.5f:center, 1.0f:bottom.
+</strong>no_title : &hellip;
+<strong>no_menus : &hellip;
+</strong>no_box_select : &hellip;
+<strong>no_mouse_pos : &hellip;
+</strong>no_highlight : &hellip;
+<strong>no_child : &hellip;
+</strong>query : &hellip;
+<strong>crosshairs : &hellip;
+</strong>anti_aliased : &hellip;
+**equal_aspects : &hellip;</p>
+<h2 id="returns">Returns</h2>
+<p>UUID as int</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@contextmanager
+def plot(*args, label: str = None, id: int=0,  width: int = -1, height: int = 400, indent: int = -1, parent: int = 0, before: int = 0, 
+         payload_type: str = &#39;$$DPG_PAYLOAD&#39;, callback: Callable = None, drag_callback: Callable = None, drop_callback: Callable = None, 
+         user_data: Any = None, show: bool = True, pos: List[int] = [], filter_key: str = &#39;&#39;, delay_search: bool = False, tracked: bool = False, 
+         track_offset: float = 0.5,
+         no_title: bool = False, no_menus: bool = False, no_box_select: bool = False, no_mouse_pos: bool = False,
+         no_highlight: bool = False, no_child: bool = False, query: bool = False, crosshairs: bool = False,
+         anti_aliased: bool = False, equal_aspects: bool = False) -&gt; int:
+    &#34;&#34;&#34;Wraps add_window() and automates calling end().
+
+    Args:
+        **label: Overrides &#39;id&#39; as label.
+        **id: Unique id used to programmatically refer to the item. If label is unused this will be the label.
+        **width: Width of the item.
+        **height: Height of the item.
+        **indent: Offsets the widget to the right the specified number multiplied by the indent style.
+        **parent: Parent this item will be added to. (runtime adding)
+        **before: Parent this item will be added to. (runtime adding)
+        **payload_type: Sender string type must be the same as the target for the target to run the payload_callback.
+        **callback: Registers a callback.
+        **drag_callback: Registers a drag callback for drag and drop.
+        **drop_callback: Registers a drop callback for drag and drop.
+        **user_data: User data for callbacks.
+        **show: Attempt to render widget.
+        **pos: Places the item relative to window coordinates, [0,0] is top left.
+        **filter_key: Used by filter widget.
+        **delay_search: Delays searching container for specified items until the end of the app. 
+            Possible optimization when a container has many children that are not accessed often.
+        **tracked: Scroll tracking.
+        **track_offset : 0.0f:top, 0.5f:center, 1.0f:bottom.
+        **no_title : ...
+        **no_menus : ...
+        **no_box_select : ...
+        **no_mouse_pos : ...
+        **no_highlight : ...
+        **no_child : ...
+        **query : ...
+        **crosshairs : ...
+        **anti_aliased : ...
+        **equal_aspects : ...
+
+    Returns:
+        UUID as int
+    &#34;&#34;&#34;
+
+    try:
+
+        widget = internal_dpg.add_plot(*args, label=label, id=id, width=width, height=height, indent=indent, parent=parent, before=before, 
+                                       payload_type=payload_type, callback=callback, drag_callback=drag_callback, drop_callback=drop_callback,
+                                       user_data=user_data, show=show, pos=pos, filter_key=filter_key, delay_search=delay_search, tracked=tracked, track_offset=track_offset,
+                                       no_title=no_title, no_menus=no_menus, no_box_select=no_box_select, no_mouse_pos=no_mouse_pos,
+                                       no_highlight=no_highlight, no_child=no_child, query=query, crosshairs=crosshairs,
+                                       anti_aliased=anti_aliased, equal_aspects=equal_aspects)
+        internal_dpg.push_container_stack(widget)
+        yield widget
+
+    finally:
+        internal_dpg.pop_container_stack()</code></pre>
+</details>
+</dd>
+<dt id="dearpygui.contexts.popup"><code class="name flex">
+<span>def <span class="ident">popup</span></span>(<span>*args, label: str = None, id: int = 0, width: int = 200, height: int = 200, parent: int = 0, show: bool = True, pos: List[int] = [], mousebutton: int = 1, modal: bool = False) ‑> int</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Wraps add_group() and automates calling end().</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>**label</code></strong></dt>
+<dd>Overrides 'id' as label.</dd>
+<dt><strong><code>**id</code></strong></dt>
+<dd>Unique id used to programmatically refer to the item. If label is unused this will be the label.</dd>
+<dt><strong><code>**width</code></strong></dt>
+<dd>Width of the item.</dd>
+<dt><strong><code>**height</code></strong></dt>
+<dd>Height of the item.</dd>
+<dt><strong><code>**parent</code></strong></dt>
+<dd>Parent this item will be added to. (runtime adding)</dd>
+<dt><strong><code>**show</code></strong></dt>
+<dd>Attempt to render widget.</dd>
+<dt><strong><code>**pos</code></strong></dt>
+<dd>Places the item relative to window coordinates, [0,0] is top left.</dd>
+<dt><strong><code>**mousebutton</code></strong></dt>
+<dd>The mouse code that will trigger the popup.</dd>
+<dt><strong><code>**modal</code></strong></dt>
+<dd>Fills area behind window according to the theme and disables user ability to interact with
+anything except the window.</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<p>UUID as int</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@contextmanager
+def popup(*args, label: str = None, id: int=0, width: int = 200, height: int = 200, parent: int = 0,  show: bool = True, pos: List[int] = [],
+         mousebutton: int = 1, modal: bool = False) -&gt; int:
+    &#34;&#34;&#34;Wraps add_group() and automates calling end().
+
+    Args:
+        **label: Overrides &#39;id&#39; as label.
+        **id: Unique id used to programmatically refer to the item. If label is unused this will be the label.
+        **width: Width of the item.
+        **height: Height of the item.
+        **parent: Parent this item will be added to. (runtime adding)
+        **show: Attempt to render widget.
+        **pos: Places the item relative to window coordinates, [0,0] is top left.
+        **mousebutton: The mouse code that will trigger the popup.
+        **modal: Fills area behind window according to the theme and disables user ability to interact with 
+            anything except the window.
+
+    Returns:
+        UUID as int
+    &#34;&#34;&#34;
+
+    try:
+        widget = internal_dpg.add_popup(*args, label=label, id=id, width=width, height=height, parent=parent, show=show,
+                                     mousebutton=mousebutton, modal=modal)
+        internal_dpg.push_container_stack(widget)
+        yield widget
+    finally:
+        internal_dpg.pop_container_stack()</code></pre>
+</details>
+</dd>
+<dt id="dearpygui.contexts.staging_container"><code class="name flex">
+<span>def <span class="ident">staging_container</span></span>(<span>*args, id: int = 0, label: str = None)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@contextmanager
+def staging_container(*args, id:int=0, label:str=None):
+
+    try:
+        widget = internal_dpg.add_staging_container(id=id)
+        internal_dpg.push_container_stack(widget)
+        yield widget
+    finally:
+        internal_dpg.pop_container_stack()</code></pre>
+</details>
+</dd>
+<dt id="dearpygui.contexts.tab"><code class="name flex">
+<span>def <span class="ident">tab</span></span>(<span>*args, label: str = None, id: int = 0, indent: int = -1, parent: int = 0, before: int = 0, payload_type: str = '$$DPG_PAYLOAD', drag_callback: Callable = None, drop_callback: Callable = None, show: bool = True, filter_key: str = '', delay_search: bool = False, tracked: bool = False, track_offset: float = 0.5, closable: bool = False, no_reorder: bool = False, leading: bool = False, trailing: bool = False, no_tooltip: bool = False) ‑> int</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Wraps add_tab() and automates calling end().</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>**label</code></strong></dt>
+<dd>Overrides 'id' as label.</dd>
+<dt><strong><code>**id</code></strong></dt>
+<dd>Unique id used to programmatically refer to the item. If label is unused this will be the label.</dd>
+<dt><strong><code>**indent</code></strong></dt>
+<dd>Offsets the widget to the right the specified number multiplied by the indent style.</dd>
+<dt><strong><code>**parent</code></strong></dt>
+<dd>Parent this item will be added to. (runtime adding)</dd>
+<dt><strong><code>**before</code></strong></dt>
+<dd>Parent this item will be added to. (runtime adding)</dd>
+<dt><strong><code>**payload_type</code></strong></dt>
+<dd>Sender string type must be the same as the target for the target to run the payload_callback.</dd>
+<dt><strong><code>**drag_callback</code></strong></dt>
+<dd>Registers a drag callback for drag and drop.</dd>
+<dt><strong><code>**drop_callback</code></strong></dt>
+<dd>Registers a drop callback for drag and drop.</dd>
+<dt><strong><code>**show</code></strong></dt>
+<dd>Attempt to render widget.</dd>
+<dt><strong><code>**filter_key</code></strong></dt>
+<dd>Used by filter widget.</dd>
+<dt><strong><code>**delay_search</code></strong></dt>
+<dd>Delays searching container for specified items until the end of the app.
+Possible optimization when a container has many children that are not accessed often.</dd>
+<dt><strong><code>**tracked</code></strong></dt>
+<dd>Scroll tracking.</dd>
+<dt>**track_offset : 0.0f:top, 0.5f:center, 1.0f:bottom.</dt>
+<dt><strong><code>**closable</code></strong></dt>
+<dd>Creates a button on the tab that can hide the tab.</dd>
+<dt><strong><code>**no_reorder</code></strong></dt>
+<dd>Disable reordering this tab or having another tab cross over this tab.</dd>
+<dt><strong><code>**leading</code></strong></dt>
+<dd>Enforce the tab position to the left of the tab bar (after the tab list popup button).</dd>
+<dt><strong><code>**trailing</code></strong></dt>
+<dd>Enforce the tab position to the right of the tab bar (before the scrolling buttons).</dd>
+<dt><strong><code>**no_tooltip</code></strong></dt>
+<dd>Disable tooltip for the given tab.</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<p>UUID as int</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@contextmanager
+def tab(*args, label: str = None, id: int=0, indent: int = -1, parent: int = 0, before: int = 0, payload_type: str = &#39;$$DPG_PAYLOAD&#39;, 
+        drag_callback: Callable = None, drop_callback: Callable = None, show: bool = True, filter_key: str = &#39;&#39;, delay_search: bool = False, 
+        tracked: bool = False, track_offset: float = 0.5, 
+        closable: bool = False, no_reorder: bool = False, leading: bool = False, trailing: bool = False, no_tooltip: bool = False) -&gt; int:
+    &#34;&#34;&#34;Wraps add_tab() and automates calling end().
+
+    Args:
+        **label: Overrides &#39;id&#39; as label.
+        **id: Unique id used to programmatically refer to the item. If label is unused this will be the label.
+        **indent: Offsets the widget to the right the specified number multiplied by the indent style.
+        **parent: Parent this item will be added to. (runtime adding)
+        **before: Parent this item will be added to. (runtime adding)
+        **payload_type: Sender string type must be the same as the target for the target to run the payload_callback.
+        **drag_callback: Registers a drag callback for drag and drop.
+        **drop_callback: Registers a drop callback for drag and drop.
+        **show: Attempt to render widget.
+        **filter_key: Used by filter widget.
+        **delay_search: Delays searching container for specified items until the end of the app. 
+            Possible optimization when a container has many children that are not accessed often.
+        **tracked: Scroll tracking.
+        **track_offset : 0.0f:top, 0.5f:center, 1.0f:bottom.
+        **closable: Creates a button on the tab that can hide the tab.
+        **no_reorder: Disable reordering this tab or having another tab cross over this tab.
+        **leading: Enforce the tab position to the left of the tab bar (after the tab list popup button).
+        **trailing: Enforce the tab position to the right of the tab bar (before the scrolling buttons).
+        **no_tooltip: Disable tooltip for the given tab.
+
+    Returns:
+        UUID as int
+    &#34;&#34;&#34;
+
+    try:
+        widget = internal_dpg.add_tab(*args, label=label, id=id, indent=indent, parent=parent, before=before, payload_type=payload_type,
+                                      drag_callback=drag_callback, drop_callback=drop_callback, show=show, filter_key=filter_key, 
+                                      delay_search=delay_search, tracked=tracked, track_offset=track_offset, 
+                                      closable=closable, no_reorder=no_reorder, leading=leading, trailing=trailing, no_tooltip=no_tooltip)
+        internal_dpg.push_container_stack(widget)
+        yield widget
+    finally:
+        internal_dpg.pop_container_stack()</code></pre>
+</details>
+</dd>
+<dt id="dearpygui.contexts.tab_bar"><code class="name flex">
+<span>def <span class="ident">tab_bar</span></span>(<span>*args, label: str = None, id: int = 0, indent: int = -1, parent: int = 0, before: int = 0, payload_type: str = '$$DPG_PAYLOAD', callback: Callable = None, drag_callback: Callable = None, drop_callback: Callable = None, user_data: Any = None, show: bool = True, pos: List[int] = [], filter_key: str = '', delay_search: bool = False, tracked: bool = False, track_offset: float = 0.5, reorderable: bool = False) ‑> int</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Wraps add_tab_bar() and automates calling end().</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>**label</code></strong></dt>
+<dd>Overrides 'id' as label.</dd>
+<dt><strong><code>**id</code></strong></dt>
+<dd>Unique id used to programmatically refer to the item. If label is unused this will be the label.</dd>
+<dt><strong><code>**indent</code></strong></dt>
+<dd>Offsets the widget to the right the specified number multiplied by the indent style.</dd>
+<dt><strong><code>**parent</code></strong></dt>
+<dd>Parent this item will be added to. (runtime adding)</dd>
+<dt><strong><code>**before</code></strong></dt>
+<dd>Parent this item will be added to. (runtime adding)</dd>
+<dt><strong><code>**payload_type</code></strong></dt>
+<dd>Sender string type must be the same as the target for the target to run the payload_callback.</dd>
+<dt><strong><code>**callback</code></strong></dt>
+<dd>Registers a callback.</dd>
+<dt><strong><code>**drag_callback</code></strong></dt>
+<dd>Registers a drag callback for drag and drop.</dd>
+<dt><strong><code>**drop_callback</code></strong></dt>
+<dd>Registers a drop callback for drag and drop.</dd>
+<dt><strong><code>**user_data</code></strong></dt>
+<dd>User data for callbacks.</dd>
+<dt><strong><code>**show</code></strong></dt>
+<dd>Attempt to render widget.</dd>
+<dt><strong><code>**pos</code></strong></dt>
+<dd>Places the item relative to window coordinates, [0,0] is top left.</dd>
+<dt><strong><code>**filter_key</code></strong></dt>
+<dd>Used by filter widget.</dd>
+<dt><strong><code>**delay_search</code></strong></dt>
+<dd>Delays searching container for specified items until the end of the app.
+Possible optimization when a container has many children that are not accessed often.</dd>
+<dt><strong><code>**tracked</code></strong></dt>
+<dd>Scroll tracking.</dd>
+<dt>**track_offset : 0.0f:top, 0.5f:center, 1.0f:bottom.</dt>
+<dt><strong><code>**reorderable</code></strong></dt>
+<dd>Allows for moveable tabs.</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<p>UUID as int</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@contextmanager
+def tab_bar(*args, label: str = None, id: int=0, indent: int = -1, parent: int = 0, before: int = 0, payload_type: str = &#39;$$DPG_PAYLOAD&#39;, 
+            callback: Callable = None, drag_callback: Callable = None, drop_callback: Callable = None, user_data: Any = None, show: bool = True,
+            pos: List[int] = [], filter_key: str = &#39;&#39;, delay_search: bool = False, tracked: bool = False, track_offset: float = 0.5, 
+            reorderable: bool = False) -&gt; int:
+    &#34;&#34;&#34;Wraps add_tab_bar() and automates calling end().
+
+    Args:
+        **label: Overrides &#39;id&#39; as label.
+        **id: Unique id used to programmatically refer to the item. If label is unused this will be the label.
+        **indent: Offsets the widget to the right the specified number multiplied by the indent style.
+        **parent: Parent this item will be added to. (runtime adding)
+        **before: Parent this item will be added to. (runtime adding)
+        **payload_type: Sender string type must be the same as the target for the target to run the payload_callback.
+        **callback: Registers a callback.
+        **drag_callback: Registers a drag callback for drag and drop.
+        **drop_callback: Registers a drop callback for drag and drop.
+        **user_data: User data for callbacks.
+        **show: Attempt to render widget.
+        **pos: Places the item relative to window coordinates, [0,0] is top left.
+        **filter_key: Used by filter widget.
+        **delay_search: Delays searching container for specified items until the end of the app. 
+            Possible optimization when a container has many children that are not accessed often.
+        **tracked: Scroll tracking.
+        **track_offset : 0.0f:top, 0.5f:center, 1.0f:bottom.
+        **reorderable: Allows for moveable tabs.
+
+    Returns:
+        UUID as int
+    &#34;&#34;&#34;
+
+    try:
+        widget = internal_dpg.add_tab_bar(*args, label=label, id=id, indent=indent, parent=parent, before=before, payload_type=payload_type, callback=callback,
+                                              drag_callback=drag_callback, drop_callback=drop_callback, user_data=user_data, show=show, pos=pos, 
+                                              filter_key=filter_key, delay_search=delay_search, tracked=tracked, track_offset=track_offset, 
+                                              reorderable=reorderable)
+        internal_dpg.push_container_stack(widget)
+        yield widget
+    finally:
+        internal_dpg.pop_container_stack()</code></pre>
+</details>
+</dd>
+<dt id="dearpygui.contexts.table"><code class="name flex">
+<span>def <span class="ident">table</span></span>(<span>*args, header_row: bool = True, width: int = 0, height: int = 0, inner_width: int = 0, show: bool = True, parent: int = 0, before: int = 0, resizable: bool = False, reorderable: bool = False, hideable: bool = False, sortable: bool = False, context_menu_in_body: bool = False, row_background: bool = False, borders_innerH: bool = False, borders_outerH: bool = False, borders_innerV: bool = False, borders_outerV: bool = False, policy: int = 0, no_host_extendX: bool = False, no_host_extendY: bool = False, no_keep_columns_visible: bool = False, precise_widths: bool = False, no_clip: bool = False, pad_outerX: bool = False, no_pad_outerX: bool = False, no_pad_innerX: bool = False, scrollX: bool = False, scrollY: bool = False, id: int = 0, indent=-1, callback: Callable = None, sort_multi: bool = False, sort_tristate: bool = False, pos=[], freeze_rows: int = 0, freeze_columns: int = 0, delay_search: bool = False, label: str = None)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@contextmanager
+def table(*args, header_row: bool = True, width: int = 0, height: int = 0, inner_width: int = 0, show: bool = True, parent: int = 0,
+                before: int = 0, resizable: bool = False, reorderable: bool = False, hideable: bool = False, sortable: bool = False,   
+                context_menu_in_body: bool = False, row_background: bool = False, borders_innerH: bool = False, borders_outerH: bool = False,
+                borders_innerV: bool = False, borders_outerV: bool = False, policy: int = 0, no_host_extendX: bool = False,
+                no_host_extendY: bool = False, no_keep_columns_visible: bool = False, precise_widths: bool = False, no_clip: bool = False,
+                pad_outerX: bool = False, no_pad_outerX: bool = False, no_pad_innerX: bool = False, scrollX: bool = False, scrollY: bool = False,
+        id:int=0, indent=-1, callback: Callable = None, sort_multi: bool = False, sort_tristate: bool = False, pos=[], freeze_rows:int = 0,
+        freeze_columns:int = 0, delay_search: bool = False, label:str=None):
+
+    try:
+        widget = internal_dpg.add_table(*args, header_row=header_row, width = width, height = height, inner_width = inner_width,
+                    show = show, parent = parent, before = before, resizable = resizable, reorderable = reorderable, hideable = hideable,
+                    sortable = sortable, context_menu_in_body = context_menu_in_body, row_background = row_background,
+                    borders_innerH = borders_innerH, borders_outerH = borders_outerH, borders_innerV = borders_innerV,
+                    borders_outerV = borders_outerV, policy = policy, no_host_extendX = no_host_extendX,
+                    no_host_extendY = no_host_extendY, no_keep_columns_visible = no_keep_columns_visible, precise_widths = precise_widths,
+                    no_clip = no_clip, pad_outerX = pad_outerX, no_pad_outerX = no_pad_outerX, no_pad_innerX = no_pad_innerX,
+                    scrollX = scrollX, scrollY = scrollY, id=id, indent=indent, callback=callback, sort_multi=sort_multi,
+            sort_tristate=sort_tristate, pos=pos, freeze_rows=freeze_rows, freeze_columns=freeze_columns, delay_search=delay_search, label=label)
+        internal_dpg.push_container_stack(widget)
+        yield widget
+    finally:
+        internal_dpg.pop_container_stack()</code></pre>
+</details>
+</dd>
+<dt id="dearpygui.contexts.table_row"><code class="name flex">
+<span>def <span class="ident">table_row</span></span>(<span>*args, id: int = 0, show: bool = True, parent: int = 0, before: int = 0, height: int = 0, label: str = None)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@contextmanager
+def table_row(*args, id:int=0, show: bool = True, parent: int = 0, before: int = 0, height: int = 0, label:str=None):
+    try:
+        widget = internal_dpg.add_table_row(*args, id=id, show=show, parent=parent, before=before, height=height, label=label)
+        internal_dpg.push_container_stack(widget)
+        yield widget
+
+    finally:
+        internal_dpg.pop_container_stack()</code></pre>
+</details>
+</dd>
+<dt id="dearpygui.contexts.texture_container"><code class="name flex">
+<span>def <span class="ident">texture_container</span></span>(<span>*args, show: bool = False, id: int = 0, label: str = None)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@contextmanager
+def texture_container(*args, show: bool = False, id:int=0, label:str=None):
+
+    try:
+        widget = internal_dpg.add_texture_container(*args, show=show, id=id, label=label)
+        internal_dpg.push_container_stack(widget)
+        yield widget
+    finally:
+        internal_dpg.pop_container_stack()</code></pre>
+</details>
+</dd>
+<dt id="dearpygui.contexts.theme"><code class="name flex">
+<span>def <span class="ident">theme</span></span>(<span>*args, id: int = 0, default_theme: bool = False, label: str = None)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@contextmanager
+def theme(*args, id:int=0, default_theme: bool = False, label:str=None):
+   
+   try:
+        widget = internal_dpg.add_theme(*args, id=id, default_theme=default_theme, label=label)
+        internal_dpg.push_container_stack(widget)
+        yield widget
+   finally:
+        internal_dpg.pop_container_stack()</code></pre>
+</details>
+</dd>
+<dt id="dearpygui.contexts.tooltip"><code class="name flex">
+<span>def <span class="ident">tooltip</span></span>(<span>*args, label: str = None, id: int = 0, show: bool = True) ‑> int</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Wraps add_menu_bar() and automates calling end().</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>parent</code></strong></dt>
+<dd>widget that will show the tooltip when hovered.</dd>
+<dt><strong><code>**label</code></strong></dt>
+<dd>Overrides 'id' as label.</dd>
+<dt><strong><code>**id</code></strong></dt>
+<dd>Unique id used to programmatically refer to the item. If label is unused this will be the label.</dd>
+<dt><strong><code>**show</code></strong></dt>
+<dd>Attempt to render widget.</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<p>UUID as int</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@contextmanager
+def tooltip(*args, label: str=None, id: int=0, show: bool = True, ) -&gt; int:
+    &#34;&#34;&#34;Wraps add_menu_bar() and automates calling end().
+
+    Args:
+        parent: widget that will show the tooltip when hovered.
+        **label: Overrides &#39;id&#39; as label.
+        **id: Unique id used to programmatically refer to the item. If label is unused this will be the label.
+        **show: Attempt to render widget.
+
+    Returns:
+        UUID as int
+    &#34;&#34;&#34;
+
+    try:
+        widget = internal_dpg.add_tooltip(*args, label=label, id=id, show=show)
+        internal_dpg.push_container_stack(widget)
+        yield widget
+    finally:
+        internal_dpg.pop_container_stack()</code></pre>
+</details>
+</dd>
+<dt id="dearpygui.contexts.tree_node"><code class="name flex">
+<span>def <span class="ident">tree_node</span></span>(<span>*args, label: str = None, id: int = 0, indent: int = -1, parent: int = 0, before: int = 0, payload_type: str = '$$DPG_PAYLOAD', drag_callback: Callable = None, drop_callback: Callable = None, show: bool = True, pos: List[int] = [], filter_key: str = '', delay_search: bool = False, tracked: bool = False, track_offset: float = 0.5, default_open: bool = False, open_on_double_click: bool = False, open_on_arrow: bool = False, leaf: bool = False, bullet: bool = False, selectable: bool = False) ‑> int</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Wraps add_tree_node() and automates calling end().</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>**label</code></strong></dt>
+<dd>Overrides 'id' as label.</dd>
+<dt><strong><code>**id</code></strong></dt>
+<dd>Unique id used to programmatically refer to the item. If label is unused this will be the label.</dd>
+<dt><strong><code>**indent</code></strong></dt>
+<dd>Offsets the widget to the right the specified number multiplied by the indent style.</dd>
+<dt><strong><code>**parent</code></strong></dt>
+<dd>Parent this item will be added to. (runtime adding)</dd>
+<dt><strong><code>**before</code></strong></dt>
+<dd>Parent this item will be added to. (runtime adding)</dd>
+<dt><strong><code>**payload_type</code></strong></dt>
+<dd>Sender string type must be the same as the target for the target to run the payload_callback.</dd>
+<dt><strong><code>**drag_callback</code></strong></dt>
+<dd>Registers a drag callback for drag and drop.</dd>
+<dt><strong><code>**drop_callback</code></strong></dt>
+<dd>Registers a drop callback for drag and drop.</dd>
+<dt><strong><code>**show</code></strong></dt>
+<dd>Attempt to render widget.</dd>
+<dt><strong><code>**pos</code></strong></dt>
+<dd>Places the item relative to window coordinates, [0,0] is top left.</dd>
+<dt><strong><code>**filter_key</code></strong></dt>
+<dd>Used by filter widget.</dd>
+<dt><strong><code>**delay_search</code></strong></dt>
+<dd>Delays searching container for specified items until the end of the app.
+Possible optimization when a container has many children that are not accessed often.</dd>
+<dt><strong><code>**tracked</code></strong></dt>
+<dd>Scroll tracking.</dd>
+<dt>**track_offset : 0.0f:top, 0.5f:center, 1.0f:bottom.</dt>
+<dt><strong><code>**default_open</code></strong></dt>
+<dd>Decides if item is open by default.</dd>
+<dt><strong><code>**open_on_double_click</code></strong></dt>
+<dd>Need double-click to open node.</dd>
+<dt><strong><code>**open_on_arrow</code></strong></dt>
+<dd>Only open when clicking on the arrow part.</dd>
+<dt><strong><code>**leaf</code></strong></dt>
+<dd>No collapsing, no arrow (use as a convenience for leaf nodes).</dd>
+<dt><strong><code>**bullet</code></strong></dt>
+<dd>Display a bullet instead of arrow.</dd>
+<dt><strong><code>**selectable</code></strong></dt>
+<dd>Display a selectable instead of arrow.</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<p>UUID as int</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@contextmanager
+def tree_node(*args, label: str = None, id: int=0, indent: int = -1, parent: int = 0, before: int = 0, payload_type: str = &#39;$$DPG_PAYLOAD&#39;, 
+              drag_callback: Callable = None, drop_callback: Callable = None, show: bool = True, pos: List[int] = [], filter_key: str = &#39;&#39;, 
+              delay_search: bool = False, tracked: bool = False, track_offset: float = 0.5, 
+              default_open: bool = False, open_on_double_click: bool = False, open_on_arrow: bool = False, leaf: bool = False, 
+              bullet: bool = False, selectable: bool = False) -&gt; int:
+    &#34;&#34;&#34;Wraps add_tree_node() and automates calling end().
+
+    Args:
+        **label: Overrides &#39;id&#39; as label.
+        **id: Unique id used to programmatically refer to the item. If label is unused this will be the label.
+        **indent: Offsets the widget to the right the specified number multiplied by the indent style.
+        **parent: Parent this item will be added to. (runtime adding)
+        **before: Parent this item will be added to. (runtime adding)
+        **payload_type: Sender string type must be the same as the target for the target to run the payload_callback.
+        **drag_callback: Registers a drag callback for drag and drop.
+        **drop_callback: Registers a drop callback for drag and drop.
+        **show: Attempt to render widget.
+        **pos: Places the item relative to window coordinates, [0,0] is top left.
+        **filter_key: Used by filter widget.
+        **delay_search: Delays searching container for specified items until the end of the app. 
+            Possible optimization when a container has many children that are not accessed often.
+        **tracked: Scroll tracking.
+        **track_offset : 0.0f:top, 0.5f:center, 1.0f:bottom.
+        **default_open: Decides if item is open by default.
+        **open_on_double_click: Need double-click to open node.
+        **open_on_arrow: Only open when clicking on the arrow part.
+        **leaf: No collapsing, no arrow (use as a convenience for leaf nodes).
+        **bullet: Display a bullet instead of arrow.
+        **selectable: Display a selectable instead of arrow.
+
+    Returns:
+        UUID as int
+    &#34;&#34;&#34;
+
+    try:
+        widget = internal_dpg.add_tree_node(*args, label=label, id=id, indent=indent, parent=parent, before=before, payload_type=payload_type,
+                                            drag_callback=drag_callback, drop_callback=drop_callback, show=show, pos=pos, filter_key=filter_key, 
+                                            delay_search=delay_search, tracked=tracked, track_offset=track_offset, 
+                                            default_open=default_open, open_on_double_click=open_on_double_click, 
+                                            open_on_arrow=open_on_arrow, leaf=leaf, bullet=bullet, selectable=selectable)
+        internal_dpg.push_container_stack(widget)
+        yield widget
+    finally:
+        internal_dpg.pop_container_stack()</code></pre>
+</details>
+</dd>
+<dt id="dearpygui.contexts.viewport_drawlist"><code class="name flex">
+<span>def <span class="ident">viewport_drawlist</span></span>(<span>*args, id: int = 0, front: bool = True, show: bool = True, delay_search: bool = False, label: str = None)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@contextmanager
+def viewport_drawlist(*args, id:int=0, front: bool = True, show: bool = True, delay_search: bool = False, label:str=None):
+    try:
+        widget = internal_dpg.add_viewport_drawlist(*args, id=id, show=show, front=fronts, delay_search=delay_search, label=label)
+        internal_dpg.push_container_stack(widget)
+        yield widget
+
+    finally:
+        internal_dpg.pop_container_stack()</code></pre>
+</details>
+</dd>
+<dt id="dearpygui.contexts.window"><code class="name flex">
+<span>def <span class="ident">window</span></span>(<span>*args, label: str = None, id: int = 0, width: int = 200, height: int = 200, indent: int = -1, user_data: Any = None, show: bool = True, delay_search: str = False, min_size: List[int] = [32, 32], max_size: List[int] = [30000, 30000], menubar: bool = False, collapsed: bool = False, autosize: bool = False, no_resize: bool = False, no_title_bar: bool = False, no_move: bool = False, no_scrollbar: bool = False, no_collapse: bool = False, horizontal_scrollbar: bool = False, no_focus_on_appearing: bool = False, no_bring_to_front_on_focus: bool = False, no_close: bool = False, no_background: bool = False, modal: bool = False, popup: bool = False, on_close: Callable = None) ‑> int</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Wraps add_window() and automates calling end().</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>**label</code></strong></dt>
+<dd>Overrides 'id' as label.</dd>
+<dt><strong><code>**id</code></strong></dt>
+<dd>Unique id used to programmatically refer to the item. If label is unused this will be the label.</dd>
+<dt><strong><code>**width</code></strong></dt>
+<dd>Width of the item.</dd>
+<dt><strong><code>**height</code></strong></dt>
+<dd>Height of the item.</dd>
+<dt><strong><code>**user_data</code></strong></dt>
+<dd>User data for callbacks.</dd>
+<dt><strong><code>**show</code></strong></dt>
+<dd>Attempt to render widget.</dd>
+<dt><strong><code>**delay_search</code></strong></dt>
+<dd>Delays searching container for specified items until the end of the app.
+Possible optimization when a container has many children that are not accessed often.</dd>
+<dt><strong><code>**min_size</code></strong></dt>
+<dd>Minimum window size.</dd>
+<dt><strong><code>**max_size</code></strong></dt>
+<dd>Maximum window size.</dd>
+<dt><strong><code>**menubar</code></strong></dt>
+<dd>Decides if the menubar is shown or not.</dd>
+<dt><strong><code>**collapsed</code></strong></dt>
+<dd>Collapse the window.</dd>
+<dt><strong><code>**autosize</code></strong></dt>
+<dd>Autosized the window to fit it's items.</dd>
+<dt><strong><code>**no_resize</code></strong></dt>
+<dd>Allows for the window size to be changed or fixed.</dd>
+<dt><strong><code>**no_title_bar</code></strong></dt>
+<dd>Title name for the title bar of the window.</dd>
+<dt><strong><code>**no_move</code></strong></dt>
+<dd>Allows for the window's position to be changed or fixed.</dd>
+<dt><strong><code>**no_scrollbar</code></strong></dt>
+<dd>Disable scrollbars. (window can still scroll with mouse or programmatically)</dd>
+<dt><strong><code>**no_collapse</code></strong></dt>
+<dd>Disable user collapsing window by double-clicking on it.</dd>
+<dt><strong><code>**horizontal_scrollbar</code></strong></dt>
+<dd>Allow horizontal scrollbar to appear. (off by default)</dd>
+<dt><strong><code>**no_focus_on_appearing</code></strong></dt>
+<dd>Disable taking focus when transitioning from hidden to visible state.</dd>
+<dt><strong><code>**no_bring_to_front_on_focus</code></strong></dt>
+<dd>Disable bringing window to front when taking focus. (e.g. clicking on it or
+programmatically giving it focus)</dd>
+<dt><strong><code>**no_close</code></strong></dt>
+<dd>Disable user closing the window by removing the close button.</dd>
+<dt><strong><code>**no_background</code></strong></dt>
+<dd>Sets Background and border alpha to transparent.</dd>
+<dt><strong><code>**modal</code></strong></dt>
+<dd>Fills area behind window according to the theme and disables user ability to interact with
+anything except the window.</dd>
+<dt><strong><code>**popup</code></strong></dt>
+<dd>Fills area behind window according to the theme, removes title bar, collapse and close. Window can
+be closed by selecting area in the background behind the window.</dd>
+<dt><strong><code>**on_close</code></strong></dt>
+<dd>Callback ran when window is closed.</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<p>UUID as int</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@contextmanager
+def window(*args, label: str = None, id: int=0, width: int = 200, height: int = 200, indent: int = -1, 
+           user_data: Any = None, show: bool = True, delay_search: str = False, min_size: List[int] = [32, 32], 
+           max_size: List[int] = [30000, 30000], menubar: bool = False, collapsed: bool = False, 
+           autosize: bool = False, no_resize: bool = False, no_title_bar: bool = False, no_move: bool = False, 
+           no_scrollbar: bool = False, no_collapse: bool = False, horizontal_scrollbar: bool = False, 
+           no_focus_on_appearing: bool = False, no_bring_to_front_on_focus: bool = False, no_close: bool = False, 
+           no_background: bool = False, modal: bool = False, popup: bool = False, on_close: Callable = None) -&gt; int:
+    &#34;&#34;&#34;Wraps add_window() and automates calling end().
+
+    Args:
+        **label: Overrides &#39;id&#39; as label.
+        **id: Unique id used to programmatically refer to the item. If label is unused this will be the label.
+        **width: Width of the item.
+        **height: Height of the item.
+        **user_data: User data for callbacks.
+        **show: Attempt to render widget.
+        **delay_search: Delays searching container for specified items until the end of the app. 
+            Possible optimization when a container has many children that are not accessed often.
+        **min_size: Minimum window size.
+        **max_size: Maximum window size.
+        **menubar: Decides if the menubar is shown or not.
+        **collapsed: Collapse the window.
+        **autosize: Autosized the window to fit it&#39;s items.
+        **no_resize: Allows for the window size to be changed or fixed.
+        **no_title_bar: Title name for the title bar of the window.
+        **no_move: Allows for the window&#39;s position to be changed or fixed.
+        **no_scrollbar: Disable scrollbars. (window can still scroll with mouse or programmatically)
+        **no_collapse: Disable user collapsing window by double-clicking on it.
+        **horizontal_scrollbar: Allow horizontal scrollbar to appear. (off by default)
+        **no_focus_on_appearing: Disable taking focus when transitioning from hidden to visible state.
+        **no_bring_to_front_on_focus: Disable bringing window to front when taking focus. (e.g. clicking on it or
+            programmatically giving it focus)
+        **no_close: Disable user closing the window by removing the close button.
+        **no_background: Sets Background and border alpha to transparent.
+        **modal: Fills area behind window according to the theme and disables user ability to interact with 
+            anything except the window.
+        **popup: Fills area behind window according to the theme, removes title bar, collapse and close. Window can 
+            be closed by selecting area in the background behind the window.
+        **on_close: Callback ran when window is closed.
+
+    Returns:
+        UUID as int
+    &#34;&#34;&#34;
+    try:
+
+        widget = internal_dpg.add_window(*args, width=width, height=height, autosize=autosize,
+                                        no_resize=no_resize, no_title_bar=no_title_bar, no_move=no_move,
+                                        no_scrollbar=no_scrollbar, no_collapse=no_collapse,
+                                        horizontal_scrollbar=horizontal_scrollbar,
+                                        no_focus_on_appearing=no_focus_on_appearing,
+                                        no_bring_to_front_on_focus=no_bring_to_front_on_focus,
+                                        menubar=menubar, no_close=no_close, user_data=user_data,
+                                        no_background=no_background, label=label, show=show, 
+                                        collapsed=collapsed, on_close=on_close,
+                                        min_size=min_size, max_size=max_size, id=id, modal=modal,
+                                        popup=popup, delay_search=delay_search)
+        internal_dpg.push_container_stack(widget)
+        yield widget
+
+    finally:
+        internal_dpg.pop_container_stack()</code></pre>
+</details>
+</dd>
+</dl>
+</section>
+<section>
+</section>
+</article>
+<nav id="sidebar">
+<h1>Index</h1>
+<div class="toc">
+<ul></ul>
+</div>
+<ul id="index">
+<li><h3>Super-module</h3>
+<ul>
+<li><code><a title="dearpygui" href="index.html">dearpygui</a></code></li>
+</ul>
+</li>
+<li><h3><a href="#header-functions">Functions</a></h3>
+<ul class="two-column">
+<li><code><a title="dearpygui.contexts.child" href="#dearpygui.contexts.child">child</a></code></li>
+<li><code><a title="dearpygui.contexts.clipper" href="#dearpygui.contexts.clipper">clipper</a></code></li>
+<li><code><a title="dearpygui.contexts.collapsing_header" href="#dearpygui.contexts.collapsing_header">collapsing_header</a></code></li>
+<li><code><a title="dearpygui.contexts.drag_payload" href="#dearpygui.contexts.drag_payload">drag_payload</a></code></li>
+<li><code><a title="dearpygui.contexts.draw_layer" href="#dearpygui.contexts.draw_layer">draw_layer</a></code></li>
+<li><code><a title="dearpygui.contexts.drawlist" href="#dearpygui.contexts.drawlist">drawlist</a></code></li>
+<li><code><a title="dearpygui.contexts.file_dialog" href="#dearpygui.contexts.file_dialog">file_dialog</a></code></li>
+<li><code><a title="dearpygui.contexts.filter_set" href="#dearpygui.contexts.filter_set">filter_set</a></code></li>
+<li><code><a title="dearpygui.contexts.font_registry" href="#dearpygui.contexts.font_registry">font_registry</a></code></li>
+<li><code><a title="dearpygui.contexts.group" href="#dearpygui.contexts.group">group</a></code></li>
+<li><code><a title="dearpygui.contexts.handler_registry" href="#dearpygui.contexts.handler_registry">handler_registry</a></code></li>
+<li><code><a title="dearpygui.contexts.menu" href="#dearpygui.contexts.menu">menu</a></code></li>
+<li><code><a title="dearpygui.contexts.menu_bar" href="#dearpygui.contexts.menu_bar">menu_bar</a></code></li>
+<li><code><a title="dearpygui.contexts.mutex" href="#dearpygui.contexts.mutex">mutex</a></code></li>
+<li><code><a title="dearpygui.contexts.node" href="#dearpygui.contexts.node">node</a></code></li>
+<li><code><a title="dearpygui.contexts.node_attribute" href="#dearpygui.contexts.node_attribute">node_attribute</a></code></li>
+<li><code><a title="dearpygui.contexts.node_editor" href="#dearpygui.contexts.node_editor">node_editor</a></code></li>
+<li><code><a title="dearpygui.contexts.plot" href="#dearpygui.contexts.plot">plot</a></code></li>
+<li><code><a title="dearpygui.contexts.popup" href="#dearpygui.contexts.popup">popup</a></code></li>
+<li><code><a title="dearpygui.contexts.staging_container" href="#dearpygui.contexts.staging_container">staging_container</a></code></li>
+<li><code><a title="dearpygui.contexts.tab" href="#dearpygui.contexts.tab">tab</a></code></li>
+<li><code><a title="dearpygui.contexts.tab_bar" href="#dearpygui.contexts.tab_bar">tab_bar</a></code></li>
+<li><code><a title="dearpygui.contexts.table" href="#dearpygui.contexts.table">table</a></code></li>
+<li><code><a title="dearpygui.contexts.table_row" href="#dearpygui.contexts.table_row">table_row</a></code></li>
+<li><code><a title="dearpygui.contexts.texture_container" href="#dearpygui.contexts.texture_container">texture_container</a></code></li>
+<li><code><a title="dearpygui.contexts.theme" href="#dearpygui.contexts.theme">theme</a></code></li>
+<li><code><a title="dearpygui.contexts.tooltip" href="#dearpygui.contexts.tooltip">tooltip</a></code></li>
+<li><code><a title="dearpygui.contexts.tree_node" href="#dearpygui.contexts.tree_node">tree_node</a></code></li>
+<li><code><a title="dearpygui.contexts.viewport_drawlist" href="#dearpygui.contexts.viewport_drawlist">viewport_drawlist</a></code></li>
+<li><code><a title="dearpygui.contexts.window" href="#dearpygui.contexts.window">window</a></code></li>
+</ul>
+</li>
+</ul>
+</nav>
+</main>
+<footer id="footer">
+<p>Generated by <a href="https://pdoc3.github.io/pdoc"><cite>pdoc</cite> 0.9.2</a>.</p>
+</footer>
+</body>
+</html>

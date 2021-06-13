@@ -53,20 +53,17 @@
 <hr>
 <ul>
 <li>label : str = None
-Overrides 'name' as label</li>
-<li>
-<p>id : int = &hellip;</p>
-</li>
-<li>
-<p>parent : int = 0
-Parent to add this item to. (runtime adding)</p>
-</li>
+Overrides 'name' as label.</li>
+<li>id : int = &hellip;
+Unique id used to programmatically refer to the item.If label is unused this will be the label.</li>
+<li>parent : int = 0
+Parent to add this item to. (runtime adding)</li>
 <li>before : int = 0
 This item will be displayed before the specified item in the parent.</li>
 <li>source : int = 0
-Overrides 'name' as value storage key</li>
+Overrides 'id' as value storage key.</li>
 <li>show : bool = True
-Attempt to render</li>
+Attempt to render widget.</li>
 <li>
 <p>xbins : int = -1</p>
 </li>
@@ -106,43 +103,37 @@ Attempt to render</li>
 <hr>
 <ul>
 <li>label : str = None
-Overrides 'name' as label</li>
-<li>
-<p>id : int = &hellip;</p>
-</li>
-<li>
-<p>width : int = 0</p>
-</li>
-<li>
-<p>height : int = 0</p>
-</li>
-<li>
-<p>indent : int = -1</p>
-</li>
-<li>
-<p>parent : int = 0
-Parent to add this item to. (runtime adding)</p>
-</li>
+Overrides 'name' as label.</li>
+<li>id : int = &hellip;
+Unique id used to programmatically refer to the item.If label is unused this will be the label.</li>
+<li>width : int = 0
+Width of the item.</li>
+<li>height : int = 0
+Height of the item.</li>
+<li>indent : int = -1
+Offsets the widget to the right the specified number multiplied by the indent style.</li>
+<li>parent : int = 0
+Parent to add this item to. (runtime adding)</li>
 <li>before : int = 0
 This item will be displayed before the specified item in the parent.</li>
 <li>source : int = 0
-Overrides 'name' as value storage key</li>
+Overrides 'id' as value storage key.</li>
 <li>payload_type : str = '$$DPG_PAYLOAD'
-Overrides 'name' as value storage key</li>
+Sender string type must be the same as the target for the target to run the payload_callback.</li>
 <li>callback : Callable = None
-Registers a callback</li>
+Registers a callback.</li>
 <li>drag_callback : Callable = None
-Registers a drag callback for drag and drop</li>
+Registers a drag callback for drag and drop.</li>
 <li>drop_callback : Callable = None
-Registers a drag callback for drag and drop</li>
+Registers a drop callback for drag and drop.</li>
 <li>user_data : Any = None
-User data for callbacks</li>
+User data for callbacks.</li>
 <li>show : bool = True
-Attempt to render</li>
+Attempt to render widget.</li>
 <li>pos : List[int] = []
 Places the item relative to window coordinates, [0,0] is top left.</li>
 <li>filter_key : str = ''
-Used by filter widget</li>
+Used by filter widget.</li>
 <li>tracked : bool = False
 Scroll tracking</li>
 <li>track_offset : float = 0.5
@@ -188,16 +179,13 @@ Scroll tracking</li>
 <hr>
 <ul>
 <li>label : str = None
-Overrides 'name' as label</li>
-<li>
-<p>id : int = &hellip;</p>
-</li>
-<li>
-<p>callback : Callable = None
-Registers a callback</p>
-</li>
+Overrides 'name' as label.</li>
+<li>id : int = &hellip;
+Unique id used to programmatically refer to the item.If label is unused this will be the label.</li>
+<li>callback : Callable = None
+Registers a callback.</li>
 <li>user_data : Any = None
-User data for callbacks</li>
+User data for callbacks.</li>
 </ul></div>
 </dd>
 <dt id="dearpygui.core.add_active_handler"><code class="name flex">
@@ -215,16 +203,13 @@ User data for callbacks</li>
 <hr>
 <ul>
 <li>label : str = None
-Overrides 'name' as label</li>
-<li>
-<p>id : int = &hellip;</p>
-</li>
-<li>
-<p>callback : Callable = None
-Registers a callback</p>
-</li>
+Overrides 'name' as label.</li>
+<li>id : int = &hellip;
+Unique id used to programmatically refer to the item.If label is unused this will be the label.</li>
+<li>callback : Callable = None
+Registers a callback.</li>
 <li>user_data : Any = None
-User data for callbacks</li>
+User data for callbacks.</li>
 </ul></div>
 </dd>
 <dt id="dearpygui.core.add_area_series"><code class="name flex">
@@ -247,20 +232,17 @@ User data for callbacks</li>
 <hr>
 <ul>
 <li>label : str = None
-Overrides 'name' as label</li>
-<li>
-<p>id : int = &hellip;</p>
-</li>
-<li>
-<p>parent : int = 0
-Parent to add this item to. (runtime adding)</p>
-</li>
+Overrides 'name' as label.</li>
+<li>id : int = &hellip;
+Unique id used to programmatically refer to the item.If label is unused this will be the label.</li>
+<li>parent : int = 0
+Parent to add this item to. (runtime adding)</li>
 <li>before : int = 0
 This item will be displayed before the specified item in the parent.</li>
 <li>source : int = 0
-Overrides 'name' as value storage key</li>
+Overrides 'id' as value storage key.</li>
 <li>show : bool = True
-Attempt to render</li>
+Attempt to render widget.</li>
 <li>
 <p>fill : List[int] = (0, 0, 0, -255)</p>
 </li>
@@ -289,20 +271,17 @@ Attempt to render</li>
 <hr>
 <ul>
 <li>label : str = None
-Overrides 'name' as label</li>
-<li>
-<p>id : int = &hellip;</p>
-</li>
-<li>
-<p>parent : int = 0
-Parent to add this item to. (runtime adding)</p>
-</li>
+Overrides 'name' as label.</li>
+<li>id : int = &hellip;
+Unique id used to programmatically refer to the item.If label is unused this will be the label.</li>
+<li>parent : int = 0
+Parent to add this item to. (runtime adding)</li>
 <li>before : int = 0
 This item will be displayed before the specified item in the parent.</li>
 <li>source : int = 0
-Overrides 'name' as value storage key</li>
+Overrides 'id' as value storage key.</li>
 <li>show : bool = True
-Attempt to render</li>
+Attempt to render widget.</li>
 <li>
 <p>weight : float = 1.0</p>
 </li>
@@ -324,46 +303,37 @@ Attempt to render</li>
 <hr>
 <ul>
 <li>label : str = None
-Overrides 'name' as label</li>
-<li>
-<p>id : int = &hellip;</p>
-</li>
-<li>
-<p>width : int = 0</p>
-</li>
-<li>
-<p>height : int = 0</p>
-</li>
-<li>
-<p>indent : int = -1</p>
-</li>
-<li>
-<p>parent : int = 0
-Parent to add this item to. (runtime adding)</p>
-</li>
+Overrides 'name' as label.</li>
+<li>id : int = &hellip;
+Unique id used to programmatically refer to the item.If label is unused this will be the label.</li>
+<li>width : int = 0
+Width of the item.</li>
+<li>height : int = 0
+Height of the item.</li>
+<li>indent : int = -1
+Offsets the widget to the right the specified number multiplied by the indent style.</li>
+<li>parent : int = 0
+Parent to add this item to. (runtime adding)</li>
 <li>before : int = 0
 This item will be displayed before the specified item in the parent.</li>
 <li>payload_type : str = '$$DPG_PAYLOAD'
-Overrides 'name' as value storage key</li>
+Sender string type must be the same as the target for the target to run the payload_callback.</li>
 <li>callback : Callable = None
-Registers a callback</li>
+Registers a callback.</li>
 <li>drag_callback : Callable = None
-Registers a drag callback for drag and drop</li>
+Registers a drag callback for drag and drop.</li>
 <li>drop_callback : Callable = None
-Registers a drag callback for drag and drop</li>
+Registers a drop callback for drag and drop.</li>
 <li>user_data : Any = None
-User data for callbacks</li>
+User data for callbacks.</li>
 <li>show : bool = True
-Attempt to render</li>
-<li>
-<p>enabled : bool = True</p>
-</li>
-<li>
-<p>pos : List[int] = []
-Places the item relative to window coordinates, [0,0] is top left.</p>
-</li>
+Attempt to render widget.</li>
+<li>enabled : bool = True
+Turns off functionality of widget and applies the disabled theme.</li>
+<li>pos : List[int] = []
+Places the item relative to window coordinates, [0,0] is top left.</li>
 <li>filter_key : str = ''
-Used by filter widget</li>
+Used by filter widget.</li>
 <li>tracked : bool = False
 Scroll tracking</li>
 <li>track_offset : float = 0.5
@@ -405,20 +375,17 @@ A cardinal direction for arrow.</li>
 <hr>
 <ul>
 <li>label : str = None
-Overrides 'name' as label</li>
-<li>
-<p>id : int = &hellip;</p>
-</li>
-<li>
-<p>parent : int = 0
-Parent to add this item to. (runtime adding)</p>
-</li>
+Overrides 'name' as label.</li>
+<li>id : int = &hellip;
+Unique id used to programmatically refer to the item.If label is unused this will be the label.</li>
+<li>parent : int = 0
+Parent to add this item to. (runtime adding)</li>
 <li>before : int = 0
 This item will be displayed before the specified item in the parent.</li>
 <li>source : int = 0
-Overrides 'name' as value storage key</li>
+Overrides 'id' as value storage key.</li>
 <li>show : bool = True
-Attempt to render</li>
+Attempt to render widget.</li>
 <li>
 <p>bull_color : List[int] = (0, 255, 113, 255)</p>
 </li>
@@ -446,42 +413,35 @@ Attempt to render</li>
 <hr>
 <ul>
 <li>label : str = None
-Overrides 'name' as label</li>
-<li>
-<p>id : int = &hellip;</p>
-</li>
-<li>
-<p>indent : int = -1</p>
-</li>
-<li>
-<p>parent : int = 0
-Parent to add this item to. (runtime adding)</p>
-</li>
+Overrides 'name' as label.</li>
+<li>id : int = &hellip;
+Unique id used to programmatically refer to the item.If label is unused this will be the label.</li>
+<li>indent : int = -1
+Offsets the widget to the right the specified number multiplied by the indent style.</li>
+<li>parent : int = 0
+Parent to add this item to. (runtime adding)</li>
 <li>before : int = 0
 This item will be displayed before the specified item in the parent.</li>
 <li>source : int = 0
-Overrides 'name' as value storage key</li>
+Overrides 'id' as value storage key.</li>
 <li>payload_type : str = '$$DPG_PAYLOAD'
-Overrides 'name' as value storage key</li>
+Sender string type must be the same as the target for the target to run the payload_callback.</li>
 <li>callback : Callable = None
-Registers a callback</li>
+Registers a callback.</li>
 <li>drag_callback : Callable = None
-Registers a drag callback for drag and drop</li>
+Registers a drag callback for drag and drop.</li>
 <li>drop_callback : Callable = None
-Registers a drag callback for drag and drop</li>
+Registers a drop callback for drag and drop.</li>
 <li>user_data : Any = None
-User data for callbacks</li>
+User data for callbacks.</li>
 <li>show : bool = True
-Attempt to render</li>
-<li>
-<p>enabled : bool = True</p>
-</li>
-<li>
-<p>pos : List[int] = []
-Places the item relative to window coordinates, [0,0] is top left.</p>
-</li>
+Attempt to render widget.</li>
+<li>enabled : bool = True
+Turns off functionality of widget and applies the disabled theme.</li>
+<li>pos : List[int] = []
+Places the item relative to window coordinates, [0,0] is top left.</li>
 <li>filter_key : str = ''
-Used by filter widget</li>
+Used by filter widget.</li>
 <li>tracked : bool = False
 Scroll tracking</li>
 <li>track_offset : float = 0.5
@@ -499,57 +459,49 @@ Scroll tracking</li>
 <hr>
 <ul>
 <li>label : str = None
-Overrides 'name' as label</li>
-<li>
-<p>id : int = &hellip;</p>
-</li>
-<li>
-<p>width : int = 0</p>
-</li>
-<li>
-<p>height : int = 0</p>
-</li>
-<li>
-<p>indent : int = -1</p>
-</li>
-<li>
-<p>parent : int = 0
-Parent to add this item to. (runtime adding)</p>
-</li>
+Overrides 'name' as label.</li>
+<li>id : int = &hellip;
+Unique id used to programmatically refer to the item.If label is unused this will be the label.</li>
+<li>width : int = 0
+Width of the item.</li>
+<li>height : int = 0
+Height of the item.</li>
+<li>indent : int = -1
+Offsets the widget to the right the specified number multiplied by the indent style.</li>
+<li>parent : int = 0
+Parent to add this item to. (runtime adding)</li>
 <li>before : int = 0
 This item will be displayed before the specified item in the parent.</li>
 <li>payload_type : str = '$$DPG_PAYLOAD'
-Overrides 'name' as value storage key</li>
+Sender string type must be the same as the target for the target to run the payload_callback.</li>
 <li>drag_callback : Callable = None
-Registers a drag callback for drag and drop</li>
+Registers a drag callback for drag and drop.</li>
 <li>drop_callback : Callable = None
-Registers a drag callback for drag and drop</li>
+Registers a drop callback for drag and drop.</li>
 <li>show : bool = True
-Attempt to render</li>
+Attempt to render widget.</li>
 <li>pos : List[int] = []
 Places the item relative to window coordinates, [0,0] is top left.</li>
 <li>filter_key : str = ''
-Used by filter widget</li>
+Used by filter widget.</li>
 <li>delay_search : str = False
-Used by filter widget</li>
+Delays searching container for specified items until the end of the app. Possible optimization when a container has many children that are not accessed often.</li>
 <li>tracked : bool = False
 Scroll tracking</li>
 <li>track_offset : float = 0.5
 0.0f:top, 0.5f:center, 1.0f:bottom</li>
-<li>
-<p>border : bool = True</p>
-</li>
-<li>
-<p>autosize_x : bool = False
-Autosize the window to fit it's items in the x.</p>
-</li>
+<li>border : bool = True
+Shows/Hides the border around the sides.</li>
+<li>autosize_x : bool = False
+Autosize the window to fit it's items in the x.</li>
 <li>autosize_y : bool = False
 Autosize the window to fit it's items in the y.</li>
 <li>no_scrollbar : bool = False
 Disable scrollbars (window can still scroll with mouse or programmatically).</li>
 <li>horizontal_scrollbar : bool = False
 Allow horizontal scrollbar to appear (off by default).</li>
-<li>menubar : bool = False</li>
+<li>menubar : bool = False
+Shows/Hides the menubar at the top.</li>
 </ul></div>
 </dd>
 <dt id="dearpygui.core.add_clicked_handler"><code class="name flex">
@@ -561,27 +513,25 @@ Allow horizontal scrollbar to appear (off by default).</li>
 <p>Required Arguments</p>
 <hr>
 <ul>
-<li>
-<p>parent : int</p>
-</li>
-<li>
-<p>button : int</p>
-</li>
+<li>parent : int</li>
+</ul>
+<p>Optional Arguments</p>
+<hr>
+<ul>
+<li>button : int = -1
+Submits callback for all mouse buttons</li>
 </ul>
 <p>Keyword Arguments</p>
 <hr>
 <ul>
 <li>label : str = None
-Overrides 'name' as label</li>
-<li>
-<p>id : int = &hellip;</p>
-</li>
-<li>
-<p>callback : Callable = None
-Registers a callback</p>
-</li>
+Overrides 'name' as label.</li>
+<li>id : int = &hellip;
+Unique id used to programmatically refer to the item.If label is unused this will be the label.</li>
+<li>callback : Callable = None
+Registers a callback.</li>
 <li>user_data : Any = None
-User data for callbacks</li>
+User data for callbacks.</li>
 </ul></div>
 </dd>
 <dt id="dearpygui.core.add_clipper"><code class="name flex">
@@ -594,26 +544,21 @@ User data for callbacks</li>
 <hr>
 <ul>
 <li>label : str = None
-Overrides 'name' as label</li>
-<li>
-<p>id : int = &hellip;</p>
-</li>
-<li>
-<p>width : int = 0</p>
-</li>
-<li>
-<p>indent : int = -1</p>
-</li>
-<li>
-<p>parent : int = 0
-Parent to add this item to. (runtime adding)</p>
-</li>
+Overrides 'name' as label.</li>
+<li>id : int = &hellip;
+Unique id used to programmatically refer to the item.If label is unused this will be the label.</li>
+<li>width : int = 0
+Width of the item.</li>
+<li>indent : int = -1
+Offsets the widget to the right the specified number multiplied by the indent style.</li>
+<li>parent : int = 0
+Parent to add this item to. (runtime adding)</li>
 <li>before : int = 0
 This item will be displayed before the specified item in the parent.</li>
 <li>show : bool = True
-Attempt to render</li>
+Attempt to render widget.</li>
 <li>delay_search : str = False
-Used by filter widget</li>
+Delays searching container for specified items until the end of the app. Possible optimization when a container has many children that are not accessed often.</li>
 </ul></div>
 </dd>
 <dt id="dearpygui.core.add_collapsing_header"><code class="name flex">
@@ -626,33 +571,29 @@ Used by filter widget</li>
 <hr>
 <ul>
 <li>label : str = None
-Overrides 'name' as label</li>
-<li>
-<p>id : int = &hellip;</p>
-</li>
-<li>
-<p>indent : int = -1</p>
-</li>
-<li>
-<p>parent : int = 0
-Parent to add this item to. (runtime adding)</p>
-</li>
+Overrides 'name' as label.</li>
+<li>id : int = &hellip;
+Unique id used to programmatically refer to the item.If label is unused this will be the label.</li>
+<li>indent : int = -1
+Offsets the widget to the right the specified number multiplied by the indent style.</li>
+<li>parent : int = 0
+Parent to add this item to. (runtime adding)</li>
 <li>before : int = 0
 This item will be displayed before the specified item in the parent.</li>
 <li>payload_type : str = '$$DPG_PAYLOAD'
-Overrides 'name' as value storage key</li>
+Sender string type must be the same as the target for the target to run the payload_callback.</li>
 <li>drag_callback : Callable = None
-Registers a drag callback for drag and drop</li>
+Registers a drag callback for drag and drop.</li>
 <li>drop_callback : Callable = None
-Registers a drag callback for drag and drop</li>
+Registers a drop callback for drag and drop.</li>
 <li>show : bool = True
-Attempt to render</li>
+Attempt to render widget.</li>
 <li>pos : List[int] = []
 Places the item relative to window coordinates, [0,0] is top left.</li>
 <li>filter_key : str = ''
-Used by filter widget</li>
+Used by filter widget.</li>
 <li>delay_search : str = False
-Used by filter widget</li>
+Delays searching container for specified items until the end of the app. Possible optimization when a container has many children that are not accessed often.</li>
 <li>tracked : bool = False
 Scroll tracking</li>
 <li>track_offset : float = 0.5
@@ -690,46 +631,37 @@ Display a bullet instead of arrow.</li>
 <hr>
 <ul>
 <li>label : str = None
-Overrides 'name' as label</li>
-<li>
-<p>id : int = &hellip;</p>
-</li>
-<li>
-<p>width : int = 0</p>
-</li>
-<li>
-<p>height : int = 0</p>
-</li>
-<li>
-<p>indent : int = -1</p>
-</li>
-<li>
-<p>parent : int = 0
-Parent to add this item to. (runtime adding)</p>
-</li>
+Overrides 'name' as label.</li>
+<li>id : int = &hellip;
+Unique id used to programmatically refer to the item.If label is unused this will be the label.</li>
+<li>width : int = 0
+Width of the item.</li>
+<li>height : int = 0
+Height of the item.</li>
+<li>indent : int = -1
+Offsets the widget to the right the specified number multiplied by the indent style.</li>
+<li>parent : int = 0
+Parent to add this item to. (runtime adding)</li>
 <li>before : int = 0
 This item will be displayed before the specified item in the parent.</li>
 <li>payload_type : str = '$$DPG_PAYLOAD'
-Overrides 'name' as value storage key</li>
+Sender string type must be the same as the target for the target to run the payload_callback.</li>
 <li>callback : Callable = None
-Registers a callback</li>
+Registers a callback.</li>
 <li>drag_callback : Callable = None
-Registers a drag callback for drag and drop</li>
+Registers a drag callback for drag and drop.</li>
 <li>drop_callback : Callable = None
-Registers a drag callback for drag and drop</li>
+Registers a drop callback for drag and drop.</li>
 <li>user_data : Any = None
-User data for callbacks</li>
+User data for callbacks.</li>
 <li>show : bool = True
-Attempt to render</li>
-<li>
-<p>enabled : bool = True</p>
-</li>
-<li>
-<p>pos : List[int] = []
-Places the item relative to window coordinates, [0,0] is top left.</p>
-</li>
+Attempt to render widget.</li>
+<li>enabled : bool = True
+Turns off functionality of widget and applies the disabled theme.</li>
+<li>pos : List[int] = []
+Places the item relative to window coordinates, [0,0] is top left.</li>
 <li>filter_key : str = ''
-Used by filter widget</li>
+Used by filter widget.</li>
 <li>tracked : bool = False
 Scroll tracking</li>
 <li>track_offset : float = 0.5
@@ -757,48 +689,39 @@ Disable display of inline text label.</li>
 <hr>
 <ul>
 <li>label : str = None
-Overrides 'name' as label</li>
-<li>
-<p>id : int = &hellip;</p>
-</li>
-<li>
-<p>width : int = 0</p>
-</li>
-<li>
-<p>height : int = 0</p>
-</li>
-<li>
-<p>indent : int = -1</p>
-</li>
-<li>
-<p>parent : int = 0
-Parent to add this item to. (runtime adding)</p>
-</li>
+Overrides 'name' as label.</li>
+<li>id : int = &hellip;
+Unique id used to programmatically refer to the item.If label is unused this will be the label.</li>
+<li>width : int = 0
+Width of the item.</li>
+<li>height : int = 0
+Height of the item.</li>
+<li>indent : int = -1
+Offsets the widget to the right the specified number multiplied by the indent style.</li>
+<li>parent : int = 0
+Parent to add this item to. (runtime adding)</li>
 <li>before : int = 0
 This item will be displayed before the specified item in the parent.</li>
 <li>source : int = 0
-Overrides 'name' as value storage key</li>
+Overrides 'id' as value storage key.</li>
 <li>payload_type : str = '$$DPG_PAYLOAD'
-Overrides 'name' as value storage key</li>
+Sender string type must be the same as the target for the target to run the payload_callback.</li>
 <li>callback : Callable = None
-Registers a callback</li>
+Registers a callback.</li>
 <li>drag_callback : Callable = None
-Registers a drag callback for drag and drop</li>
+Registers a drag callback for drag and drop.</li>
 <li>drop_callback : Callable = None
-Registers a drag callback for drag and drop</li>
+Registers a drop callback for drag and drop.</li>
 <li>user_data : Any = None
-User data for callbacks</li>
+User data for callbacks.</li>
 <li>show : bool = True
-Attempt to render</li>
-<li>
-<p>enabled : bool = True</p>
-</li>
-<li>
-<p>pos : List[int] = []
-Places the item relative to window coordinates, [0,0] is top left.</p>
-</li>
+Attempt to render widget.</li>
+<li>enabled : bool = True
+Turns off functionality of widget and applies the disabled theme.</li>
+<li>pos : List[int] = []
+Places the item relative to window coordinates, [0,0] is top left.</li>
 <li>filter_key : str = ''
-Used by filter widget</li>
+Used by filter widget.</li>
 <li>tracked : bool = False
 Scroll tracking</li>
 <li>track_offset : float = 0.5
@@ -858,48 +781,39 @@ Displays color inputs without the alpha channel.</li>
 <hr>
 <ul>
 <li>label : str = None
-Overrides 'name' as label</li>
-<li>
-<p>id : int = &hellip;</p>
-</li>
-<li>
-<p>width : int = 0</p>
-</li>
-<li>
-<p>height : int = 0</p>
-</li>
-<li>
-<p>indent : int = -1</p>
-</li>
-<li>
-<p>parent : int = 0
-Parent to add this item to. (runtime adding)</p>
-</li>
+Overrides 'name' as label.</li>
+<li>id : int = &hellip;
+Unique id used to programmatically refer to the item.If label is unused this will be the label.</li>
+<li>width : int = 0
+Width of the item.</li>
+<li>height : int = 0
+Height of the item.</li>
+<li>indent : int = -1
+Offsets the widget to the right the specified number multiplied by the indent style.</li>
+<li>parent : int = 0
+Parent to add this item to. (runtime adding)</li>
 <li>before : int = 0
 This item will be displayed before the specified item in the parent.</li>
 <li>source : int = 0
-Overrides 'name' as value storage key</li>
+Overrides 'id' as value storage key.</li>
 <li>payload_type : str = '$$DPG_PAYLOAD'
-Overrides 'name' as value storage key</li>
+Sender string type must be the same as the target for the target to run the payload_callback.</li>
 <li>callback : Callable = None
-Registers a callback</li>
+Registers a callback.</li>
 <li>drag_callback : Callable = None
-Registers a drag callback for drag and drop</li>
+Registers a drag callback for drag and drop.</li>
 <li>drop_callback : Callable = None
-Registers a drag callback for drag and drop</li>
+Registers a drop callback for drag and drop.</li>
 <li>user_data : Any = None
-User data for callbacks</li>
+User data for callbacks.</li>
 <li>show : bool = True
-Attempt to render</li>
-<li>
-<p>enabled : bool = True</p>
-</li>
-<li>
-<p>pos : List[int] = []
-Places the item relative to window coordinates, [0,0] is top left.</p>
-</li>
+Attempt to render widget.</li>
+<li>enabled : bool = True
+Turns off functionality of widget and applies the disabled theme.</li>
+<li>pos : List[int] = []
+Places the item relative to window coordinates, [0,0] is top left.</li>
 <li>filter_key : str = ''
-Used by filter widget</li>
+Used by filter widget.</li>
 <li>tracked : bool = False
 Scroll tracking</li>
 <li>track_offset : float = 0.5
@@ -954,29 +868,23 @@ Wheel for Hue, triangle for Sat/Value.</li>
 <hr>
 <ul>
 <li>label : str = None
-Overrides 'name' as label</li>
-<li>
-<p>id : int = &hellip;</p>
-</li>
-<li>
-<p>width : int = 0</p>
-</li>
-<li>
-<p>height : int = 0</p>
-</li>
-<li>
-<p>indent : int = -1</p>
-</li>
-<li>
-<p>parent : int = 0
-Parent to add this item to. (runtime adding)</p>
-</li>
+Overrides 'name' as label.</li>
+<li>id : int = &hellip;
+Unique id used to programmatically refer to the item.If label is unused this will be the label.</li>
+<li>width : int = 0
+Width of the item.</li>
+<li>height : int = 0
+Height of the item.</li>
+<li>indent : int = -1
+Offsets the widget to the right the specified number multiplied by the indent style.</li>
+<li>parent : int = 0
+Parent to add this item to. (runtime adding)</li>
 <li>before : int = 0
 This item will be displayed before the specified item in the parent.</li>
 <li>source : int = 0
-Overrides 'name' as value storage key</li>
+Overrides 'id' as value storage key.</li>
 <li>show : bool = True
-Attempt to render</li>
+Attempt to render widget.</li>
 <li>pos : List[int] = []
 Places the item relative to window coordinates, [0,0] is top left.</li>
 <li>
@@ -1005,45 +913,37 @@ Places the item relative to window coordinates, [0,0] is top left.</li>
 <hr>
 <ul>
 <li>label : str = None
-Overrides 'name' as label</li>
-<li>
-<p>id : int = &hellip;</p>
-</li>
-<li>
-<p>width : int = 0</p>
-</li>
-<li>
-<p>indent : int = -1</p>
-</li>
-<li>
-<p>parent : int = 0
-Parent to add this item to. (runtime adding)</p>
-</li>
+Overrides 'name' as label.</li>
+<li>id : int = &hellip;
+Unique id used to programmatically refer to the item.If label is unused this will be the label.</li>
+<li>width : int = 0
+Width of the item.</li>
+<li>indent : int = -1
+Offsets the widget to the right the specified number multiplied by the indent style.</li>
+<li>parent : int = 0
+Parent to add this item to. (runtime adding)</li>
 <li>before : int = 0
 This item will be displayed before the specified item in the parent.</li>
 <li>source : int = 0
-Overrides 'name' as value storage key</li>
+Overrides 'id' as value storage key.</li>
 <li>payload_type : str = '$$DPG_PAYLOAD'
-Overrides 'name' as value storage key</li>
+Sender string type must be the same as the target for the target to run the payload_callback.</li>
 <li>callback : Callable = None
-Registers a callback</li>
+Registers a callback.</li>
 <li>drag_callback : Callable = None
-Registers a drag callback for drag and drop</li>
+Registers a drag callback for drag and drop.</li>
 <li>drop_callback : Callable = None
-Registers a drag callback for drag and drop</li>
+Registers a drop callback for drag and drop.</li>
 <li>user_data : Any = None
-User data for callbacks</li>
+User data for callbacks.</li>
 <li>show : bool = True
-Attempt to render</li>
-<li>
-<p>enabled : bool = True</p>
-</li>
-<li>
-<p>pos : List[int] = []
-Places the item relative to window coordinates, [0,0] is top left.</p>
-</li>
+Attempt to render widget.</li>
+<li>enabled : bool = True
+Turns off functionality of widget and applies the disabled theme.</li>
+<li>pos : List[int] = []
+Places the item relative to window coordinates, [0,0] is top left.</li>
 <li>filter_key : str = ''
-Used by filter widget</li>
+Used by filter widget.</li>
 <li>tracked : bool = False
 Scroll tracking</li>
 <li>track_offset : float = 0.5
@@ -1079,35 +979,31 @@ Display only the square arrow button.</li>
 <hr>
 <ul>
 <li>label : str = None
-Overrides 'name' as label</li>
-<li>
-<p>id : int = &hellip;</p>
-</li>
-<li>
-<p>indent : int = -1</p>
-</li>
-<li>
-<p>parent : int = 0
-Parent to add this item to. (runtime adding)</p>
-</li>
+Overrides 'name' as label.</li>
+<li>id : int = &hellip;
+Unique id used to programmatically refer to the item.If label is unused this will be the label.</li>
+<li>indent : int = -1
+Offsets the widget to the right the specified number multiplied by the indent style.</li>
+<li>parent : int = 0
+Parent to add this item to. (runtime adding)</li>
 <li>before : int = 0
 This item will be displayed before the specified item in the parent.</li>
 <li>payload_type : str = '$$DPG_PAYLOAD'
-Overrides 'name' as value storage key</li>
+Sender string type must be the same as the target for the target to run the payload_callback.</li>
 <li>callback : Callable = None
-Registers a callback</li>
+Registers a callback.</li>
 <li>drag_callback : Callable = None
-Registers a drag callback for drag and drop</li>
+Registers a drag callback for drag and drop.</li>
 <li>drop_callback : Callable = None
-Registers a drag callback for drag and drop</li>
+Registers a drop callback for drag and drop.</li>
 <li>user_data : Any = None
-User data for callbacks</li>
+User data for callbacks.</li>
 <li>show : bool = True
-Attempt to render</li>
+Attempt to render widget.</li>
 <li>pos : List[int] = []
 Places the item relative to window coordinates, [0,0] is top left.</li>
 <li>filter_key : str = ''
-Used by filter widget</li>
+Used by filter widget.</li>
 <li>tracked : bool = False
 Scroll tracking</li>
 <li>track_offset : float = 0.5
@@ -1136,16 +1032,13 @@ Scroll tracking</li>
 <hr>
 <ul>
 <li>label : str = None
-Overrides 'name' as label</li>
-<li>
-<p>id : int = &hellip;</p>
-</li>
-<li>
-<p>callback : Callable = None
-Registers a callback</p>
-</li>
+Overrides 'name' as label.</li>
+<li>id : int = &hellip;
+Unique id used to programmatically refer to the item.If label is unused this will be the label.</li>
+<li>callback : Callable = None
+Registers a callback.</li>
 <li>user_data : Any = None
-User data for callbacks</li>
+User data for callbacks.</li>
 </ul></div>
 </dd>
 <dt id="dearpygui.core.add_deactivated_handler"><code class="name flex">
@@ -1163,16 +1056,13 @@ User data for callbacks</li>
 <hr>
 <ul>
 <li>label : str = None
-Overrides 'name' as label</li>
-<li>
-<p>id : int = &hellip;</p>
-</li>
-<li>
-<p>callback : Callable = None
-Registers a callback</p>
-</li>
+Overrides 'name' as label.</li>
+<li>id : int = &hellip;
+Unique id used to programmatically refer to the item.If label is unused this will be the label.</li>
+<li>callback : Callable = None
+Registers a callback.</li>
 <li>user_data : Any = None
-User data for callbacks</li>
+User data for callbacks.</li>
 </ul></div>
 </dd>
 <dt id="dearpygui.core.add_drag_float"><code class="name flex">
@@ -1185,45 +1075,37 @@ User data for callbacks</li>
 <hr>
 <ul>
 <li>label : str = None
-Overrides 'name' as label</li>
-<li>
-<p>id : int = &hellip;</p>
-</li>
-<li>
-<p>width : int = 0</p>
-</li>
-<li>
-<p>indent : int = -1</p>
-</li>
-<li>
-<p>parent : int = 0
-Parent to add this item to. (runtime adding)</p>
-</li>
+Overrides 'name' as label.</li>
+<li>id : int = &hellip;
+Unique id used to programmatically refer to the item.If label is unused this will be the label.</li>
+<li>width : int = 0
+Width of the item.</li>
+<li>indent : int = -1
+Offsets the widget to the right the specified number multiplied by the indent style.</li>
+<li>parent : int = 0
+Parent to add this item to. (runtime adding)</li>
 <li>before : int = 0
 This item will be displayed before the specified item in the parent.</li>
 <li>source : int = 0
-Overrides 'name' as value storage key</li>
+Overrides 'id' as value storage key.</li>
 <li>payload_type : str = '$$DPG_PAYLOAD'
-Overrides 'name' as value storage key</li>
+Sender string type must be the same as the target for the target to run the payload_callback.</li>
 <li>callback : Callable = None
-Registers a callback</li>
+Registers a callback.</li>
 <li>drag_callback : Callable = None
-Registers a drag callback for drag and drop</li>
+Registers a drag callback for drag and drop.</li>
 <li>drop_callback : Callable = None
-Registers a drag callback for drag and drop</li>
+Registers a drop callback for drag and drop.</li>
 <li>user_data : Any = None
-User data for callbacks</li>
+User data for callbacks.</li>
 <li>show : bool = True
-Attempt to render</li>
-<li>
-<p>enabled : bool = True</p>
-</li>
-<li>
-<p>pos : List[int] = []
-Places the item relative to window coordinates, [0,0] is top left.</p>
-</li>
+Attempt to render widget.</li>
+<li>enabled : bool = True
+Turns off functionality of widget and applies the disabled theme.</li>
+<li>pos : List[int] = []
+Places the item relative to window coordinates, [0,0] is top left.</li>
 <li>filter_key : str = ''
-Used by filter widget</li>
+Used by filter widget.</li>
 <li>tracked : bool = False
 Scroll tracking</li>
 <li>track_offset : float = 0.5
@@ -1261,45 +1143,37 @@ Clamp value to min/max bounds when input manually with CTRL+Click. By default CT
 <hr>
 <ul>
 <li>label : str = None
-Overrides 'name' as label</li>
-<li>
-<p>id : int = &hellip;</p>
-</li>
-<li>
-<p>width : int = 0</p>
-</li>
-<li>
-<p>indent : int = -1</p>
-</li>
-<li>
-<p>parent : int = 0
-Parent to add this item to. (runtime adding)</p>
-</li>
+Overrides 'name' as label.</li>
+<li>id : int = &hellip;
+Unique id used to programmatically refer to the item.If label is unused this will be the label.</li>
+<li>width : int = 0
+Width of the item.</li>
+<li>indent : int = -1
+Offsets the widget to the right the specified number multiplied by the indent style.</li>
+<li>parent : int = 0
+Parent to add this item to. (runtime adding)</li>
 <li>before : int = 0
 This item will be displayed before the specified item in the parent.</li>
 <li>source : int = 0
-Overrides 'name' as value storage key</li>
+Overrides 'id' as value storage key.</li>
 <li>payload_type : str = '$$DPG_PAYLOAD'
-Overrides 'name' as value storage key</li>
+Sender string type must be the same as the target for the target to run the payload_callback.</li>
 <li>callback : Callable = None
-Registers a callback</li>
+Registers a callback.</li>
 <li>drag_callback : Callable = None
-Registers a drag callback for drag and drop</li>
+Registers a drag callback for drag and drop.</li>
 <li>drop_callback : Callable = None
-Registers a drag callback for drag and drop</li>
+Registers a drop callback for drag and drop.</li>
 <li>user_data : Any = None
-User data for callbacks</li>
+User data for callbacks.</li>
 <li>show : bool = True
-Attempt to render</li>
-<li>
-<p>enabled : bool = True</p>
-</li>
-<li>
-<p>pos : List[int] = []
-Places the item relative to window coordinates, [0,0] is top left.</p>
-</li>
+Attempt to render widget.</li>
+<li>enabled : bool = True
+Turns off functionality of widget and applies the disabled theme.</li>
+<li>pos : List[int] = []
+Places the item relative to window coordinates, [0,0] is top left.</li>
 <li>filter_key : str = ''
-Used by filter widget</li>
+Used by filter widget.</li>
 <li>tracked : bool = False
 Scroll tracking</li>
 <li>track_offset : float = 0.5
@@ -1341,45 +1215,37 @@ Clamp value to min/max bounds when input manually with CTRL+Click. By default CT
 <hr>
 <ul>
 <li>label : str = None
-Overrides 'name' as label</li>
-<li>
-<p>id : int = &hellip;</p>
-</li>
-<li>
-<p>width : int = 0</p>
-</li>
-<li>
-<p>indent : int = -1</p>
-</li>
-<li>
-<p>parent : int = 0
-Parent to add this item to. (runtime adding)</p>
-</li>
+Overrides 'name' as label.</li>
+<li>id : int = &hellip;
+Unique id used to programmatically refer to the item.If label is unused this will be the label.</li>
+<li>width : int = 0
+Width of the item.</li>
+<li>indent : int = -1
+Offsets the widget to the right the specified number multiplied by the indent style.</li>
+<li>parent : int = 0
+Parent to add this item to. (runtime adding)</li>
 <li>before : int = 0
 This item will be displayed before the specified item in the parent.</li>
 <li>source : int = 0
-Overrides 'name' as value storage key</li>
+Overrides 'id' as value storage key.</li>
 <li>payload_type : str = '$$DPG_PAYLOAD'
-Overrides 'name' as value storage key</li>
+Sender string type must be the same as the target for the target to run the payload_callback.</li>
 <li>callback : Callable = None
-Registers a callback</li>
+Registers a callback.</li>
 <li>drag_callback : Callable = None
-Registers a drag callback for drag and drop</li>
+Registers a drag callback for drag and drop.</li>
 <li>drop_callback : Callable = None
-Registers a drag callback for drag and drop</li>
+Registers a drop callback for drag and drop.</li>
 <li>user_data : Any = None
-User data for callbacks</li>
+User data for callbacks.</li>
 <li>show : bool = True
-Attempt to render</li>
-<li>
-<p>enabled : bool = True</p>
-</li>
-<li>
-<p>pos : List[int] = []
-Places the item relative to window coordinates, [0,0] is top left.</p>
-</li>
+Attempt to render widget.</li>
+<li>enabled : bool = True
+Turns off functionality of widget and applies the disabled theme.</li>
+<li>pos : List[int] = []
+Places the item relative to window coordinates, [0,0] is top left.</li>
 <li>filter_key : str = ''
-Used by filter widget</li>
+Used by filter widget.</li>
 <li>tracked : bool = False
 Scroll tracking</li>
 <li>track_offset : float = 0.5
@@ -1417,45 +1283,37 @@ Clamp value to min/max bounds when input manually with CTRL+Click. By default CT
 <hr>
 <ul>
 <li>label : str = None
-Overrides 'name' as label</li>
-<li>
-<p>id : int = &hellip;</p>
-</li>
-<li>
-<p>width : int = 0</p>
-</li>
-<li>
-<p>indent : int = -1</p>
-</li>
-<li>
-<p>parent : int = 0
-Parent to add this item to. (runtime adding)</p>
-</li>
+Overrides 'name' as label.</li>
+<li>id : int = &hellip;
+Unique id used to programmatically refer to the item.If label is unused this will be the label.</li>
+<li>width : int = 0
+Width of the item.</li>
+<li>indent : int = -1
+Offsets the widget to the right the specified number multiplied by the indent style.</li>
+<li>parent : int = 0
+Parent to add this item to. (runtime adding)</li>
 <li>before : int = 0
 This item will be displayed before the specified item in the parent.</li>
 <li>source : int = 0
-Overrides 'name' as value storage key</li>
+Overrides 'id' as value storage key.</li>
 <li>payload_type : str = '$$DPG_PAYLOAD'
-Overrides 'name' as value storage key</li>
+Sender string type must be the same as the target for the target to run the payload_callback.</li>
 <li>callback : Callable = None
-Registers a callback</li>
+Registers a callback.</li>
 <li>drag_callback : Callable = None
-Registers a drag callback for drag and drop</li>
+Registers a drag callback for drag and drop.</li>
 <li>drop_callback : Callable = None
-Registers a drag callback for drag and drop</li>
+Registers a drop callback for drag and drop.</li>
 <li>user_data : Any = None
-User data for callbacks</li>
+User data for callbacks.</li>
 <li>show : bool = True
-Attempt to render</li>
-<li>
-<p>enabled : bool = True</p>
-</li>
-<li>
-<p>pos : List[int] = []
-Places the item relative to window coordinates, [0,0] is top left.</p>
-</li>
+Attempt to render widget.</li>
+<li>enabled : bool = True
+Turns off functionality of widget and applies the disabled theme.</li>
+<li>pos : List[int] = []
+Places the item relative to window coordinates, [0,0] is top left.</li>
 <li>filter_key : str = ''
-Used by filter widget</li>
+Used by filter widget.</li>
 <li>tracked : bool = False
 Scroll tracking</li>
 <li>track_offset : float = 0.5
@@ -1497,22 +1355,19 @@ Clamp value to min/max bounds when input manually with CTRL+Click. By default CT
 <hr>
 <ul>
 <li>label : str = None
-Overrides 'name' as label</li>
-<li>
-<p>id : int = &hellip;</p>
-</li>
-<li>
-<p>parent : int = 0
-Parent to add this item to. (runtime adding)</p>
-</li>
+Overrides 'name' as label.</li>
+<li>id : int = &hellip;
+Unique id used to programmatically refer to the item.If label is unused this will be the label.</li>
+<li>parent : int = 0
+Parent to add this item to. (runtime adding)</li>
 <li>before : int = 0
 This item will be displayed before the specified item in the parent.</li>
 <li>source : int = 0
-Overrides 'name' as value storage key</li>
+Overrides 'id' as value storage key.</li>
 <li>callback : Callable = None
-Registers a callback</li>
+Registers a callback.</li>
 <li>show : bool = True
-Attempt to render</li>
+Attempt to render widget.</li>
 <li>
 <p>default_value : List[float] = (0.0, 0.0, 0.0, 0.0)</p>
 </li>
@@ -1540,16 +1395,13 @@ Attempt to render</li>
 <hr>
 <ul>
 <li>label : str = None
-Overrides 'name' as label</li>
-<li>
-<p>id : int = &hellip;</p>
-</li>
-<li>
-<p>parent : int = 0
-Parent to add this item to. (runtime adding)</p>
-</li>
+Overrides 'name' as label.</li>
+<li>id : int = &hellip;
+Unique id used to programmatically refer to the item.If label is unused this will be the label.</li>
+<li>parent : int = 0
+Parent to add this item to. (runtime adding)</li>
 <li>show : bool = True
-Attempt to render</li>
+Attempt to render widget.</li>
 <li>drag_data : Any = None
 Drag data</li>
 <li>payload_type : str = '$$DPG_PAYLOAD'</li>
@@ -1565,22 +1417,19 @@ Drag data</li>
 <hr>
 <ul>
 <li>label : str = None
-Overrides 'name' as label</li>
-<li>
-<p>id : int = &hellip;</p>
-</li>
-<li>
-<p>parent : int = 0
-Parent to add this item to. (runtime adding)</p>
-</li>
+Overrides 'name' as label.</li>
+<li>id : int = &hellip;
+Unique id used to programmatically refer to the item.If label is unused this will be the label.</li>
+<li>parent : int = 0
+Parent to add this item to. (runtime adding)</li>
 <li>before : int = 0
 This item will be displayed before the specified item in the parent.</li>
 <li>source : int = 0
-Overrides 'name' as value storage key</li>
+Overrides 'id' as value storage key.</li>
 <li>callback : Callable = None
-Registers a callback</li>
+Registers a callback.</li>
 <li>show : bool = True
-Attempt to render</li>
+Attempt to render widget.</li>
 <li>
 <p>default_value : List[float] = (0.0, 0.0, 0.0, 0.0)</p>
 </li>
@@ -1605,18 +1454,15 @@ Attempt to render</li>
 <hr>
 <ul>
 <li>label : str = None
-Overrides 'name' as label</li>
-<li>
-<p>id : int = &hellip;</p>
-</li>
-<li>
-<p>parent : int = 0
-Parent to add this item to. (runtime adding)</p>
-</li>
+Overrides 'name' as label.</li>
+<li>id : int = &hellip;
+Unique id used to programmatically refer to the item.If label is unused this will be the label.</li>
+<li>parent : int = 0
+Parent to add this item to. (runtime adding)</li>
 <li>before : int = 0
 This item will be displayed before the specified item in the parent.</li>
 <li>show : bool = True
-Attempt to render</li>
+Attempt to render widget.</li>
 </ul></div>
 </dd>
 <dt id="dearpygui.core.add_drawlist"><code class="name flex">
@@ -1629,40 +1475,35 @@ Attempt to render</li>
 <hr>
 <ul>
 <li>label : str = None
-Overrides 'name' as label</li>
-<li>
-<p>id : int = &hellip;</p>
-</li>
-<li>
-<p>width : int = 0</p>
-</li>
-<li>
-<p>height : int = 0</p>
-</li>
-<li>
-<p>parent : int = 0
-Parent to add this item to. (runtime adding)</p>
-</li>
+Overrides 'name' as label.</li>
+<li>id : int = &hellip;
+Unique id used to programmatically refer to the item.If label is unused this will be the label.</li>
+<li>width : int = 0
+Width of the item.</li>
+<li>height : int = 0
+Height of the item.</li>
+<li>parent : int = 0
+Parent to add this item to. (runtime adding)</li>
 <li>before : int = 0
 This item will be displayed before the specified item in the parent.</li>
 <li>payload_type : str = '$$DPG_PAYLOAD'
-Overrides 'name' as value storage key</li>
+Sender string type must be the same as the target for the target to run the payload_callback.</li>
 <li>callback : Callable = None
-Registers a callback</li>
+Registers a callback.</li>
 <li>drag_callback : Callable = None
-Registers a drag callback for drag and drop</li>
+Registers a drag callback for drag and drop.</li>
 <li>drop_callback : Callable = None
-Registers a drag callback for drag and drop</li>
+Registers a drop callback for drag and drop.</li>
 <li>user_data : Any = None
-User data for callbacks</li>
+User data for callbacks.</li>
 <li>show : bool = True
-Attempt to render</li>
+Attempt to render widget.</li>
 <li>pos : List[int] = []
 Places the item relative to window coordinates, [0,0] is top left.</li>
 <li>filter_key : str = ''
-Used by filter widget</li>
+Used by filter widget.</li>
 <li>delay_search : str = False
-Used by filter widget</li>
+Delays searching container for specified items until the end of the app. Possible optimization when a container has many children that are not accessed often.</li>
 <li>tracked : bool = False
 Scroll tracking</li>
 <li>track_offset : float = 0.5
@@ -1679,27 +1520,21 @@ Scroll tracking</li>
 <hr>
 <ul>
 <li>label : str = None
-Overrides 'name' as label</li>
-<li>
-<p>id : int = &hellip;</p>
-</li>
-<li>
-<p>width : int = 0</p>
-</li>
-<li>
-<p>height : int = 0</p>
-</li>
-<li>
-<p>indent : int = -1</p>
-</li>
-<li>
-<p>parent : int = 0
-Parent to add this item to. (runtime adding)</p>
-</li>
+Overrides 'name' as label.</li>
+<li>id : int = &hellip;
+Unique id used to programmatically refer to the item.If label is unused this will be the label.</li>
+<li>width : int = 0
+Width of the item.</li>
+<li>height : int = 0
+Height of the item.</li>
+<li>indent : int = -1
+Offsets the widget to the right the specified number multiplied by the indent style.</li>
+<li>parent : int = 0
+Parent to add this item to. (runtime adding)</li>
 <li>before : int = 0
 This item will be displayed before the specified item in the parent.</li>
 <li>show : bool = True
-Attempt to render</li>
+Attempt to render widget.</li>
 <li>pos : List[int] = []
 Places the item relative to window coordinates, [0,0] is top left.</li>
 </ul></div>
@@ -1727,14 +1562,11 @@ Places the item relative to window coordinates, [0,0] is top left.</li>
 <hr>
 <ul>
 <li>label : str = None
-Overrides 'name' as label</li>
-<li>
-<p>id : int = &hellip;</p>
-</li>
-<li>
-<p>parent : int = 0
-Parent to add this item to. (runtime adding)</p>
-</li>
+Overrides 'name' as label.</li>
+<li>id : int = &hellip;
+Unique id used to programmatically refer to the item.If label is unused this will be the label.</li>
+<li>parent : int = 0
+Parent to add this item to. (runtime adding)</li>
 </ul></div>
 </dd>
 <dt id="dearpygui.core.add_edited_handler"><code class="name flex">
@@ -1752,16 +1584,13 @@ Parent to add this item to. (runtime adding)</p>
 <hr>
 <ul>
 <li>label : str = None
-Overrides 'name' as label</li>
-<li>
-<p>id : int = &hellip;</p>
-</li>
-<li>
-<p>callback : Callable = None
-Registers a callback</p>
-</li>
+Overrides 'name' as label.</li>
+<li>id : int = &hellip;
+Unique id used to programmatically refer to the item.If label is unused this will be the label.</li>
+<li>callback : Callable = None
+Registers a callback.</li>
 <li>user_data : Any = None
-User data for callbacks</li>
+User data for callbacks.</li>
 </ul></div>
 </dd>
 <dt id="dearpygui.core.add_error_series"><code class="name flex">
@@ -1790,20 +1619,17 @@ User data for callbacks</li>
 <hr>
 <ul>
 <li>label : str = None
-Overrides 'name' as label</li>
-<li>
-<p>id : int = &hellip;</p>
-</li>
-<li>
-<p>parent : int = 0
-Parent to add this item to. (runtime adding)</p>
-</li>
+Overrides 'name' as label.</li>
+<li>id : int = &hellip;
+Unique id used to programmatically refer to the item.If label is unused this will be the label.</li>
+<li>parent : int = 0
+Parent to add this item to. (runtime adding)</li>
 <li>before : int = 0
 This item will be displayed before the specified item in the parent.</li>
 <li>source : int = 0
-Overrides 'name' as value storage key</li>
+Overrides 'id' as value storage key.</li>
 <li>show : bool = True
-Attempt to render</li>
+Attempt to render widget.</li>
 <li>
 <p>contribute_to_bounds : bool = True</p>
 </li>
@@ -1822,22 +1648,17 @@ Attempt to render</li>
 <hr>
 <ul>
 <li>label : str = None
-Overrides 'name' as label</li>
-<li>
-<p>id : int = &hellip;</p>
-</li>
-<li>
-<p>width : int = 0</p>
-</li>
-<li>
-<p>height : int = 0</p>
-</li>
-<li>
-<p>callback : Callable = None
-Registers a callback</p>
-</li>
+Overrides 'name' as label.</li>
+<li>id : int = &hellip;
+Unique id used to programmatically refer to the item.If label is unused this will be the label.</li>
+<li>width : int = 0
+Width of the item.</li>
+<li>height : int = 0
+Height of the item.</li>
+<li>callback : Callable = None
+Registers a callback.</li>
 <li>show : bool = True
-Attempt to render</li>
+Attempt to render widget.</li>
 <li>
 <p>default_path : str = ''</p>
 </li>
@@ -1870,20 +1691,15 @@ Attempt to render</li>
 <hr>
 <ul>
 <li>label : str = None
-Overrides 'name' as label</li>
-<li>
-<p>id : int = &hellip;</p>
-</li>
-<li>
-<p>width : int = 0</p>
-</li>
-<li>
-<p>height : int = 0</p>
-</li>
-<li>
-<p>parent : int = 0
-Parent to add this item to. (runtime adding)</p>
-</li>
+Overrides 'name' as label.</li>
+<li>id : int = &hellip;
+Unique id used to programmatically refer to the item.If label is unused this will be the label.</li>
+<li>width : int = 0
+Width of the item.</li>
+<li>height : int = 0
+Height of the item.</li>
+<li>parent : int = 0
+Parent to add this item to. (runtime adding)</li>
 <li>before : int = 0
 This item will be displayed before the specified item in the parent.</li>
 <li>
@@ -1904,26 +1720,21 @@ This item will be displayed before the specified item in the parent.</li>
 <hr>
 <ul>
 <li>label : str = None
-Overrides 'name' as label</li>
-<li>
-<p>id : int = &hellip;</p>
-</li>
-<li>
-<p>width : int = 0</p>
-</li>
-<li>
-<p>indent : int = -1</p>
-</li>
-<li>
-<p>parent : int = 0
-Parent to add this item to. (runtime adding)</p>
-</li>
+Overrides 'name' as label.</li>
+<li>id : int = &hellip;
+Unique id used to programmatically refer to the item.If label is unused this will be the label.</li>
+<li>width : int = 0
+Width of the item.</li>
+<li>indent : int = -1
+Offsets the widget to the right the specified number multiplied by the indent style.</li>
+<li>parent : int = 0
+Parent to add this item to. (runtime adding)</li>
 <li>before : int = 0
 This item will be displayed before the specified item in the parent.</li>
 <li>show : bool = True
-Attempt to render</li>
+Attempt to render widget.</li>
 <li>delay_search : str = False
-Used by filter widget</li>
+Delays searching container for specified items until the end of the app. Possible optimization when a container has many children that are not accessed often.</li>
 </ul></div>
 </dd>
 <dt id="dearpygui.core.add_focus_handler"><code class="name flex">
@@ -1941,16 +1752,13 @@ Used by filter widget</li>
 <hr>
 <ul>
 <li>label : str = None
-Overrides 'name' as label</li>
-<li>
-<p>id : int = &hellip;</p>
-</li>
-<li>
-<p>callback : Callable = None
-Registers a callback</p>
-</li>
+Overrides 'name' as label.</li>
+<li>id : int = &hellip;
+Unique id used to programmatically refer to the item.If label is unused this will be the label.</li>
+<li>callback : Callable = None
+Registers a callback.</li>
 <li>user_data : Any = None
-User data for callbacks</li>
+User data for callbacks.</li>
 </ul></div>
 </dd>
 <dt id="dearpygui.core.add_font"><code class="name flex">
@@ -1973,14 +1781,11 @@ User data for callbacks</li>
 <hr>
 <ul>
 <li>label : str = None
-Overrides 'name' as label</li>
-<li>
-<p>id : int = &hellip;</p>
-</li>
-<li>
-<p>parent : int = 0
-Parent to add this item to. (runtime adding)</p>
-</li>
+Overrides 'name' as label.</li>
+<li>id : int = &hellip;
+Unique id used to programmatically refer to the item.If label is unused this will be the label.</li>
+<li>parent : int = 0
+Parent to add this item to. (runtime adding)</li>
 <li>default_font : bool = False</li>
 </ul></div>
 </dd>
@@ -1994,14 +1799,11 @@ Parent to add this item to. (runtime adding)</p>
 <hr>
 <ul>
 <li>label : str = None
-Overrides 'name' as label</li>
-<li>
-<p>id : int = &hellip;</p>
-</li>
-<li>
-<p>show : bool = True
-Attempt to render</p>
-</li>
+Overrides 'name' as label.</li>
+<li>id : int = &hellip;
+Unique id used to programmatically refer to the item.If label is unused this will be the label.</li>
+<li>show : bool = True
+Attempt to render widget.</li>
 </ul></div>
 </dd>
 <dt id="dearpygui.core.add_group"><code class="name flex">
@@ -2014,36 +1816,31 @@ Attempt to render</p>
 <hr>
 <ul>
 <li>label : str = None
-Overrides 'name' as label</li>
-<li>
-<p>id : int = &hellip;</p>
-</li>
-<li>
-<p>width : int = 0</p>
-</li>
-<li>
-<p>indent : int = -1</p>
-</li>
-<li>
-<p>parent : int = 0
-Parent to add this item to. (runtime adding)</p>
-</li>
+Overrides 'name' as label.</li>
+<li>id : int = &hellip;
+Unique id used to programmatically refer to the item.If label is unused this will be the label.</li>
+<li>width : int = 0
+Width of the item.</li>
+<li>indent : int = -1
+Offsets the widget to the right the specified number multiplied by the indent style.</li>
+<li>parent : int = 0
+Parent to add this item to. (runtime adding)</li>
 <li>before : int = 0
 This item will be displayed before the specified item in the parent.</li>
 <li>payload_type : str = '$$DPG_PAYLOAD'
-Overrides 'name' as value storage key</li>
+Sender string type must be the same as the target for the target to run the payload_callback.</li>
 <li>drag_callback : Callable = None
-Registers a drag callback for drag and drop</li>
+Registers a drag callback for drag and drop.</li>
 <li>drop_callback : Callable = None
-Registers a drag callback for drag and drop</li>
+Registers a drop callback for drag and drop.</li>
 <li>show : bool = True
-Attempt to render</li>
+Attempt to render widget.</li>
 <li>pos : List[int] = []
 Places the item relative to window coordinates, [0,0] is top left.</li>
 <li>filter_key : str = ''
-Used by filter widget</li>
+Used by filter widget.</li>
 <li>delay_search : str = False
-Used by filter widget</li>
+Delays searching container for specified items until the end of the app. Possible optimization when a container has many children that are not accessed often.</li>
 <li>tracked : bool = False
 Scroll tracking</li>
 <li>track_offset : float = 0.5
@@ -2064,14 +1861,11 @@ Spacing for the horizontal layout.</li>
 <hr>
 <ul>
 <li>label : str = None
-Overrides 'name' as label</li>
-<li>
-<p>id : int = &hellip;</p>
-</li>
-<li>
-<p>show : bool = True
-Attempt to render</p>
-</li>
+Overrides 'name' as label.</li>
+<li>id : int = &hellip;
+Unique id used to programmatically refer to the item.If label is unused this will be the label.</li>
+<li>show : bool = True
+Attempt to render widget.</li>
 </ul></div>
 </dd>
 <dt id="dearpygui.core.add_heat_series"><code class="name flex">
@@ -2097,20 +1891,17 @@ Attempt to render</p>
 <hr>
 <ul>
 <li>label : str = None
-Overrides 'name' as label</li>
-<li>
-<p>id : int = &hellip;</p>
-</li>
-<li>
-<p>parent : int = 0
-Parent to add this item to. (runtime adding)</p>
-</li>
+Overrides 'name' as label.</li>
+<li>id : int = &hellip;
+Unique id used to programmatically refer to the item.If label is unused this will be the label.</li>
+<li>parent : int = 0
+Parent to add this item to. (runtime adding)</li>
 <li>before : int = 0
 This item will be displayed before the specified item in the parent.</li>
 <li>source : int = 0
-Overrides 'name' as value storage key</li>
+Overrides 'id' as value storage key.</li>
 <li>show : bool = True
-Attempt to render</li>
+Attempt to render widget.</li>
 <li>
 <p>scale_min : float = 0.0</p>
 </li>
@@ -2146,20 +1937,17 @@ Attempt to render</li>
 <hr>
 <ul>
 <li>label : str = None
-Overrides 'name' as label</li>
-<li>
-<p>id : int = &hellip;</p>
-</li>
-<li>
-<p>parent : int = 0
-Parent to add this item to. (runtime adding)</p>
-</li>
+Overrides 'name' as label.</li>
+<li>id : int = &hellip;
+Unique id used to programmatically refer to the item.If label is unused this will be the label.</li>
+<li>parent : int = 0
+Parent to add this item to. (runtime adding)</li>
 <li>before : int = 0
 This item will be displayed before the specified item in the parent.</li>
 <li>source : int = 0
-Overrides 'name' as value storage key</li>
+Overrides 'id' as value storage key.</li>
 <li>show : bool = True
-Attempt to render</li>
+Attempt to render widget.</li>
 <li>
 <p>bins : int = -1</p>
 </li>
@@ -2201,20 +1989,17 @@ Attempt to render</li>
 <hr>
 <ul>
 <li>label : str = None
-Overrides 'name' as label</li>
-<li>
-<p>id : int = &hellip;</p>
-</li>
-<li>
-<p>parent : int = 0
-Parent to add this item to. (runtime adding)</p>
-</li>
+Overrides 'name' as label.</li>
+<li>id : int = &hellip;
+Unique id used to programmatically refer to the item.If label is unused this will be the label.</li>
+<li>parent : int = 0
+Parent to add this item to. (runtime adding)</li>
 <li>before : int = 0
 This item will be displayed before the specified item in the parent.</li>
 <li>source : int = 0
-Overrides 'name' as value storage key</li>
+Overrides 'id' as value storage key.</li>
 <li>show : bool = True
-Attempt to render</li>
+Attempt to render widget.</li>
 <li>contribute_to_bounds : bool = True</li>
 </ul></div>
 </dd>
@@ -2233,16 +2018,13 @@ Attempt to render</li>
 <hr>
 <ul>
 <li>label : str = None
-Overrides 'name' as label</li>
-<li>
-<p>id : int = &hellip;</p>
-</li>
-<li>
-<p>callback : Callable = None
-Registers a callback</p>
-</li>
+Overrides 'name' as label.</li>
+<li>id : int = &hellip;
+Unique id used to programmatically refer to the item.If label is unused this will be the label.</li>
+<li>callback : Callable = None
+Registers a callback.</li>
 <li>user_data : Any = None
-User data for callbacks</li>
+User data for callbacks.</li>
 </ul></div>
 </dd>
 <dt id="dearpygui.core.add_image"><code class="name flex">
@@ -2260,39 +2042,33 @@ User data for callbacks</li>
 <hr>
 <ul>
 <li>label : str = None
-Overrides 'name' as label</li>
-<li>
-<p>id : int = &hellip;</p>
-</li>
-<li>
-<p>width : int = 0</p>
-</li>
-<li>
-<p>height : int = 0</p>
-</li>
-<li>
-<p>indent : int = -1</p>
-</li>
-<li>
-<p>parent : int = 0
-Parent to add this item to. (runtime adding)</p>
-</li>
+Overrides 'name' as label.</li>
+<li>id : int = &hellip;
+Unique id used to programmatically refer to the item.If label is unused this will be the label.</li>
+<li>width : int = 0
+Width of the item.</li>
+<li>height : int = 0
+Height of the item.</li>
+<li>indent : int = -1
+Offsets the widget to the right the specified number multiplied by the indent style.</li>
+<li>parent : int = 0
+Parent to add this item to. (runtime adding)</li>
 <li>before : int = 0
 This item will be displayed before the specified item in the parent.</li>
 <li>source : int = 0
-Overrides 'name' as value storage key</li>
+Overrides 'id' as value storage key.</li>
 <li>payload_type : str = '$$DPG_PAYLOAD'
-Overrides 'name' as value storage key</li>
+Sender string type must be the same as the target for the target to run the payload_callback.</li>
 <li>drag_callback : Callable = None
-Registers a drag callback for drag and drop</li>
+Registers a drag callback for drag and drop.</li>
 <li>drop_callback : Callable = None
-Registers a drag callback for drag and drop</li>
+Registers a drop callback for drag and drop.</li>
 <li>show : bool = True
-Attempt to render</li>
+Attempt to render widget.</li>
 <li>pos : List[int] = []
 Places the item relative to window coordinates, [0,0] is top left.</li>
 <li>filter_key : str = ''
-Used by filter widget</li>
+Used by filter widget.</li>
 <li>tracked : bool = False
 Scroll tracking</li>
 <li>track_offset : float = 0.5
@@ -2326,48 +2102,39 @@ Normalized texture coordinates.</li>
 <hr>
 <ul>
 <li>label : str = None
-Overrides 'name' as label</li>
-<li>
-<p>id : int = &hellip;</p>
-</li>
-<li>
-<p>width : int = 0</p>
-</li>
-<li>
-<p>height : int = 0</p>
-</li>
-<li>
-<p>indent : int = -1</p>
-</li>
-<li>
-<p>parent : int = 0
-Parent to add this item to. (runtime adding)</p>
-</li>
+Overrides 'name' as label.</li>
+<li>id : int = &hellip;
+Unique id used to programmatically refer to the item.If label is unused this will be the label.</li>
+<li>width : int = 0
+Width of the item.</li>
+<li>height : int = 0
+Height of the item.</li>
+<li>indent : int = -1
+Offsets the widget to the right the specified number multiplied by the indent style.</li>
+<li>parent : int = 0
+Parent to add this item to. (runtime adding)</li>
 <li>before : int = 0
 This item will be displayed before the specified item in the parent.</li>
 <li>source : int = 0
-Overrides 'name' as value storage key</li>
+Overrides 'id' as value storage key.</li>
 <li>payload_type : str = '$$DPG_PAYLOAD'
-Overrides 'name' as value storage key</li>
+Sender string type must be the same as the target for the target to run the payload_callback.</li>
 <li>callback : Callable = None
-Registers a callback</li>
+Registers a callback.</li>
 <li>drag_callback : Callable = None
-Registers a drag callback for drag and drop</li>
+Registers a drag callback for drag and drop.</li>
 <li>drop_callback : Callable = None
-Registers a drag callback for drag and drop</li>
+Registers a drop callback for drag and drop.</li>
 <li>user_data : Any = None
-User data for callbacks</li>
+User data for callbacks.</li>
 <li>show : bool = True
-Attempt to render</li>
-<li>
-<p>enabled : bool = True</p>
-</li>
-<li>
-<p>pos : List[int] = []
-Places the item relative to window coordinates, [0,0] is top left.</p>
-</li>
+Attempt to render widget.</li>
+<li>enabled : bool = True
+Turns off functionality of widget and applies the disabled theme.</li>
+<li>pos : List[int] = []
+Places the item relative to window coordinates, [0,0] is top left.</li>
 <li>filter_key : str = ''
-Used by filter widget</li>
+Used by filter widget.</li>
 <li>tracked : bool = False
 Scroll tracking</li>
 <li>track_offset : float = 0.5
@@ -2410,20 +2177,17 @@ Normalized texture coordinates.</li>
 <hr>
 <ul>
 <li>label : str = None
-Overrides 'name' as label</li>
-<li>
-<p>id : int = &hellip;</p>
-</li>
-<li>
-<p>parent : int = 0
-Parent to add this item to. (runtime adding)</p>
-</li>
+Overrides 'name' as label.</li>
+<li>id : int = &hellip;
+Unique id used to programmatically refer to the item.If label is unused this will be the label.</li>
+<li>parent : int = 0
+Parent to add this item to. (runtime adding)</li>
 <li>before : int = 0
 This item will be displayed before the specified item in the parent.</li>
 <li>source : int = 0
-Overrides 'name' as value storage key</li>
+Overrides 'id' as value storage key.</li>
 <li>show : bool = True
-Attempt to render</li>
+Attempt to render widget.</li>
 <li>uv_min : List[float] = (0.0, 0.0)
 normalized texture coordinates</li>
 <li>uv_max : List[float] = (1.0, 1.0)
@@ -2446,45 +2210,37 @@ normalized texture coordinates</li>
 <hr>
 <ul>
 <li>label : str = None
-Overrides 'name' as label</li>
-<li>
-<p>id : int = &hellip;</p>
-</li>
-<li>
-<p>width : int = 0</p>
-</li>
-<li>
-<p>indent : int = -1</p>
-</li>
-<li>
-<p>parent : int = 0
-Parent to add this item to. (runtime adding)</p>
-</li>
+Overrides 'name' as label.</li>
+<li>id : int = &hellip;
+Unique id used to programmatically refer to the item.If label is unused this will be the label.</li>
+<li>width : int = 0
+Width of the item.</li>
+<li>indent : int = -1
+Offsets the widget to the right the specified number multiplied by the indent style.</li>
+<li>parent : int = 0
+Parent to add this item to. (runtime adding)</li>
 <li>before : int = 0
 This item will be displayed before the specified item in the parent.</li>
 <li>source : int = 0
-Overrides 'name' as value storage key</li>
+Overrides 'id' as value storage key.</li>
 <li>payload_type : str = '$$DPG_PAYLOAD'
-Overrides 'name' as value storage key</li>
+Sender string type must be the same as the target for the target to run the payload_callback.</li>
 <li>callback : Callable = None
-Registers a callback</li>
+Registers a callback.</li>
 <li>drag_callback : Callable = None
-Registers a drag callback for drag and drop</li>
+Registers a drag callback for drag and drop.</li>
 <li>drop_callback : Callable = None
-Registers a drag callback for drag and drop</li>
+Registers a drop callback for drag and drop.</li>
 <li>user_data : Any = None
-User data for callbacks</li>
+User data for callbacks.</li>
 <li>show : bool = True
-Attempt to render</li>
-<li>
-<p>enabled : bool = True</p>
-</li>
-<li>
-<p>pos : List[int] = []
-Places the item relative to window coordinates, [0,0] is top left.</p>
-</li>
+Attempt to render widget.</li>
+<li>enabled : bool = True
+Turns off functionality of widget and applies the disabled theme.</li>
+<li>pos : List[int] = []
+Places the item relative to window coordinates, [0,0] is top left.</li>
 <li>filter_key : str = ''
-Used by filter widget</li>
+Used by filter widget.</li>
 <li>tracked : bool = False
 Scroll tracking</li>
 <li>track_offset : float = 0.5
@@ -2528,45 +2284,37 @@ Only runs callback on enter</li>
 <hr>
 <ul>
 <li>label : str = None
-Overrides 'name' as label</li>
-<li>
-<p>id : int = &hellip;</p>
-</li>
-<li>
-<p>width : int = 0</p>
-</li>
-<li>
-<p>indent : int = -1</p>
-</li>
-<li>
-<p>parent : int = 0
-Parent to add this item to. (runtime adding)</p>
-</li>
+Overrides 'name' as label.</li>
+<li>id : int = &hellip;
+Unique id used to programmatically refer to the item.If label is unused this will be the label.</li>
+<li>width : int = 0
+Width of the item.</li>
+<li>indent : int = -1
+Offsets the widget to the right the specified number multiplied by the indent style.</li>
+<li>parent : int = 0
+Parent to add this item to. (runtime adding)</li>
 <li>before : int = 0
 This item will be displayed before the specified item in the parent.</li>
 <li>source : int = 0
-Overrides 'name' as value storage key</li>
+Overrides 'id' as value storage key.</li>
 <li>payload_type : str = '$$DPG_PAYLOAD'
-Overrides 'name' as value storage key</li>
+Sender string type must be the same as the target for the target to run the payload_callback.</li>
 <li>callback : Callable = None
-Registers a callback</li>
+Registers a callback.</li>
 <li>drag_callback : Callable = None
-Registers a drag callback for drag and drop</li>
+Registers a drag callback for drag and drop.</li>
 <li>drop_callback : Callable = None
-Registers a drag callback for drag and drop</li>
+Registers a drop callback for drag and drop.</li>
 <li>user_data : Any = None
-User data for callbacks</li>
+User data for callbacks.</li>
 <li>show : bool = True
-Attempt to render</li>
-<li>
-<p>enabled : bool = True</p>
-</li>
-<li>
-<p>pos : List[int] = []
-Places the item relative to window coordinates, [0,0] is top left.</p>
-</li>
+Attempt to render widget.</li>
+<li>enabled : bool = True
+Turns off functionality of widget and applies the disabled theme.</li>
+<li>pos : List[int] = []
+Places the item relative to window coordinates, [0,0] is top left.</li>
 <li>filter_key : str = ''
-Used by filter widget</li>
+Used by filter widget.</li>
 <li>tracked : bool = False
 Scroll tracking</li>
 <li>track_offset : float = 0.5
@@ -2606,45 +2354,37 @@ Only runs callback on enter.</li>
 <hr>
 <ul>
 <li>label : str = None
-Overrides 'name' as label</li>
-<li>
-<p>id : int = &hellip;</p>
-</li>
-<li>
-<p>width : int = 0</p>
-</li>
-<li>
-<p>indent : int = -1</p>
-</li>
-<li>
-<p>parent : int = 0
-Parent to add this item to. (runtime adding)</p>
-</li>
+Overrides 'name' as label.</li>
+<li>id : int = &hellip;
+Unique id used to programmatically refer to the item.If label is unused this will be the label.</li>
+<li>width : int = 0
+Width of the item.</li>
+<li>indent : int = -1
+Offsets the widget to the right the specified number multiplied by the indent style.</li>
+<li>parent : int = 0
+Parent to add this item to. (runtime adding)</li>
 <li>before : int = 0
 This item will be displayed before the specified item in the parent.</li>
 <li>source : int = 0
-Overrides 'name' as value storage key</li>
+Overrides 'id' as value storage key.</li>
 <li>payload_type : str = '$$DPG_PAYLOAD'
-Overrides 'name' as value storage key</li>
+Sender string type must be the same as the target for the target to run the payload_callback.</li>
 <li>callback : Callable = None
-Registers a callback</li>
+Registers a callback.</li>
 <li>drag_callback : Callable = None
-Registers a drag callback for drag and drop</li>
+Registers a drag callback for drag and drop.</li>
 <li>drop_callback : Callable = None
-Registers a drag callback for drag and drop</li>
+Registers a drop callback for drag and drop.</li>
 <li>user_data : Any = None
-User data for callbacks</li>
+User data for callbacks.</li>
 <li>show : bool = True
-Attempt to render</li>
-<li>
-<p>enabled : bool = True</p>
-</li>
-<li>
-<p>pos : List[int] = []
-Places the item relative to window coordinates, [0,0] is top left.</p>
-</li>
+Attempt to render widget.</li>
+<li>enabled : bool = True
+Turns off functionality of widget and applies the disabled theme.</li>
+<li>pos : List[int] = []
+Places the item relative to window coordinates, [0,0] is top left.</li>
 <li>filter_key : str = ''
-Used by filter widget</li>
+Used by filter widget.</li>
 <li>tracked : bool = False
 Scroll tracking</li>
 <li>track_offset : float = 0.5
@@ -2685,45 +2425,37 @@ Only runs callback on enter.</li>
 <hr>
 <ul>
 <li>label : str = None
-Overrides 'name' as label</li>
-<li>
-<p>id : int = &hellip;</p>
-</li>
-<li>
-<p>width : int = 0</p>
-</li>
-<li>
-<p>indent : int = -1</p>
-</li>
-<li>
-<p>parent : int = 0
-Parent to add this item to. (runtime adding)</p>
-</li>
+Overrides 'name' as label.</li>
+<li>id : int = &hellip;
+Unique id used to programmatically refer to the item.If label is unused this will be the label.</li>
+<li>width : int = 0
+Width of the item.</li>
+<li>indent : int = -1
+Offsets the widget to the right the specified number multiplied by the indent style.</li>
+<li>parent : int = 0
+Parent to add this item to. (runtime adding)</li>
 <li>before : int = 0
 This item will be displayed before the specified item in the parent.</li>
 <li>source : int = 0
-Overrides 'name' as value storage key</li>
+Overrides 'id' as value storage key.</li>
 <li>payload_type : str = '$$DPG_PAYLOAD'
-Overrides 'name' as value storage key</li>
+Sender string type must be the same as the target for the target to run the payload_callback.</li>
 <li>callback : Callable = None
-Registers a callback</li>
+Registers a callback.</li>
 <li>drag_callback : Callable = None
-Registers a drag callback for drag and drop</li>
+Registers a drag callback for drag and drop.</li>
 <li>drop_callback : Callable = None
-Registers a drag callback for drag and drop</li>
+Registers a drop callback for drag and drop.</li>
 <li>user_data : Any = None
-User data for callbacks</li>
+User data for callbacks.</li>
 <li>show : bool = True
-Attempt to render</li>
-<li>
-<p>enabled : bool = True</p>
-</li>
-<li>
-<p>pos : List[int] = []
-Places the item relative to window coordinates, [0,0] is top left.</p>
-</li>
+Attempt to render widget.</li>
+<li>enabled : bool = True
+Turns off functionality of widget and applies the disabled theme.</li>
+<li>pos : List[int] = []
+Places the item relative to window coordinates, [0,0] is top left.</li>
 <li>filter_key : str = ''
-Used by filter widget</li>
+Used by filter widget.</li>
 <li>tracked : bool = False
 Scroll tracking</li>
 <li>track_offset : float = 0.5
@@ -2760,48 +2492,39 @@ Only runs callback on enter.</li>
 <hr>
 <ul>
 <li>label : str = None
-Overrides 'name' as label</li>
-<li>
-<p>id : int = &hellip;</p>
-</li>
-<li>
-<p>width : int = 0</p>
-</li>
-<li>
-<p>height : int = 0</p>
-</li>
-<li>
-<p>indent : int = -1</p>
-</li>
-<li>
-<p>parent : int = 0
-Parent to add this item to. (runtime adding)</p>
-</li>
+Overrides 'name' as label.</li>
+<li>id : int = &hellip;
+Unique id used to programmatically refer to the item.If label is unused this will be the label.</li>
+<li>width : int = 0
+Width of the item.</li>
+<li>height : int = 0
+Height of the item.</li>
+<li>indent : int = -1
+Offsets the widget to the right the specified number multiplied by the indent style.</li>
+<li>parent : int = 0
+Parent to add this item to. (runtime adding)</li>
 <li>before : int = 0
 This item will be displayed before the specified item in the parent.</li>
 <li>source : int = 0
-Overrides 'name' as value storage key</li>
+Overrides 'id' as value storage key.</li>
 <li>payload_type : str = '$$DPG_PAYLOAD'
-Overrides 'name' as value storage key</li>
+Sender string type must be the same as the target for the target to run the payload_callback.</li>
 <li>callback : Callable = None
-Registers a callback</li>
+Registers a callback.</li>
 <li>drag_callback : Callable = None
-Registers a drag callback for drag and drop</li>
+Registers a drag callback for drag and drop.</li>
 <li>drop_callback : Callable = None
-Registers a drag callback for drag and drop</li>
+Registers a drop callback for drag and drop.</li>
 <li>user_data : Any = None
-User data for callbacks</li>
+User data for callbacks.</li>
 <li>show : bool = True
-Attempt to render</li>
-<li>
-<p>enabled : bool = True</p>
-</li>
-<li>
-<p>pos : List[int] = []
-Places the item relative to window coordinates, [0,0] is top left.</p>
-</li>
+Attempt to render widget.</li>
+<li>enabled : bool = True
+Turns off functionality of widget and applies the disabled theme.</li>
+<li>pos : List[int] = []
+Places the item relative to window coordinates, [0,0] is top left.</li>
 <li>filter_key : str = ''
-Used by filter widget</li>
+Used by filter widget.</li>
 <li>tracked : bool = False
 Scroll tracking</li>
 <li>track_offset : float = 0.5
@@ -2859,20 +2582,17 @@ Submits callback for all keys</li>
 <hr>
 <ul>
 <li>label : str = None
-Overrides 'name' as label</li>
-<li>
-<p>id : int = &hellip;</p>
-</li>
-<li>
-<p>parent : int = 0
-Parent to add this item to. (runtime adding)</p>
-</li>
+Overrides 'name' as label.</li>
+<li>id : int = &hellip;
+Unique id used to programmatically refer to the item.If label is unused this will be the label.</li>
+<li>parent : int = 0
+Parent to add this item to. (runtime adding)</li>
 <li>callback : Callable = None
-Registers a callback</li>
+Registers a callback.</li>
 <li>user_data : Any = None
-User data for callbacks</li>
+User data for callbacks.</li>
 <li>show : bool = True
-Attempt to render</li>
+Attempt to render widget.</li>
 </ul></div>
 </dd>
 <dt id="dearpygui.core.add_key_press_handler"><code class="name flex">
@@ -2891,20 +2611,17 @@ Submits callback for all keys</li>
 <hr>
 <ul>
 <li>label : str = None
-Overrides 'name' as label</li>
-<li>
-<p>id : int = &hellip;</p>
-</li>
-<li>
-<p>parent : int = 0
-Parent to add this item to. (runtime adding)</p>
-</li>
+Overrides 'name' as label.</li>
+<li>id : int = &hellip;
+Unique id used to programmatically refer to the item.If label is unused this will be the label.</li>
+<li>parent : int = 0
+Parent to add this item to. (runtime adding)</li>
 <li>callback : Callable = None
-Registers a callback</li>
+Registers a callback.</li>
 <li>user_data : Any = None
-User data for callbacks</li>
+User data for callbacks.</li>
 <li>show : bool = True
-Attempt to render</li>
+Attempt to render widget.</li>
 </ul></div>
 </dd>
 <dt id="dearpygui.core.add_key_release_handler"><code class="name flex">
@@ -2923,20 +2640,17 @@ Submits callback for all keys</li>
 <hr>
 <ul>
 <li>label : str = None
-Overrides 'name' as label</li>
-<li>
-<p>id : int = &hellip;</p>
-</li>
-<li>
-<p>parent : int = 0
-Parent to add this item to. (runtime adding)</p>
-</li>
+Overrides 'name' as label.</li>
+<li>id : int = &hellip;
+Unique id used to programmatically refer to the item.If label is unused this will be the label.</li>
+<li>parent : int = 0
+Parent to add this item to. (runtime adding)</li>
 <li>callback : Callable = None
-Registers a callback</li>
+Registers a callback.</li>
 <li>user_data : Any = None
-User data for callbacks</li>
+User data for callbacks.</li>
 <li>show : bool = True
-Attempt to render</li>
+Attempt to render widget.</li>
 </ul></div>
 </dd>
 <dt id="dearpygui.core.add_knob_float"><code class="name flex">
@@ -2949,43 +2663,37 @@ Attempt to render</li>
 <hr>
 <ul>
 <li>label : str = None
-Overrides 'name' as label</li>
-<li>
-<p>id : int = &hellip;</p>
-</li>
-<li>
-<p>width : int = 0</p>
-</li>
-<li>
-<p>height : int = 0</p>
-</li>
-<li>
-<p>indent : int = -1</p>
-</li>
-<li>
-<p>parent : int = 0
-Parent to add this item to. (runtime adding)</p>
-</li>
+Overrides 'name' as label.</li>
+<li>id : int = &hellip;
+Unique id used to programmatically refer to the item.If label is unused this will be the label.</li>
+<li>width : int = 0
+Width of the item.</li>
+<li>height : int = 0
+Height of the item.</li>
+<li>indent : int = -1
+Offsets the widget to the right the specified number multiplied by the indent style.</li>
+<li>parent : int = 0
+Parent to add this item to. (runtime adding)</li>
 <li>before : int = 0
 This item will be displayed before the specified item in the parent.</li>
 <li>source : int = 0
-Overrides 'name' as value storage key</li>
+Overrides 'id' as value storage key.</li>
 <li>payload_type : str = '$$DPG_PAYLOAD'
-Overrides 'name' as value storage key</li>
+Sender string type must be the same as the target for the target to run the payload_callback.</li>
 <li>callback : Callable = None
-Registers a callback</li>
+Registers a callback.</li>
 <li>drag_callback : Callable = None
-Registers a drag callback for drag and drop</li>
+Registers a drag callback for drag and drop.</li>
 <li>drop_callback : Callable = None
-Registers a drag callback for drag and drop</li>
+Registers a drop callback for drag and drop.</li>
 <li>user_data : Any = None
-User data for callbacks</li>
+User data for callbacks.</li>
 <li>show : bool = True
-Attempt to render</li>
+Attempt to render widget.</li>
 <li>pos : List[int] = []
 Places the item relative to window coordinates, [0,0] is top left.</li>
 <li>filter_key : str = ''
-Used by filter widget</li>
+Used by filter widget.</li>
 <li>tracked : bool = False
 Scroll tracking</li>
 <li>track_offset : float = 0.5
@@ -3021,20 +2729,17 @@ Scroll tracking</li>
 <hr>
 <ul>
 <li>label : str = None
-Overrides 'name' as label</li>
-<li>
-<p>id : int = &hellip;</p>
-</li>
-<li>
-<p>parent : int = 0
-Parent to add this item to. (runtime adding)</p>
-</li>
+Overrides 'name' as label.</li>
+<li>id : int = &hellip;
+Unique id used to programmatically refer to the item.If label is unused this will be the label.</li>
+<li>parent : int = 0
+Parent to add this item to. (runtime adding)</li>
 <li>before : int = 0
 This item will be displayed before the specified item in the parent.</li>
 <li>source : int = 0
-Overrides 'name' as value storage key</li>
+Overrides 'id' as value storage key.</li>
 <li>show : bool = True
-Attempt to render</li>
+Attempt to render widget.</li>
 <li>contribute_to_bounds : bool = True</li>
 </ul></div>
 </dd>
@@ -3053,45 +2758,37 @@ Attempt to render</li>
 <hr>
 <ul>
 <li>label : str = None
-Overrides 'name' as label</li>
-<li>
-<p>id : int = &hellip;</p>
-</li>
-<li>
-<p>width : int = 0</p>
-</li>
-<li>
-<p>indent : int = -1</p>
-</li>
-<li>
-<p>parent : int = 0
-Parent to add this item to. (runtime adding)</p>
-</li>
+Overrides 'name' as label.</li>
+<li>id : int = &hellip;
+Unique id used to programmatically refer to the item.If label is unused this will be the label.</li>
+<li>width : int = 0
+Width of the item.</li>
+<li>indent : int = -1
+Offsets the widget to the right the specified number multiplied by the indent style.</li>
+<li>parent : int = 0
+Parent to add this item to. (runtime adding)</li>
 <li>before : int = 0
 This item will be displayed before the specified item in the parent.</li>
 <li>source : int = 0
-Overrides 'name' as value storage key</li>
+Overrides 'id' as value storage key.</li>
 <li>payload_type : str = '$$DPG_PAYLOAD'
-Overrides 'name' as value storage key</li>
+Sender string type must be the same as the target for the target to run the payload_callback.</li>
 <li>callback : Callable = None
-Registers a callback</li>
+Registers a callback.</li>
 <li>drag_callback : Callable = None
-Registers a drag callback for drag and drop</li>
+Registers a drag callback for drag and drop.</li>
 <li>drop_callback : Callable = None
-Registers a drag callback for drag and drop</li>
+Registers a drop callback for drag and drop.</li>
 <li>user_data : Any = None
-User data for callbacks</li>
+User data for callbacks.</li>
 <li>show : bool = True
-Attempt to render</li>
-<li>
-<p>enabled : bool = True</p>
-</li>
-<li>
-<p>pos : List[int] = []
-Places the item relative to window coordinates, [0,0] is top left.</p>
-</li>
+Attempt to render widget.</li>
+<li>enabled : bool = True
+Turns off functionality of widget and applies the disabled theme.</li>
+<li>pos : List[int] = []
+Places the item relative to window coordinates, [0,0] is top left.</li>
 <li>filter_key : str = ''
-Used by filter widget</li>
+Used by filter widget.</li>
 <li>tracked : bool = False
 Scroll tracking</li>
 <li>track_offset : float = 0.5
@@ -3115,27 +2812,21 @@ Expands the height of the listbox to show specified number of items.</p>
 <hr>
 <ul>
 <li>label : str = None
-Overrides 'name' as label</li>
-<li>
-<p>id : int = &hellip;</p>
-</li>
-<li>
-<p>width : int = 0</p>
-</li>
-<li>
-<p>height : int = 0</p>
-</li>
-<li>
-<p>indent : int = -1</p>
-</li>
-<li>
-<p>parent : int = 0
-Parent to add this item to. (runtime adding)</p>
-</li>
+Overrides 'name' as label.</li>
+<li>id : int = &hellip;
+Unique id used to programmatically refer to the item.If label is unused this will be the label.</li>
+<li>width : int = 0
+Width of the item.</li>
+<li>height : int = 0
+Height of the item.</li>
+<li>indent : int = -1
+Offsets the widget to the right the specified number multiplied by the indent style.</li>
+<li>parent : int = 0
+Parent to add this item to. (runtime adding)</li>
 <li>before : int = 0
 This item will be displayed before the specified item in the parent.</li>
 <li>show : bool = True
-Attempt to render</li>
+Attempt to render widget.</li>
 <li>pos : List[int] = []
 Places the item relative to window coordinates, [0,0] is top left.</li>
 <li>style : int = 0</li>
@@ -3151,36 +2842,29 @@ Places the item relative to window coordinates, [0,0] is top left.</li>
 <hr>
 <ul>
 <li>label : str = None
-Overrides 'name' as label</li>
-<li>
-<p>id : int = &hellip;</p>
-</li>
-<li>
-<p>indent : int = -1</p>
-</li>
-<li>
-<p>parent : int = 0
-Parent to add this item to. (runtime adding)</p>
-</li>
+Overrides 'name' as label.</li>
+<li>id : int = &hellip;
+Unique id used to programmatically refer to the item.If label is unused this will be the label.</li>
+<li>indent : int = -1
+Offsets the widget to the right the specified number multiplied by the indent style.</li>
+<li>parent : int = 0
+Parent to add this item to. (runtime adding)</li>
 <li>before : int = 0
 This item will be displayed before the specified item in the parent.</li>
 <li>payload_type : str = '$$DPG_PAYLOAD'
-Overrides 'name' as value storage key</li>
+Sender string type must be the same as the target for the target to run the payload_callback.</li>
 <li>drag_callback : Callable = None
-Registers a drag callback for drag and drop</li>
+Registers a drag callback for drag and drop.</li>
 <li>drop_callback : Callable = None
-Registers a drag callback for drag and drop</li>
+Registers a drop callback for drag and drop.</li>
 <li>show : bool = True
-Attempt to render</li>
-<li>
-<p>enabled : bool = True</p>
-</li>
-<li>
-<p>filter_key : str = ''
-Used by filter widget</p>
-</li>
+Attempt to render widget.</li>
+<li>enabled : bool = True
+Turns off functionality of widget and applies the disabled theme.</li>
+<li>filter_key : str = ''
+Used by filter widget.</li>
 <li>delay_search : str = False
-Used by filter widget</li>
+Delays searching container for specified items until the end of the app. Possible optimization when a container has many children that are not accessed often.</li>
 <li>tracked : bool = False
 Scroll tracking</li>
 <li>track_offset : float = 0.5
@@ -3197,21 +2881,17 @@ Scroll tracking</li>
 <hr>
 <ul>
 <li>label : str = None
-Overrides 'name' as label</li>
-<li>
-<p>id : int = &hellip;</p>
-</li>
-<li>
-<p>indent : int = -1</p>
-</li>
-<li>
-<p>parent : int = 0
-Parent to add this item to. (runtime adding)</p>
-</li>
+Overrides 'name' as label.</li>
+<li>id : int = &hellip;
+Unique id used to programmatically refer to the item.If label is unused this will be the label.</li>
+<li>indent : int = -1
+Offsets the widget to the right the specified number multiplied by the indent style.</li>
+<li>parent : int = 0
+Parent to add this item to. (runtime adding)</li>
 <li>show : bool = True
-Attempt to render</li>
+Attempt to render widget.</li>
 <li>delay_search : str = False
-Used by filter widget</li>
+Delays searching container for specified items until the end of the app. Possible optimization when a container has many children that are not accessed often.</li>
 </ul></div>
 </dd>
 <dt id="dearpygui.core.add_menu_item"><code class="name flex">
@@ -3224,38 +2904,31 @@ Used by filter widget</li>
 <hr>
 <ul>
 <li>label : str = None
-Overrides 'name' as label</li>
-<li>
-<p>id : int = &hellip;</p>
-</li>
-<li>
-<p>indent : int = -1</p>
-</li>
-<li>
-<p>parent : int = 0
-Parent to add this item to. (runtime adding)</p>
-</li>
+Overrides 'name' as label.</li>
+<li>id : int = &hellip;
+Unique id used to programmatically refer to the item.If label is unused this will be the label.</li>
+<li>indent : int = -1
+Offsets the widget to the right the specified number multiplied by the indent style.</li>
+<li>parent : int = 0
+Parent to add this item to. (runtime adding)</li>
 <li>before : int = 0
 This item will be displayed before the specified item in the parent.</li>
 <li>payload_type : str = '$$DPG_PAYLOAD'
-Overrides 'name' as value storage key</li>
+Sender string type must be the same as the target for the target to run the payload_callback.</li>
 <li>callback : Callable = None
-Registers a callback</li>
+Registers a callback.</li>
 <li>drag_callback : Callable = None
-Registers a drag callback for drag and drop</li>
+Registers a drag callback for drag and drop.</li>
 <li>drop_callback : Callable = None
-Registers a drag callback for drag and drop</li>
+Registers a drop callback for drag and drop.</li>
 <li>user_data : Any = None
-User data for callbacks</li>
+User data for callbacks.</li>
 <li>show : bool = True
-Attempt to render</li>
-<li>
-<p>enabled : bool = True</p>
-</li>
-<li>
-<p>filter_key : str = ''
-Used by filter widget</p>
-</li>
+Attempt to render widget.</li>
+<li>enabled : bool = True
+Turns off functionality of widget and applies the disabled theme.</li>
+<li>filter_key : str = ''
+Used by filter widget.</li>
 <li>tracked : bool = False
 Scroll tracking</li>
 <li>track_offset : float = 0.5
@@ -3287,20 +2960,17 @@ Submits callback for all mouse buttons</li>
 <hr>
 <ul>
 <li>label : str = None
-Overrides 'name' as label</li>
-<li>
-<p>id : int = &hellip;</p>
-</li>
-<li>
-<p>parent : int = 0
-Parent to add this item to. (runtime adding)</p>
-</li>
+Overrides 'name' as label.</li>
+<li>id : int = &hellip;
+Unique id used to programmatically refer to the item.If label is unused this will be the label.</li>
+<li>parent : int = 0
+Parent to add this item to. (runtime adding)</li>
 <li>callback : Callable = None
-Registers a callback</li>
+Registers a callback.</li>
 <li>user_data : Any = None
-User data for callbacks</li>
+User data for callbacks.</li>
 <li>show : bool = True
-Attempt to render</li>
+Attempt to render widget.</li>
 </ul></div>
 </dd>
 <dt id="dearpygui.core.add_mouse_double_click_handler"><code class="name flex">
@@ -3319,20 +2989,17 @@ Submits callback for all mouse buttons</li>
 <hr>
 <ul>
 <li>label : str = None
-Overrides 'name' as label</li>
-<li>
-<p>id : int = &hellip;</p>
-</li>
-<li>
-<p>parent : int = 0
-Parent to add this item to. (runtime adding)</p>
-</li>
+Overrides 'name' as label.</li>
+<li>id : int = &hellip;
+Unique id used to programmatically refer to the item.If label is unused this will be the label.</li>
+<li>parent : int = 0
+Parent to add this item to. (runtime adding)</li>
 <li>callback : Callable = None
-Registers a callback</li>
+Registers a callback.</li>
 <li>user_data : Any = None
-User data for callbacks</li>
+User data for callbacks.</li>
 <li>show : bool = True
-Attempt to render</li>
+Attempt to render widget.</li>
 </ul></div>
 </dd>
 <dt id="dearpygui.core.add_mouse_down_handler"><code class="name flex">
@@ -3351,20 +3018,17 @@ Submits callback for all mouse buttons</li>
 <hr>
 <ul>
 <li>label : str = None
-Overrides 'name' as label</li>
-<li>
-<p>id : int = &hellip;</p>
-</li>
-<li>
-<p>parent : int = 0
-Parent to add this item to. (runtime adding)</p>
-</li>
+Overrides 'name' as label.</li>
+<li>id : int = &hellip;
+Unique id used to programmatically refer to the item.If label is unused this will be the label.</li>
+<li>parent : int = 0
+Parent to add this item to. (runtime adding)</li>
 <li>callback : Callable = None
-Registers a callback</li>
+Registers a callback.</li>
 <li>user_data : Any = None
-User data for callbacks</li>
+User data for callbacks.</li>
 <li>show : bool = True
-Attempt to render</li>
+Attempt to render widget.</li>
 </ul></div>
 </dd>
 <dt id="dearpygui.core.add_mouse_drag_handler"><code class="name flex">
@@ -3385,20 +3049,17 @@ The threshold the mouse must be dragged before the callback is ran</li>
 <hr>
 <ul>
 <li>label : str = None
-Overrides 'name' as label</li>
-<li>
-<p>id : int = &hellip;</p>
-</li>
-<li>
-<p>parent : int = 0
-Parent to add this item to. (runtime adding)</p>
-</li>
+Overrides 'name' as label.</li>
+<li>id : int = &hellip;
+Unique id used to programmatically refer to the item.If label is unused this will be the label.</li>
+<li>parent : int = 0
+Parent to add this item to. (runtime adding)</li>
 <li>callback : Callable = None
-Registers a callback</li>
+Registers a callback.</li>
 <li>user_data : Any = None
-User data for callbacks</li>
+User data for callbacks.</li>
 <li>show : bool = True
-Attempt to render</li>
+Attempt to render widget.</li>
 </ul></div>
 </dd>
 <dt id="dearpygui.core.add_mouse_move_handler"><code class="name flex">
@@ -3411,20 +3072,17 @@ Attempt to render</li>
 <hr>
 <ul>
 <li>label : str = None
-Overrides 'name' as label</li>
-<li>
-<p>id : int = &hellip;</p>
-</li>
-<li>
-<p>parent : int = 0
-Parent to add this item to. (runtime adding)</p>
-</li>
+Overrides 'name' as label.</li>
+<li>id : int = &hellip;
+Unique id used to programmatically refer to the item.If label is unused this will be the label.</li>
+<li>parent : int = 0
+Parent to add this item to. (runtime adding)</li>
 <li>callback : Callable = None
-Registers a callback</li>
+Registers a callback.</li>
 <li>user_data : Any = None
-User data for callbacks</li>
+User data for callbacks.</li>
 <li>show : bool = True
-Attempt to render</li>
+Attempt to render widget.</li>
 </ul></div>
 </dd>
 <dt id="dearpygui.core.add_mouse_release_handler"><code class="name flex">
@@ -3443,20 +3101,17 @@ Submits callback for all mouse buttons</li>
 <hr>
 <ul>
 <li>label : str = None
-Overrides 'name' as label</li>
-<li>
-<p>id : int = &hellip;</p>
-</li>
-<li>
-<p>parent : int = 0
-Parent to add this item to. (runtime adding)</p>
-</li>
+Overrides 'name' as label.</li>
+<li>id : int = &hellip;
+Unique id used to programmatically refer to the item.If label is unused this will be the label.</li>
+<li>parent : int = 0
+Parent to add this item to. (runtime adding)</li>
 <li>callback : Callable = None
-Registers a callback</li>
+Registers a callback.</li>
 <li>user_data : Any = None
-User data for callbacks</li>
+User data for callbacks.</li>
 <li>show : bool = True
-Attempt to render</li>
+Attempt to render widget.</li>
 </ul></div>
 </dd>
 <dt id="dearpygui.core.add_mouse_wheel_handler"><code class="name flex">
@@ -3469,20 +3124,17 @@ Attempt to render</li>
 <hr>
 <ul>
 <li>label : str = None
-Overrides 'name' as label</li>
-<li>
-<p>id : int = &hellip;</p>
-</li>
-<li>
-<p>parent : int = 0
-Parent to add this item to. (runtime adding)</p>
-</li>
+Overrides 'name' as label.</li>
+<li>id : int = &hellip;
+Unique id used to programmatically refer to the item.If label is unused this will be the label.</li>
+<li>parent : int = 0
+Parent to add this item to. (runtime adding)</li>
 <li>callback : Callable = None
-Registers a callback</li>
+Registers a callback.</li>
 <li>user_data : Any = None
-User data for callbacks</li>
+User data for callbacks.</li>
 <li>show : bool = True
-Attempt to render</li>
+Attempt to render widget.</li>
 </ul></div>
 </dd>
 <dt id="dearpygui.core.add_node"><code class="name flex">
@@ -3495,30 +3147,27 @@ Attempt to render</li>
 <hr>
 <ul>
 <li>label : str = None
-Overrides 'name' as label</li>
-<li>
-<p>id : int = &hellip;</p>
-</li>
-<li>
-<p>parent : int = 0
-Parent to add this item to. (runtime adding)</p>
-</li>
+Overrides 'name' as label.</li>
+<li>id : int = &hellip;
+Unique id used to programmatically refer to the item.If label is unused this will be the label.</li>
+<li>parent : int = 0
+Parent to add this item to. (runtime adding)</li>
 <li>before : int = 0
 This item will be displayed before the specified item in the parent.</li>
 <li>payload_type : str = '$$DPG_PAYLOAD'
-Overrides 'name' as value storage key</li>
+Sender string type must be the same as the target for the target to run the payload_callback.</li>
 <li>drag_callback : Callable = None
-Registers a drag callback for drag and drop</li>
+Registers a drag callback for drag and drop.</li>
 <li>drop_callback : Callable = None
-Registers a drag callback for drag and drop</li>
+Registers a drop callback for drag and drop.</li>
 <li>show : bool = True
-Attempt to render</li>
+Attempt to render widget.</li>
 <li>pos : List[int] = []
 Places the item relative to window coordinates, [0,0] is top left.</li>
 <li>filter_key : str = ''
-Used by filter widget</li>
+Used by filter widget.</li>
 <li>delay_search : str = False
-Used by filter widget</li>
+Delays searching container for specified items until the end of the app. Possible optimization when a container has many children that are not accessed often.</li>
 <li>tracked : bool = False
 Scroll tracking</li>
 <li>track_offset : float = 0.5
@@ -3537,29 +3186,25 @@ Allow node to be draggable.</li>
 <hr>
 <ul>
 <li>label : str = None
-Overrides 'name' as label</li>
-<li>
-<p>id : int = &hellip;</p>
-</li>
-<li>
-<p>indent : int = -1</p>
-</li>
-<li>
-<p>parent : int = 0
-Parent to add this item to. (runtime adding)</p>
-</li>
+Overrides 'name' as label.</li>
+<li>id : int = &hellip;
+Unique id used to programmatically refer to the item.If label is unused this will be the label.</li>
+<li>indent : int = -1
+Offsets the widget to the right the specified number multiplied by the indent style.</li>
+<li>parent : int = 0
+Parent to add this item to. (runtime adding)</li>
 <li>before : int = 0
 This item will be displayed before the specified item in the parent.</li>
 <li>payload_type : str = '$$DPG_PAYLOAD'
-Overrides 'name' as value storage key</li>
+Sender string type must be the same as the target for the target to run the payload_callback.</li>
 <li>drag_callback : Callable = None
-Registers a drag callback for drag and drop</li>
+Registers a drag callback for drag and drop.</li>
 <li>drop_callback : Callable = None
-Registers a drag callback for drag and drop</li>
+Registers a drop callback for drag and drop.</li>
 <li>show : bool = True
-Attempt to render</li>
+Attempt to render widget.</li>
 <li>filter_key : str = ''
-Used by filter widget</li>
+Used by filter widget.</li>
 <li>tracked : bool = False
 Scroll tracking</li>
 <li>track_offset : float = 0.5
@@ -3582,30 +3227,27 @@ Pin shape</li>
 <hr>
 <ul>
 <li>label : str = None
-Overrides 'name' as label</li>
-<li>
-<p>id : int = &hellip;</p>
-</li>
-<li>
-<p>parent : int = 0
-Parent to add this item to. (runtime adding)</p>
-</li>
+Overrides 'name' as label.</li>
+<li>id : int = &hellip;
+Unique id used to programmatically refer to the item.If label is unused this will be the label.</li>
+<li>parent : int = 0
+Parent to add this item to. (runtime adding)</li>
 <li>before : int = 0
 This item will be displayed before the specified item in the parent.</li>
 <li>payload_type : str = '$$DPG_PAYLOAD'
-Overrides 'name' as value storage key</li>
+Sender string type must be the same as the target for the target to run the payload_callback.</li>
 <li>callback : Callable = None
-Registers a callback</li>
+Registers a callback.</li>
 <li>drag_callback : Callable = None
-Registers a drag callback for drag and drop</li>
+Registers a drag callback for drag and drop.</li>
 <li>drop_callback : Callable = None
-Registers a drag callback for drag and drop</li>
+Registers a drop callback for drag and drop.</li>
 <li>show : bool = True
-Attempt to render</li>
+Attempt to render widget.</li>
 <li>filter_key : str = ''
-Used by filter widget</li>
+Used by filter widget.</li>
 <li>delay_search : str = False
-Used by filter widget</li>
+Delays searching container for specified items until the end of the app. Possible optimization when a container has many children that are not accessed often.</li>
 <li>tracked : bool = False
 Scroll tracking</li>
 <li>track_offset : float = 0.5
@@ -3634,16 +3276,13 @@ Callback ran when a link is detached.</li>
 <hr>
 <ul>
 <li>label : str = None
-Overrides 'name' as label</li>
-<li>
-<p>id : int = &hellip;</p>
-</li>
-<li>
-<p>parent : int = 0
-Parent to add this item to. (runtime adding)</p>
-</li>
+Overrides 'name' as label.</li>
+<li>id : int = &hellip;
+Unique id used to programmatically refer to the item.If label is unused this will be the label.</li>
+<li>parent : int = 0
+Parent to add this item to. (runtime adding)</li>
 <li>show : bool = True
-Attempt to render</li>
+Attempt to render widget.</li>
 </ul></div>
 </dd>
 <dt id="dearpygui.core.add_pie_series"><code class="name flex">
@@ -3675,20 +3314,17 @@ Attempt to render</li>
 <hr>
 <ul>
 <li>label : str = None
-Overrides 'name' as label</li>
-<li>
-<p>id : int = &hellip;</p>
-</li>
-<li>
-<p>parent : int = 0
-Parent to add this item to. (runtime adding)</p>
-</li>
+Overrides 'name' as label.</li>
+<li>id : int = &hellip;
+Unique id used to programmatically refer to the item.If label is unused this will be the label.</li>
+<li>parent : int = 0
+Parent to add this item to. (runtime adding)</li>
 <li>before : int = 0
 This item will be displayed before the specified item in the parent.</li>
 <li>source : int = 0
-Overrides 'name' as value storage key</li>
+Overrides 'id' as value storage key.</li>
 <li>show : bool = True
-Attempt to render</li>
+Attempt to render widget.</li>
 <li>
 <p>format : str = '%0.2f'</p>
 </li>
@@ -3713,43 +3349,37 @@ Attempt to render</li>
 <hr>
 <ul>
 <li>label : str = None
-Overrides 'name' as label</li>
-<li>
-<p>id : int = &hellip;</p>
-</li>
-<li>
-<p>width : int = 0</p>
-</li>
-<li>
-<p>height : int = 0</p>
-</li>
-<li>
-<p>indent : int = -1</p>
-</li>
-<li>
-<p>parent : int = 0
-Parent to add this item to. (runtime adding)</p>
-</li>
+Overrides 'name' as label.</li>
+<li>id : int = &hellip;
+Unique id used to programmatically refer to the item.If label is unused this will be the label.</li>
+<li>width : int = 0
+Width of the item.</li>
+<li>height : int = 0
+Height of the item.</li>
+<li>indent : int = -1
+Offsets the widget to the right the specified number multiplied by the indent style.</li>
+<li>parent : int = 0
+Parent to add this item to. (runtime adding)</li>
 <li>before : int = 0
 This item will be displayed before the specified item in the parent.</li>
 <li>payload_type : str = '$$DPG_PAYLOAD'
-Overrides 'name' as value storage key</li>
+Sender string type must be the same as the target for the target to run the payload_callback.</li>
 <li>callback : Callable = None
-Registers a callback</li>
+Registers a callback.</li>
 <li>drag_callback : Callable = None
-Registers a drag callback for drag and drop</li>
+Registers a drag callback for drag and drop.</li>
 <li>drop_callback : Callable = None
-Registers a drag callback for drag and drop</li>
+Registers a drop callback for drag and drop.</li>
 <li>user_data : Any = None
-User data for callbacks</li>
+User data for callbacks.</li>
 <li>show : bool = True
-Attempt to render</li>
+Attempt to render widget.</li>
 <li>pos : List[int] = []
 Places the item relative to window coordinates, [0,0] is top left.</li>
 <li>filter_key : str = ''
-Used by filter widget</li>
+Used by filter widget.</li>
 <li>delay_search : str = False
-Used by filter widget</li>
+Delays searching container for specified items until the end of the app. Possible optimization when a container has many children that are not accessed often.</li>
 <li>tracked : bool = False
 Scroll tracking</li>
 <li>track_offset : float = 0.5
@@ -3796,20 +3426,17 @@ Scroll tracking</li>
 <hr>
 <ul>
 <li>label : str = None
-Overrides 'name' as label</li>
-<li>
-<p>id : int = &hellip;</p>
-</li>
-<li>
-<p>parent : int = 0
-Parent to add this item to. (runtime adding)</p>
-</li>
+Overrides 'name' as label.</li>
+<li>id : int = &hellip;
+Unique id used to programmatically refer to the item.If label is unused this will be the label.</li>
+<li>parent : int = 0
+Parent to add this item to. (runtime adding)</li>
 <li>before : int = 0
 This item will be displayed before the specified item in the parent.</li>
 <li>source : int = 0
-Overrides 'name' as value storage key</li>
+Overrides 'id' as value storage key.</li>
 <li>show : bool = True
-Attempt to render</li>
+Attempt to render widget.</li>
 <li>
 <p>default_value : List[float] = (0.0, 0.0)</p>
 </li>
@@ -3839,22 +3466,19 @@ Attempt to render</li>
 <hr>
 <ul>
 <li>label : str = None
-Overrides 'name' as label</li>
-<li>
-<p>id : int = &hellip;</p>
-</li>
-<li>
-<p>parent : int = 0
-Parent to add this item to. (runtime adding)</p>
-</li>
+Overrides 'name' as label.</li>
+<li>id : int = &hellip;
+Unique id used to programmatically refer to the item.If label is unused this will be the label.</li>
+<li>parent : int = 0
+Parent to add this item to. (runtime adding)</li>
 <li>payload_type : str = '$$DPG_PAYLOAD'
-Overrides 'name' as value storage key</li>
+Sender string type must be the same as the target for the target to run the payload_callback.</li>
 <li>drag_callback : Callable = None
-Registers a drag callback for drag and drop</li>
+Registers a drag callback for drag and drop.</li>
 <li>drop_callback : Callable = None
-Registers a drag callback for drag and drop</li>
+Registers a drop callback for drag and drop.</li>
 <li>show : bool = True
-Attempt to render</li>
+Attempt to render widget.</li>
 <li>
 <p>no_gridlines : bool = False</p>
 </li>
@@ -3891,22 +3515,19 @@ Attempt to render</li>
 <hr>
 <ul>
 <li>label : str = None
-Overrides 'name' as label</li>
-<li>
-<p>id : int = &hellip;</p>
-</li>
-<li>
-<p>parent : int = 0
-Parent to add this item to. (runtime adding)</p>
-</li>
+Overrides 'name' as label.</li>
+<li>id : int = &hellip;
+Unique id used to programmatically refer to the item.If label is unused this will be the label.</li>
+<li>parent : int = 0
+Parent to add this item to. (runtime adding)</li>
 <li>payload_type : str = '$$DPG_PAYLOAD'
-Overrides 'name' as value storage key</li>
+Sender string type must be the same as the target for the target to run the payload_callback.</li>
 <li>drag_callback : Callable = None
-Registers a drag callback for drag and drop</li>
+Registers a drag callback for drag and drop.</li>
 <li>drop_callback : Callable = None
-Registers a drag callback for drag and drop</li>
+Registers a drop callback for drag and drop.</li>
 <li>show : bool = True
-Attempt to render</li>
+Attempt to render widget.</li>
 <li>location : int = 5
 location, mvPlot_Location_*</li>
 <li>
@@ -3927,27 +3548,23 @@ location, mvPlot_Location_*</li>
 <hr>
 <ul>
 <li>label : str = None
-Overrides 'name' as label</li>
-<li>
-<p>id : int = &hellip;</p>
-</li>
-<li>
-<p>width : int = 0</p>
-</li>
-<li>
-<p>height : int = 0</p>
-</li>
-<li>
-<p>parent : int = 0
-Parent to add this item to. (runtime adding)</p>
-</li>
+Overrides 'name' as label.</li>
+<li>id : int = &hellip;
+Unique id used to programmatically refer to the item.If label is unused this will be the label.</li>
+<li>width : int = 0
+Width of the item.</li>
+<li>height : int = 0
+Height of the item.</li>
+<li>parent : int = 0
+Parent to add this item to. (runtime adding)</li>
 <li>show : bool = True
-Attempt to render</li>
+Attempt to render widget.</li>
 <li>pos : List[int] = []
 Places the item relative to window coordinates, [0,0] is top left.</li>
 <li>mousebutton : int = 1
 The mouse code that will trigger the popup.</li>
-<li>modal : bool = False</li>
+<li>modal : bool = False
+Fills area behind window according to the theme and disables user ability to interact with anything except the window.</li>
 </ul></div>
 </dd>
 <dt id="dearpygui.core.add_progress_bar"><code class="name flex">
@@ -3960,39 +3577,33 @@ The mouse code that will trigger the popup.</li>
 <hr>
 <ul>
 <li>label : str = None
-Overrides 'name' as label</li>
-<li>
-<p>id : int = &hellip;</p>
-</li>
-<li>
-<p>width : int = 0</p>
-</li>
-<li>
-<p>height : int = 0</p>
-</li>
-<li>
-<p>indent : int = -1</p>
-</li>
-<li>
-<p>parent : int = 0
-Parent to add this item to. (runtime adding)</p>
-</li>
+Overrides 'name' as label.</li>
+<li>id : int = &hellip;
+Unique id used to programmatically refer to the item.If label is unused this will be the label.</li>
+<li>width : int = 0
+Width of the item.</li>
+<li>height : int = 0
+Height of the item.</li>
+<li>indent : int = -1
+Offsets the widget to the right the specified number multiplied by the indent style.</li>
+<li>parent : int = 0
+Parent to add this item to. (runtime adding)</li>
 <li>before : int = 0
 This item will be displayed before the specified item in the parent.</li>
 <li>source : int = 0
-Overrides 'name' as value storage key</li>
+Overrides 'id' as value storage key.</li>
 <li>payload_type : str = '$$DPG_PAYLOAD'
-Overrides 'name' as value storage key</li>
+Sender string type must be the same as the target for the target to run the payload_callback.</li>
 <li>drag_callback : Callable = None
-Registers a drag callback for drag and drop</li>
+Registers a drag callback for drag and drop.</li>
 <li>drop_callback : Callable = None
-Registers a drag callback for drag and drop</li>
+Registers a drop callback for drag and drop.</li>
 <li>show : bool = True
-Attempt to render</li>
+Attempt to render widget.</li>
 <li>pos : List[int] = []
 Places the item relative to window coordinates, [0,0] is top left.</li>
 <li>filter_key : str = ''
-Used by filter widget</li>
+Used by filter widget.</li>
 <li>tracked : bool = False
 Scroll tracking</li>
 <li>track_offset : float = 0.5
@@ -4018,42 +3629,35 @@ value from 0 to 1</li>
 <hr>
 <ul>
 <li>label : str = None
-Overrides 'name' as label</li>
-<li>
-<p>id : int = &hellip;</p>
-</li>
-<li>
-<p>indent : int = -1</p>
-</li>
-<li>
-<p>parent : int = 0
-Parent to add this item to. (runtime adding)</p>
-</li>
+Overrides 'name' as label.</li>
+<li>id : int = &hellip;
+Unique id used to programmatically refer to the item.If label is unused this will be the label.</li>
+<li>indent : int = -1
+Offsets the widget to the right the specified number multiplied by the indent style.</li>
+<li>parent : int = 0
+Parent to add this item to. (runtime adding)</li>
 <li>before : int = 0
 This item will be displayed before the specified item in the parent.</li>
 <li>source : int = 0
-Overrides 'name' as value storage key</li>
+Overrides 'id' as value storage key.</li>
 <li>payload_type : str = '$$DPG_PAYLOAD'
-Overrides 'name' as value storage key</li>
+Sender string type must be the same as the target for the target to run the payload_callback.</li>
 <li>callback : Callable = None
-Registers a callback</li>
+Registers a callback.</li>
 <li>drag_callback : Callable = None
-Registers a drag callback for drag and drop</li>
+Registers a drag callback for drag and drop.</li>
 <li>drop_callback : Callable = None
-Registers a drag callback for drag and drop</li>
+Registers a drop callback for drag and drop.</li>
 <li>user_data : Any = None
-User data for callbacks</li>
+User data for callbacks.</li>
 <li>show : bool = True
-Attempt to render</li>
-<li>
-<p>enabled : bool = True</p>
-</li>
-<li>
-<p>pos : List[int] = []
-Places the item relative to window coordinates, [0,0] is top left.</p>
-</li>
+Attempt to render widget.</li>
+<li>enabled : bool = True
+Turns off functionality of widget and applies the disabled theme.</li>
+<li>pos : List[int] = []
+Places the item relative to window coordinates, [0,0] is top left.</li>
 <li>filter_key : str = ''
-Used by filter widget</li>
+Used by filter widget.</li>
 <li>tracked : bool = False
 Scroll tracking</li>
 <li>track_offset : float = 0.5
@@ -4081,16 +3685,13 @@ Scroll tracking</li>
 <hr>
 <ul>
 <li>label : str = None
-Overrides 'name' as label</li>
-<li>
-<p>id : int = &hellip;</p>
-</li>
-<li>
-<p>callback : Callable = None
-Registers a callback</p>
-</li>
+Overrides 'name' as label.</li>
+<li>id : int = &hellip;
+Unique id used to programmatically refer to the item.If label is unused this will be the label.</li>
+<li>callback : Callable = None
+Registers a callback.</li>
 <li>user_data : Any = None
-User data for callbacks</li>
+User data for callbacks.</li>
 </ul></div>
 </dd>
 <dt id="dearpygui.core.add_same_line"><code class="name flex">
@@ -4103,18 +3704,15 @@ User data for callbacks</li>
 <hr>
 <ul>
 <li>label : str = None
-Overrides 'name' as label</li>
-<li>
-<p>id : int = &hellip;</p>
-</li>
-<li>
-<p>parent : int = 0
-Parent to add this item to. (runtime adding)</p>
-</li>
+Overrides 'name' as label.</li>
+<li>id : int = &hellip;
+Unique id used to programmatically refer to the item.If label is unused this will be the label.</li>
+<li>parent : int = 0
+Parent to add this item to. (runtime adding)</li>
 <li>before : int = 0
 This item will be displayed before the specified item in the parent.</li>
 <li>show : bool = True
-Attempt to render</li>
+Attempt to render widget.</li>
 <li>xoffset : float = 0.0
 offset from containing window</li>
 <li>spacing : float = -1.0
@@ -4141,20 +3739,17 @@ offset from previous widget</li>
 <hr>
 <ul>
 <li>label : str = None
-Overrides 'name' as label</li>
-<li>
-<p>id : int = &hellip;</p>
-</li>
-<li>
-<p>parent : int = 0
-Parent to add this item to. (runtime adding)</p>
-</li>
+Overrides 'name' as label.</li>
+<li>id : int = &hellip;
+Unique id used to programmatically refer to the item.If label is unused this will be the label.</li>
+<li>parent : int = 0
+Parent to add this item to. (runtime adding)</li>
 <li>before : int = 0
 This item will be displayed before the specified item in the parent.</li>
 <li>source : int = 0
-Overrides 'name' as value storage key</li>
+Overrides 'id' as value storage key.</li>
 <li>show : bool = True
-Attempt to render</li>
+Attempt to render widget.</li>
 <li>contribute_to_bounds : bool = True</li>
 </ul></div>
 </dd>
@@ -4168,48 +3763,39 @@ Attempt to render</li>
 <hr>
 <ul>
 <li>label : str = None
-Overrides 'name' as label</li>
-<li>
-<p>id : int = &hellip;</p>
-</li>
-<li>
-<p>width : int = 0</p>
-</li>
-<li>
-<p>height : int = 0</p>
-</li>
-<li>
-<p>indent : int = -1</p>
-</li>
-<li>
-<p>parent : int = 0
-Parent to add this item to. (runtime adding)</p>
-</li>
+Overrides 'name' as label.</li>
+<li>id : int = &hellip;
+Unique id used to programmatically refer to the item.If label is unused this will be the label.</li>
+<li>width : int = 0
+Width of the item.</li>
+<li>height : int = 0
+Height of the item.</li>
+<li>indent : int = -1
+Offsets the widget to the right the specified number multiplied by the indent style.</li>
+<li>parent : int = 0
+Parent to add this item to. (runtime adding)</li>
 <li>before : int = 0
 This item will be displayed before the specified item in the parent.</li>
 <li>source : int = 0
-Overrides 'name' as value storage key</li>
+Overrides 'id' as value storage key.</li>
 <li>payload_type : str = '$$DPG_PAYLOAD'
-Overrides 'name' as value storage key</li>
+Sender string type must be the same as the target for the target to run the payload_callback.</li>
 <li>callback : Callable = None
-Registers a callback</li>
+Registers a callback.</li>
 <li>drag_callback : Callable = None
-Registers a drag callback for drag and drop</li>
+Registers a drag callback for drag and drop.</li>
 <li>drop_callback : Callable = None
-Registers a drag callback for drag and drop</li>
+Registers a drop callback for drag and drop.</li>
 <li>user_data : Any = None
-User data for callbacks</li>
+User data for callbacks.</li>
 <li>show : bool = True
-Attempt to render</li>
-<li>
-<p>enabled : bool = True</p>
-</li>
-<li>
-<p>pos : List[int] = []
-Places the item relative to window coordinates, [0,0] is top left.</p>
-</li>
+Attempt to render widget.</li>
+<li>enabled : bool = True
+Turns off functionality of widget and applies the disabled theme.</li>
+<li>pos : List[int] = []
+Places the item relative to window coordinates, [0,0] is top left.</li>
 <li>filter_key : str = ''
-Used by filter widget</li>
+Used by filter widget.</li>
 <li>tracked : bool = False
 Scroll tracking</li>
 <li>track_offset : float = 0.5
@@ -4233,21 +3819,17 @@ Span the width of all columns if placed in a table.</p>
 <hr>
 <ul>
 <li>label : str = None
-Overrides 'name' as label</li>
-<li>
-<p>id : int = &hellip;</p>
-</li>
-<li>
-<p>indent : int = -1</p>
-</li>
-<li>
-<p>parent : int = 0
-Parent to add this item to. (runtime adding)</p>
-</li>
+Overrides 'name' as label.</li>
+<li>id : int = &hellip;
+Unique id used to programmatically refer to the item.If label is unused this will be the label.</li>
+<li>indent : int = -1
+Offsets the widget to the right the specified number multiplied by the indent style.</li>
+<li>parent : int = 0
+Parent to add this item to. (runtime adding)</li>
 <li>before : int = 0
 This item will be displayed before the specified item in the parent.</li>
 <li>show : bool = True
-Attempt to render</li>
+Attempt to render widget.</li>
 <li>pos : List[int] = []
 Places the item relative to window coordinates, [0,0] is top left.</li>
 </ul></div>
@@ -4272,20 +3854,17 @@ Places the item relative to window coordinates, [0,0] is top left.</li>
 <hr>
 <ul>
 <li>label : str = None
-Overrides 'name' as label</li>
-<li>
-<p>id : int = &hellip;</p>
-</li>
-<li>
-<p>parent : int = 0
-Parent to add this item to. (runtime adding)</p>
-</li>
+Overrides 'name' as label.</li>
+<li>id : int = &hellip;
+Unique id used to programmatically refer to the item.If label is unused this will be the label.</li>
+<li>parent : int = 0
+Parent to add this item to. (runtime adding)</li>
 <li>before : int = 0
 This item will be displayed before the specified item in the parent.</li>
 <li>source : int = 0
-Overrides 'name' as value storage key</li>
+Overrides 'id' as value storage key.</li>
 <li>show : bool = True
-Attempt to render</li>
+Attempt to render widget.</li>
 <li>
 <p>y2 : List[float] = []</p>
 </li>
@@ -4304,37 +3883,31 @@ Attempt to render</li>
 <hr>
 <ul>
 <li>label : str = None
-Overrides 'name' as label</li>
-<li>
-<p>id : int = &hellip;</p>
-</li>
-<li>
-<p>width : int = 0</p>
-</li>
-<li>
-<p>height : int = 0</p>
-</li>
-<li>
-<p>indent : int = -1</p>
-</li>
-<li>
-<p>parent : int = 0
-Parent to add this item to. (runtime adding)</p>
-</li>
+Overrides 'name' as label.</li>
+<li>id : int = &hellip;
+Unique id used to programmatically refer to the item.If label is unused this will be the label.</li>
+<li>width : int = 0
+Width of the item.</li>
+<li>height : int = 0
+Height of the item.</li>
+<li>indent : int = -1
+Offsets the widget to the right the specified number multiplied by the indent style.</li>
+<li>parent : int = 0
+Parent to add this item to. (runtime adding)</li>
 <li>before : int = 0
 This item will be displayed before the specified item in the parent.</li>
 <li>source : int = 0
-Overrides 'name' as value storage key</li>
+Overrides 'id' as value storage key.</li>
 <li>payload_type : str = '$$DPG_PAYLOAD'
-Overrides 'name' as value storage key</li>
+Sender string type must be the same as the target for the target to run the payload_callback.</li>
 <li>drag_callback : Callable = None
-Registers a drag callback for drag and drop</li>
+Registers a drag callback for drag and drop.</li>
 <li>drop_callback : Callable = None
-Registers a drag callback for drag and drop</li>
+Registers a drop callback for drag and drop.</li>
 <li>show : bool = True
-Attempt to render</li>
+Attempt to render widget.</li>
 <li>filter_key : str = ''
-Used by filter widget</li>
+Used by filter widget.</li>
 <li>tracked : bool = False
 Scroll tracking</li>
 <li>track_offset : float = 0.5
@@ -4370,48 +3943,39 @@ overlays text (similar to a plot title)</p>
 <hr>
 <ul>
 <li>label : str = None
-Overrides 'name' as label</li>
-<li>
-<p>id : int = &hellip;</p>
-</li>
-<li>
-<p>width : int = 0</p>
-</li>
-<li>
-<p>height : int = 0</p>
-</li>
-<li>
-<p>indent : int = -1</p>
-</li>
-<li>
-<p>parent : int = 0
-Parent to add this item to. (runtime adding)</p>
-</li>
+Overrides 'name' as label.</li>
+<li>id : int = &hellip;
+Unique id used to programmatically refer to the item.If label is unused this will be the label.</li>
+<li>width : int = 0
+Width of the item.</li>
+<li>height : int = 0
+Height of the item.</li>
+<li>indent : int = -1
+Offsets the widget to the right the specified number multiplied by the indent style.</li>
+<li>parent : int = 0
+Parent to add this item to. (runtime adding)</li>
 <li>before : int = 0
 This item will be displayed before the specified item in the parent.</li>
 <li>source : int = 0
-Overrides 'name' as value storage key</li>
+Overrides 'id' as value storage key.</li>
 <li>payload_type : str = '$$DPG_PAYLOAD'
-Overrides 'name' as value storage key</li>
+Sender string type must be the same as the target for the target to run the payload_callback.</li>
 <li>callback : Callable = None
-Registers a callback</li>
+Registers a callback.</li>
 <li>drag_callback : Callable = None
-Registers a drag callback for drag and drop</li>
+Registers a drag callback for drag and drop.</li>
 <li>drop_callback : Callable = None
-Registers a drag callback for drag and drop</li>
+Registers a drop callback for drag and drop.</li>
 <li>user_data : Any = None
-User data for callbacks</li>
+User data for callbacks.</li>
 <li>show : bool = True
-Attempt to render</li>
-<li>
-<p>enabled : bool = True</p>
-</li>
-<li>
-<p>pos : List[int] = []
-Places the item relative to window coordinates, [0,0] is top left.</p>
-</li>
+Attempt to render widget.</li>
+<li>enabled : bool = True
+Turns off functionality of widget and applies the disabled theme.</li>
+<li>pos : List[int] = []
+Places the item relative to window coordinates, [0,0] is top left.</li>
 <li>filter_key : str = ''
-Used by filter widget</li>
+Used by filter widget.</li>
 <li>tracked : bool = False
 Scroll tracking</li>
 <li>track_offset : float = 0.5
@@ -4448,45 +4012,37 @@ Clamp value to min/max bounds when input manually with CTRL+Click. By default CT
 <hr>
 <ul>
 <li>label : str = None
-Overrides 'name' as label</li>
-<li>
-<p>id : int = &hellip;</p>
-</li>
-<li>
-<p>width : int = 0</p>
-</li>
-<li>
-<p>indent : int = -1</p>
-</li>
-<li>
-<p>parent : int = 0
-Parent to add this item to. (runtime adding)</p>
-</li>
+Overrides 'name' as label.</li>
+<li>id : int = &hellip;
+Unique id used to programmatically refer to the item.If label is unused this will be the label.</li>
+<li>width : int = 0
+Width of the item.</li>
+<li>indent : int = -1
+Offsets the widget to the right the specified number multiplied by the indent style.</li>
+<li>parent : int = 0
+Parent to add this item to. (runtime adding)</li>
 <li>before : int = 0
 This item will be displayed before the specified item in the parent.</li>
 <li>source : int = 0
-Overrides 'name' as value storage key</li>
+Overrides 'id' as value storage key.</li>
 <li>payload_type : str = '$$DPG_PAYLOAD'
-Overrides 'name' as value storage key</li>
+Sender string type must be the same as the target for the target to run the payload_callback.</li>
 <li>callback : Callable = None
-Registers a callback</li>
+Registers a callback.</li>
 <li>drag_callback : Callable = None
-Registers a drag callback for drag and drop</li>
+Registers a drag callback for drag and drop.</li>
 <li>drop_callback : Callable = None
-Registers a drag callback for drag and drop</li>
+Registers a drop callback for drag and drop.</li>
 <li>user_data : Any = None
-User data for callbacks</li>
+User data for callbacks.</li>
 <li>show : bool = True
-Attempt to render</li>
-<li>
-<p>enabled : bool = True</p>
-</li>
-<li>
-<p>pos : List[int] = []
-Places the item relative to window coordinates, [0,0] is top left.</p>
-</li>
+Attempt to render widget.</li>
+<li>enabled : bool = True
+Turns off functionality of widget and applies the disabled theme.</li>
+<li>pos : List[int] = []
+Places the item relative to window coordinates, [0,0] is top left.</li>
 <li>filter_key : str = ''
-Used by filter widget</li>
+Used by filter widget.</li>
 <li>tracked : bool = False
 Scroll tracking</li>
 <li>track_offset : float = 0.5
@@ -4523,48 +4079,39 @@ Clamp value to min/max bounds when input manually with CTRL+Click. By default CT
 <hr>
 <ul>
 <li>label : str = None
-Overrides 'name' as label</li>
-<li>
-<p>id : int = &hellip;</p>
-</li>
-<li>
-<p>width : int = 0</p>
-</li>
-<li>
-<p>height : int = 0</p>
-</li>
-<li>
-<p>indent : int = -1</p>
-</li>
-<li>
-<p>parent : int = 0
-Parent to add this item to. (runtime adding)</p>
-</li>
+Overrides 'name' as label.</li>
+<li>id : int = &hellip;
+Unique id used to programmatically refer to the item.If label is unused this will be the label.</li>
+<li>width : int = 0
+Width of the item.</li>
+<li>height : int = 0
+Height of the item.</li>
+<li>indent : int = -1
+Offsets the widget to the right the specified number multiplied by the indent style.</li>
+<li>parent : int = 0
+Parent to add this item to. (runtime adding)</li>
 <li>before : int = 0
 This item will be displayed before the specified item in the parent.</li>
 <li>source : int = 0
-Overrides 'name' as value storage key</li>
+Overrides 'id' as value storage key.</li>
 <li>payload_type : str = '$$DPG_PAYLOAD'
-Overrides 'name' as value storage key</li>
+Sender string type must be the same as the target for the target to run the payload_callback.</li>
 <li>callback : Callable = None
-Registers a callback</li>
+Registers a callback.</li>
 <li>drag_callback : Callable = None
-Registers a drag callback for drag and drop</li>
+Registers a drag callback for drag and drop.</li>
 <li>drop_callback : Callable = None
-Registers a drag callback for drag and drop</li>
+Registers a drop callback for drag and drop.</li>
 <li>user_data : Any = None
-User data for callbacks</li>
+User data for callbacks.</li>
 <li>show : bool = True
-Attempt to render</li>
-<li>
-<p>enabled : bool = True</p>
-</li>
-<li>
-<p>pos : List[int] = []
-Places the item relative to window coordinates, [0,0] is top left.</p>
-</li>
+Attempt to render widget.</li>
+<li>enabled : bool = True
+Turns off functionality of widget and applies the disabled theme.</li>
+<li>pos : List[int] = []
+Places the item relative to window coordinates, [0,0] is top left.</li>
 <li>filter_key : str = ''
-Used by filter widget</li>
+Used by filter widget.</li>
 <li>tracked : bool = False
 Scroll tracking</li>
 <li>track_offset : float = 0.5
@@ -4601,45 +4148,37 @@ Clamp value to min/max bounds when input manually with CTRL+Click. By default CT
 <hr>
 <ul>
 <li>label : str = None
-Overrides 'name' as label</li>
-<li>
-<p>id : int = &hellip;</p>
-</li>
-<li>
-<p>width : int = 0</p>
-</li>
-<li>
-<p>indent : int = -1</p>
-</li>
-<li>
-<p>parent : int = 0
-Parent to add this item to. (runtime adding)</p>
-</li>
+Overrides 'name' as label.</li>
+<li>id : int = &hellip;
+Unique id used to programmatically refer to the item.If label is unused this will be the label.</li>
+<li>width : int = 0
+Width of the item.</li>
+<li>indent : int = -1
+Offsets the widget to the right the specified number multiplied by the indent style.</li>
+<li>parent : int = 0
+Parent to add this item to. (runtime adding)</li>
 <li>before : int = 0
 This item will be displayed before the specified item in the parent.</li>
 <li>source : int = 0
-Overrides 'name' as value storage key</li>
+Overrides 'id' as value storage key.</li>
 <li>payload_type : str = '$$DPG_PAYLOAD'
-Overrides 'name' as value storage key</li>
+Sender string type must be the same as the target for the target to run the payload_callback.</li>
 <li>callback : Callable = None
-Registers a callback</li>
+Registers a callback.</li>
 <li>drag_callback : Callable = None
-Registers a drag callback for drag and drop</li>
+Registers a drag callback for drag and drop.</li>
 <li>drop_callback : Callable = None
-Registers a drag callback for drag and drop</li>
+Registers a drop callback for drag and drop.</li>
 <li>user_data : Any = None
-User data for callbacks</li>
+User data for callbacks.</li>
 <li>show : bool = True
-Attempt to render</li>
-<li>
-<p>enabled : bool = True</p>
-</li>
-<li>
-<p>pos : List[int] = []
-Places the item relative to window coordinates, [0,0] is top left.</p>
-</li>
+Attempt to render widget.</li>
+<li>enabled : bool = True
+Turns off functionality of widget and applies the disabled theme.</li>
+<li>pos : List[int] = []
+Places the item relative to window coordinates, [0,0] is top left.</li>
 <li>filter_key : str = ''
-Used by filter widget</li>
+Used by filter widget.</li>
 <li>tracked : bool = False
 Scroll tracking</li>
 <li>track_offset : float = 0.5
@@ -4676,21 +4215,17 @@ Clamp value to min/max bounds when input manually with CTRL+Click. By default CT
 <hr>
 <ul>
 <li>label : str = None
-Overrides 'name' as label</li>
-<li>
-<p>id : int = &hellip;</p>
-</li>
-<li>
-<p>indent : int = -1</p>
-</li>
-<li>
-<p>parent : int = 0
-Parent to add this item to. (runtime adding)</p>
-</li>
+Overrides 'name' as label.</li>
+<li>id : int = &hellip;
+Unique id used to programmatically refer to the item.If label is unused this will be the label.</li>
+<li>indent : int = -1
+Offsets the widget to the right the specified number multiplied by the indent style.</li>
+<li>parent : int = 0
+Parent to add this item to. (runtime adding)</li>
 <li>before : int = 0
 This item will be displayed before the specified item in the parent.</li>
 <li>show : bool = True
-Attempt to render</li>
+Attempt to render widget.</li>
 <li>pos : List[int] = []
 Places the item relative to window coordinates, [0,0] is top left.</li>
 <li>count : int = 1
@@ -4707,8 +4242,9 @@ Number of spacings to add</li>
 <hr>
 <ul>
 <li>label : str = None
-Overrides 'name' as label</li>
-<li>id : int = &hellip;</li>
+Overrides 'name' as label.</li>
+<li>id : int = &hellip;
+Unique id used to programmatically refer to the item.If label is unused this will be the label.</li>
 </ul></div>
 </dd>
 <dt id="dearpygui.core.add_stair_series"><code class="name flex">
@@ -4731,20 +4267,17 @@ Overrides 'name' as label</li>
 <hr>
 <ul>
 <li>label : str = None
-Overrides 'name' as label</li>
-<li>
-<p>id : int = &hellip;</p>
-</li>
-<li>
-<p>parent : int = 0
-Parent to add this item to. (runtime adding)</p>
-</li>
+Overrides 'name' as label.</li>
+<li>id : int = &hellip;
+Unique id used to programmatically refer to the item.If label is unused this will be the label.</li>
+<li>parent : int = 0
+Parent to add this item to. (runtime adding)</li>
 <li>before : int = 0
 This item will be displayed before the specified item in the parent.</li>
 <li>source : int = 0
-Overrides 'name' as value storage key</li>
+Overrides 'id' as value storage key.</li>
 <li>show : bool = True
-Attempt to render</li>
+Attempt to render widget.</li>
 <li>contribute_to_bounds : bool = True</li>
 </ul></div>
 </dd>
@@ -4771,14 +4304,11 @@ Attempt to render</li>
 <hr>
 <ul>
 <li>label : str = None
-Overrides 'name' as label</li>
-<li>
-<p>id : int = &hellip;</p>
-</li>
-<li>
-<p>parent : int = 0
-Parent to add this item to. (runtime adding)</p>
-</li>
+Overrides 'name' as label.</li>
+<li>id : int = &hellip;
+Unique id used to programmatically refer to the item.If label is unused this will be the label.</li>
+<li>parent : int = 0
+Parent to add this item to. (runtime adding)</li>
 <li>file : str = ''</li>
 </ul></div>
 </dd>
@@ -4802,23 +4332,19 @@ Parent to add this item to. (runtime adding)</p>
 <hr>
 <ul>
 <li>label : str = None
-Overrides 'name' as label</li>
-<li>
-<p>id : int = &hellip;</p>
-</li>
-<li>
-<p>indent : int = -1</p>
-</li>
-<li>
-<p>parent : int = 0
-Parent to add this item to. (runtime adding)</p>
-</li>
+Overrides 'name' as label.</li>
+<li>id : int = &hellip;
+Unique id used to programmatically refer to the item.If label is unused this will be the label.</li>
+<li>indent : int = -1
+Offsets the widget to the right the specified number multiplied by the indent style.</li>
+<li>parent : int = 0
+Parent to add this item to. (runtime adding)</li>
 <li>before : int = 0
 This item will be displayed before the specified item in the parent.</li>
 <li>source : int = 0
-Overrides 'name' as value storage key</li>
+Overrides 'id' as value storage key.</li>
 <li>show : bool = True
-Attempt to render</li>
+Attempt to render widget.</li>
 <li>contribute_to_bounds : bool = True</li>
 </ul></div>
 </dd>
@@ -4832,31 +4358,27 @@ Attempt to render</li>
 <hr>
 <ul>
 <li>label : str = None
-Overrides 'name' as label</li>
-<li>
-<p>id : int = &hellip;</p>
-</li>
-<li>
-<p>indent : int = -1</p>
-</li>
-<li>
-<p>parent : int = 0
-Parent to add this item to. (runtime adding)</p>
-</li>
+Overrides 'name' as label.</li>
+<li>id : int = &hellip;
+Unique id used to programmatically refer to the item.If label is unused this will be the label.</li>
+<li>indent : int = -1
+Offsets the widget to the right the specified number multiplied by the indent style.</li>
+<li>parent : int = 0
+Parent to add this item to. (runtime adding)</li>
 <li>before : int = 0
 This item will be displayed before the specified item in the parent.</li>
 <li>payload_type : str = '$$DPG_PAYLOAD'
-Overrides 'name' as value storage key</li>
+Sender string type must be the same as the target for the target to run the payload_callback.</li>
 <li>drag_callback : Callable = None
-Registers a drag callback for drag and drop</li>
+Registers a drag callback for drag and drop.</li>
 <li>drop_callback : Callable = None
-Registers a drag callback for drag and drop</li>
+Registers a drop callback for drag and drop.</li>
 <li>show : bool = True
-Attempt to render</li>
+Attempt to render widget.</li>
 <li>filter_key : str = ''
-Used by filter widget</li>
+Used by filter widget.</li>
 <li>delay_search : str = False
-Used by filter widget</li>
+Delays searching container for specified items until the end of the app. Possible optimization when a container has many children that are not accessed often.</li>
 <li>tracked : bool = False
 Scroll tracking</li>
 <li>track_offset : float = 0.5
@@ -4883,37 +4405,33 @@ Disable tooltip for the given tab.</li>
 <hr>
 <ul>
 <li>label : str = None
-Overrides 'name' as label</li>
-<li>
-<p>id : int = &hellip;</p>
-</li>
-<li>
-<p>indent : int = -1</p>
-</li>
-<li>
-<p>parent : int = 0
-Parent to add this item to. (runtime adding)</p>
-</li>
+Overrides 'name' as label.</li>
+<li>id : int = &hellip;
+Unique id used to programmatically refer to the item.If label is unused this will be the label.</li>
+<li>indent : int = -1
+Offsets the widget to the right the specified number multiplied by the indent style.</li>
+<li>parent : int = 0
+Parent to add this item to. (runtime adding)</li>
 <li>before : int = 0
 This item will be displayed before the specified item in the parent.</li>
 <li>payload_type : str = '$$DPG_PAYLOAD'
-Overrides 'name' as value storage key</li>
+Sender string type must be the same as the target for the target to run the payload_callback.</li>
 <li>callback : Callable = None
-Registers a callback</li>
+Registers a callback.</li>
 <li>drag_callback : Callable = None
-Registers a drag callback for drag and drop</li>
+Registers a drag callback for drag and drop.</li>
 <li>drop_callback : Callable = None
-Registers a drag callback for drag and drop</li>
+Registers a drop callback for drag and drop.</li>
 <li>user_data : Any = None
-User data for callbacks</li>
+User data for callbacks.</li>
 <li>show : bool = True
-Attempt to render</li>
+Attempt to render widget.</li>
 <li>pos : List[int] = []
 Places the item relative to window coordinates, [0,0] is top left.</li>
 <li>filter_key : str = ''
-Used by filter widget</li>
+Used by filter widget.</li>
 <li>delay_search : str = False
-Used by filter widget</li>
+Delays searching container for specified items until the end of the app. Possible optimization when a container has many children that are not accessed often.</li>
 <li>tracked : bool = False
 Scroll tracking</li>
 <li>track_offset : float = 0.5
@@ -4932,33 +4450,29 @@ Allows for moveable tabs.</li>
 <hr>
 <ul>
 <li>label : str = None
-Overrides 'name' as label</li>
-<li>
-<p>id : int = &hellip;</p>
-</li>
-<li>
-<p>indent : int = -1</p>
-</li>
-<li>
-<p>parent : int = 0
-Parent to add this item to. (runtime adding)</p>
-</li>
+Overrides 'name' as label.</li>
+<li>id : int = &hellip;
+Unique id used to programmatically refer to the item.If label is unused this will be the label.</li>
+<li>indent : int = -1
+Offsets the widget to the right the specified number multiplied by the indent style.</li>
+<li>parent : int = 0
+Parent to add this item to. (runtime adding)</li>
 <li>before : int = 0
 This item will be displayed before the specified item in the parent.</li>
 <li>payload_type : str = '$$DPG_PAYLOAD'
-Overrides 'name' as value storage key</li>
+Sender string type must be the same as the target for the target to run the payload_callback.</li>
 <li>callback : Callable = None
-Registers a callback</li>
+Registers a callback.</li>
 <li>drag_callback : Callable = None
-Registers a drag callback for drag and drop</li>
+Registers a drag callback for drag and drop.</li>
 <li>drop_callback : Callable = None
-Registers a drag callback for drag and drop</li>
+Registers a drop callback for drag and drop.</li>
 <li>user_data : Any = None
-User data for callbacks</li>
+User data for callbacks.</li>
 <li>show : bool = True
-Attempt to render</li>
+Attempt to render widget.</li>
 <li>filter_key : str = ''
-Used by filter widget</li>
+Used by filter widget.</li>
 <li>tracked : bool = False
 Scroll tracking</li>
 <li>track_offset : float = 0.5
@@ -4983,37 +4497,31 @@ Disable tooltip for the given tab.</li>
 <hr>
 <ul>
 <li>label : str = None
-Overrides 'name' as label</li>
-<li>
-<p>id : int = &hellip;</p>
-</li>
-<li>
-<p>width : int = 0</p>
-</li>
-<li>
-<p>height : int = 0</p>
-</li>
-<li>
-<p>indent : int = -1</p>
-</li>
-<li>
-<p>parent : int = 0
-Parent to add this item to. (runtime adding)</p>
-</li>
+Overrides 'name' as label.</li>
+<li>id : int = &hellip;
+Unique id used to programmatically refer to the item.If label is unused this will be the label.</li>
+<li>width : int = 0
+Width of the item.</li>
+<li>height : int = 0
+Height of the item.</li>
+<li>indent : int = -1
+Offsets the widget to the right the specified number multiplied by the indent style.</li>
+<li>parent : int = 0
+Parent to add this item to. (runtime adding)</li>
 <li>before : int = 0
 This item will be displayed before the specified item in the parent.</li>
 <li>source : int = 0
-Overrides 'name' as value storage key</li>
+Overrides 'id' as value storage key.</li>
 <li>callback : Callable = None
-Registers a callback</li>
+Registers a callback.</li>
 <li>show : bool = True
-Attempt to render</li>
+Attempt to render widget.</li>
 <li>pos : List[int] = []
 Places the item relative to window coordinates, [0,0] is top left.</li>
 <li>filter_key : str = ''
-Used by filter widget</li>
+Used by filter widget.</li>
 <li>delay_search : str = False
-Used by filter widget</li>
+Delays searching container for specified items until the end of the app. Possible optimization when a container has many children that are not accessed often.</li>
 <li>header_row : bool = True
 show headers at the top of the columns</li>
 <li>
@@ -5086,21 +4594,17 @@ Enable vertical scrolling.</li>
 <hr>
 <ul>
 <li>label : str = None
-Overrides 'name' as label</li>
-<li>
-<p>id : int = &hellip;</p>
-</li>
-<li>
-<p>width : int = 0</p>
-</li>
-<li>
-<p>parent : int = 0
-Parent to add this item to. (runtime adding)</p>
-</li>
+Overrides 'name' as label.</li>
+<li>id : int = &hellip;
+Unique id used to programmatically refer to the item.If label is unused this will be the label.</li>
+<li>width : int = 0
+Width of the item.</li>
+<li>parent : int = 0
+Parent to add this item to. (runtime adding)</li>
 <li>before : int = 0
 This item will be displayed before the specified item in the parent.</li>
 <li>show : bool = True
-Attempt to render</li>
+Attempt to render widget.</li>
 <li>
 <p>init_width_or_weight : bool = 0.0</p>
 </li>
@@ -5150,18 +4654,15 @@ Ignore current Indent value when entering cell (default for columns &gt; 0). Ind
 <hr>
 <ul>
 <li>label : str = None
-Overrides 'name' as label</li>
-<li>
-<p>id : int = &hellip;</p>
-</li>
-<li>
-<p>parent : int = 0
-Parent to add this item to. (runtime adding)</p>
-</li>
+Overrides 'name' as label.</li>
+<li>id : int = &hellip;
+Unique id used to programmatically refer to the item.If label is unused this will be the label.</li>
+<li>parent : int = 0
+Parent to add this item to. (runtime adding)</li>
 <li>before : int = 0
 This item will be displayed before the specified item in the parent.</li>
 <li>show : bool = True
-Attempt to render</li>
+Attempt to render widget.</li>
 </ul></div>
 </dd>
 <dt id="dearpygui.core.add_table_row"><code class="name flex">
@@ -5174,21 +4675,17 @@ Attempt to render</li>
 <hr>
 <ul>
 <li>label : str = None
-Overrides 'name' as label</li>
-<li>
-<p>id : int = &hellip;</p>
-</li>
-<li>
-<p>height : int = 0</p>
-</li>
-<li>
-<p>parent : int = 0
-Parent to add this item to. (runtime adding)</p>
-</li>
+Overrides 'name' as label.</li>
+<li>id : int = &hellip;
+Unique id used to programmatically refer to the item.If label is unused this will be the label.</li>
+<li>height : int = 0
+Height of the item.</li>
+<li>parent : int = 0
+Parent to add this item to. (runtime adding)</li>
 <li>before : int = 0
 This item will be displayed before the specified item in the parent.</li>
 <li>show : bool = True
-Attempt to render</li>
+Attempt to render widget.</li>
 </ul></div>
 </dd>
 <dt id="dearpygui.core.add_text"><code class="name flex">
@@ -5206,27 +4703,23 @@ Attempt to render</li>
 <hr>
 <ul>
 <li>label : str = None
-Overrides 'name' as label</li>
-<li>
-<p>id : int = &hellip;</p>
-</li>
-<li>
-<p>indent : int = -1</p>
-</li>
-<li>
-<p>parent : int = 0
-Parent to add this item to. (runtime adding)</p>
-</li>
+Overrides 'name' as label.</li>
+<li>id : int = &hellip;
+Unique id used to programmatically refer to the item.If label is unused this will be the label.</li>
+<li>indent : int = -1
+Offsets the widget to the right the specified number multiplied by the indent style.</li>
+<li>parent : int = 0
+Parent to add this item to. (runtime adding)</li>
 <li>before : int = 0
 This item will be displayed before the specified item in the parent.</li>
 <li>source : int = 0
-Overrides 'name' as value storage key</li>
+Overrides 'id' as value storage key.</li>
 <li>show : bool = True
-Attempt to render</li>
+Attempt to render widget.</li>
 <li>pos : List[int] = []
 Places the item relative to window coordinates, [0,0] is top left.</li>
 <li>filter_key : str = ''
-Used by filter widget</li>
+Used by filter widget.</li>
 <li>tracked : bool = False
 Scroll tracking</li>
 <li>track_offset : float = 0.5
@@ -5261,20 +4754,17 @@ Displays the label.</li>
 <hr>
 <ul>
 <li>label : str = None
-Overrides 'name' as label</li>
-<li>
-<p>id : int = &hellip;</p>
-</li>
-<li>
-<p>parent : int = 0
-Parent to add this item to. (runtime adding)</p>
-</li>
+Overrides 'name' as label.</li>
+<li>id : int = &hellip;
+Unique id used to programmatically refer to the item.If label is unused this will be the label.</li>
+<li>parent : int = 0
+Parent to add this item to. (runtime adding)</li>
 <li>before : int = 0
 This item will be displayed before the specified item in the parent.</li>
 <li>source : int = 0
-Overrides 'name' as value storage key</li>
+Overrides 'id' as value storage key.</li>
 <li>show : bool = True
-Attempt to render</li>
+Attempt to render widget.</li>
 <li>
 <p>x_offset : int = &hellip;</p>
 </li>
@@ -5299,14 +4789,11 @@ Attempt to render</li>
 <hr>
 <ul>
 <li>label : str = None
-Overrides 'name' as label</li>
-<li>
-<p>id : int = &hellip;</p>
-</li>
-<li>
-<p>show : bool = True
-Attempt to render</p>
-</li>
+Overrides 'name' as label.</li>
+<li>id : int = &hellip;
+Unique id used to programmatically refer to the item.If label is unused this will be the label.</li>
+<li>show : bool = True
+Attempt to render widget.</li>
 </ul></div>
 </dd>
 <dt id="dearpygui.core.add_theme"><code class="name flex">
@@ -5319,13 +4806,10 @@ Attempt to render</p>
 <hr>
 <ul>
 <li>label : str = None
-Overrides 'name' as label</li>
-<li>
-<p>id : int = &hellip;</p>
-</li>
-<li>
-<p>default_theme : bool = False</p>
-</li>
+Overrides 'name' as label.</li>
+<li>id : int = &hellip;
+Unique id used to programmatically refer to the item.If label is unused this will be the label.</li>
+<li>default_theme : bool = False</li>
 </ul></div>
 </dd>
 <dt id="dearpygui.core.add_theme_color"><code class="name flex">
@@ -5348,14 +4832,11 @@ Overrides 'name' as label</li>
 <hr>
 <ul>
 <li>label : str = None
-Overrides 'name' as label</li>
-<li>
-<p>id : int = &hellip;</p>
-</li>
-<li>
-<p>parent : int = 0
-Parent to add this item to. (runtime adding)</p>
-</li>
+Overrides 'name' as label.</li>
+<li>id : int = &hellip;
+Unique id used to programmatically refer to the item.If label is unused this will be the label.</li>
+<li>parent : int = 0
+Parent to add this item to. (runtime adding)</li>
 <li>category : int = 0</li>
 </ul></div>
 </dd>
@@ -5382,14 +4863,11 @@ Parent to add this item to. (runtime adding)</p>
 <hr>
 <ul>
 <li>label : str = None
-Overrides 'name' as label</li>
-<li>
-<p>id : int = &hellip;</p>
-</li>
-<li>
-<p>parent : int = 0
-Parent to add this item to. (runtime adding)</p>
-</li>
+Overrides 'name' as label.</li>
+<li>id : int = &hellip;
+Unique id used to programmatically refer to the item.If label is unused this will be the label.</li>
+<li>parent : int = 0
+Parent to add this item to. (runtime adding)</li>
 <li>category : int = 0</li>
 </ul></div>
 </dd>
@@ -5403,35 +4881,31 @@ Parent to add this item to. (runtime adding)</p>
 <hr>
 <ul>
 <li>label : str = None
-Overrides 'name' as label</li>
-<li>
-<p>id : int = &hellip;</p>
-</li>
-<li>
-<p>indent : int = -1</p>
-</li>
-<li>
-<p>parent : int = 0
-Parent to add this item to. (runtime adding)</p>
-</li>
+Overrides 'name' as label.</li>
+<li>id : int = &hellip;
+Unique id used to programmatically refer to the item.If label is unused this will be the label.</li>
+<li>indent : int = -1
+Offsets the widget to the right the specified number multiplied by the indent style.</li>
+<li>parent : int = 0
+Parent to add this item to. (runtime adding)</li>
 <li>before : int = 0
 This item will be displayed before the specified item in the parent.</li>
 <li>payload_type : str = '$$DPG_PAYLOAD'
-Overrides 'name' as value storage key</li>
+Sender string type must be the same as the target for the target to run the payload_callback.</li>
 <li>callback : Callable = None
-Registers a callback</li>
+Registers a callback.</li>
 <li>drag_callback : Callable = None
-Registers a drag callback for drag and drop</li>
+Registers a drag callback for drag and drop.</li>
 <li>drop_callback : Callable = None
-Registers a drag callback for drag and drop</li>
+Registers a drop callback for drag and drop.</li>
 <li>user_data : Any = None
-User data for callbacks</li>
+User data for callbacks.</li>
 <li>show : bool = True
-Attempt to render</li>
+Attempt to render widget.</li>
 <li>pos : List[int] = []
 Places the item relative to window coordinates, [0,0] is top left.</li>
 <li>filter_key : str = ''
-Used by filter widget</li>
+Used by filter widget.</li>
 <li>tracked : bool = False
 Scroll tracking</li>
 <li>track_offset : float = 0.5
@@ -5460,16 +4934,13 @@ show 24 hour clock</p>
 <hr>
 <ul>
 <li>label : str = None
-Overrides 'name' as label</li>
-<li>
-<p>id : int = &hellip;</p>
-</li>
-<li>
-<p>callback : Callable = None
-Registers a callback</p>
-</li>
+Overrides 'name' as label.</li>
+<li>id : int = &hellip;
+Unique id used to programmatically refer to the item.If label is unused this will be the label.</li>
+<li>callback : Callable = None
+Registers a callback.</li>
 <li>user_data : Any = None
-User data for callbacks</li>
+User data for callbacks.</li>
 </ul></div>
 </dd>
 <dt id="dearpygui.core.add_tooltip"><code class="name flex">
@@ -5487,14 +4958,11 @@ User data for callbacks</li>
 <hr>
 <ul>
 <li>label : str = None
-Overrides 'name' as label</li>
-<li>
-<p>id : int = &hellip;</p>
-</li>
-<li>
-<p>show : bool = True
-Attempt to render</p>
-</li>
+Overrides 'name' as label.</li>
+<li>id : int = &hellip;
+Unique id used to programmatically refer to the item.If label is unused this will be the label.</li>
+<li>show : bool = True
+Attempt to render widget.</li>
 </ul></div>
 </dd>
 <dt id="dearpygui.core.add_tree_node"><code class="name flex">
@@ -5507,33 +4975,29 @@ Attempt to render</p>
 <hr>
 <ul>
 <li>label : str = None
-Overrides 'name' as label</li>
-<li>
-<p>id : int = &hellip;</p>
-</li>
-<li>
-<p>indent : int = -1</p>
-</li>
-<li>
-<p>parent : int = 0
-Parent to add this item to. (runtime adding)</p>
-</li>
+Overrides 'name' as label.</li>
+<li>id : int = &hellip;
+Unique id used to programmatically refer to the item.If label is unused this will be the label.</li>
+<li>indent : int = -1
+Offsets the widget to the right the specified number multiplied by the indent style.</li>
+<li>parent : int = 0
+Parent to add this item to. (runtime adding)</li>
 <li>before : int = 0
 This item will be displayed before the specified item in the parent.</li>
 <li>payload_type : str = '$$DPG_PAYLOAD'
-Overrides 'name' as value storage key</li>
+Sender string type must be the same as the target for the target to run the payload_callback.</li>
 <li>drag_callback : Callable = None
-Registers a drag callback for drag and drop</li>
+Registers a drag callback for drag and drop.</li>
 <li>drop_callback : Callable = None
-Registers a drag callback for drag and drop</li>
+Registers a drop callback for drag and drop.</li>
 <li>show : bool = True
-Attempt to render</li>
+Attempt to render widget.</li>
 <li>pos : List[int] = []
 Places the item relative to window coordinates, [0,0] is top left.</li>
 <li>filter_key : str = ''
-Used by filter widget</li>
+Used by filter widget.</li>
 <li>delay_search : str = False
-Used by filter widget</li>
+Delays searching container for specified items until the end of the app. Possible optimization when a container has many children that are not accessed often.</li>
 <li>tracked : bool = False
 Scroll tracking</li>
 <li>track_offset : float = 0.5
@@ -5565,18 +5029,15 @@ Makes the tree selectable.</li>
 <hr>
 <ul>
 <li>label : str = None
-Overrides 'name' as label</li>
-<li>
-<p>id : int = &hellip;</p>
-</li>
-<li>
-<p>show : bool = True
-Attempt to render</p>
-</li>
+Overrides 'name' as label.</li>
+<li>id : int = &hellip;
+Unique id used to programmatically refer to the item.If label is unused this will be the label.</li>
+<li>show : bool = True
+Attempt to render widget.</li>
 <li>filter_key : str = ''
-Used by filter widget</li>
+Used by filter widget.</li>
 <li>delay_search : str = False
-Used by filter widget</li>
+Delays searching container for specified items until the end of the app. Possible optimization when a container has many children that are not accessed often.</li>
 <li>front : bool = True</li>
 </ul></div>
 </dd>
@@ -5595,16 +5056,13 @@ Used by filter widget</li>
 <hr>
 <ul>
 <li>label : str = None
-Overrides 'name' as label</li>
-<li>
-<p>id : int = &hellip;</p>
-</li>
-<li>
-<p>callback : Callable = None
-Registers a callback</p>
-</li>
+Overrides 'name' as label.</li>
+<li>id : int = &hellip;
+Unique id used to programmatically refer to the item.If label is unused this will be the label.</li>
+<li>callback : Callable = None
+Registers a callback.</li>
 <li>user_data : Any = None
-User data for callbacks</li>
+User data for callbacks.</li>
 </ul></div>
 </dd>
 <dt id="dearpygui.core.add_vline_series"><code class="name flex">
@@ -5622,20 +5080,17 @@ User data for callbacks</li>
 <hr>
 <ul>
 <li>label : str = None
-Overrides 'name' as label</li>
-<li>
-<p>id : int = &hellip;</p>
-</li>
-<li>
-<p>parent : int = 0
-Parent to add this item to. (runtime adding)</p>
-</li>
+Overrides 'name' as label.</li>
+<li>id : int = &hellip;
+Unique id used to programmatically refer to the item.If label is unused this will be the label.</li>
+<li>parent : int = 0
+Parent to add this item to. (runtime adding)</li>
 <li>before : int = 0
 This item will be displayed before the specified item in the parent.</li>
 <li>source : int = 0
-Overrides 'name' as value storage key</li>
+Overrides 'id' as value storage key.</li>
 <li>show : bool = True
-Attempt to render</li>
+Attempt to render widget.</li>
 <li>contribute_to_bounds : bool = True</li>
 </ul></div>
 </dd>
@@ -5649,27 +5104,21 @@ Attempt to render</li>
 <hr>
 <ul>
 <li>label : str = None
-Overrides 'name' as label</li>
-<li>
-<p>id : int = &hellip;</p>
-</li>
-<li>
-<p>width : int = 0</p>
-</li>
-<li>
-<p>height : int = 0</p>
-</li>
-<li>
-<p>indent : int = -1</p>
-</li>
-<li>
-<p>user_data : Any = None
-User data for callbacks</p>
-</li>
+Overrides 'name' as label.</li>
+<li>id : int = &hellip;
+Unique id used to programmatically refer to the item.If label is unused this will be the label.</li>
+<li>width : int = 0
+Width of the item.</li>
+<li>height : int = 0
+Height of the item.</li>
+<li>indent : int = -1
+Offsets the widget to the right the specified number multiplied by the indent style.</li>
+<li>user_data : Any = None
+User data for callbacks.</li>
 <li>show : bool = True
-Attempt to render</li>
+Attempt to render widget.</li>
 <li>delay_search : str = False
-Used by filter widget</li>
+Delays searching container for specified items until the end of the app. Possible optimization when a container has many children that are not accessed often.</li>
 <li>min_size : List[int] = [32, 32]
 Minimum window size.</li>
 <li>max_size : List[int] = [30000, 30000]
@@ -5690,31 +5139,25 @@ Title name for the title bar of the window.</li>
 <li>no_move : bool = False
 Allows for the window's position to be changed or fixed.</li>
 <li>no_scrollbar : bool = False
-Disable scrollbars (window can still scroll with mouse or programmatically).</li>
+Disable scrollbars. (window can still scroll with mouse or programmatically)</li>
 <li>no_collapse : bool = False
 Disable user collapsing window by double-clicking on it.</li>
 <li>horizontal_scrollbar : bool = False
-Allow horizontal scrollbar to appear (off by default).</li>
+Allow horizontal scrollbar to appear. (off by default)</li>
 <li>no_focus_on_appearing : bool = False
 Disable taking focus when transitioning from hidden to visible state.</li>
 <li>no_bring_to_front_on_focus : bool = False
-Disable bringing window to front when taking focus (e.g. clicking on it or programmatically giving it focus).</li>
-<li>
-<p>no_close : bool = False</p>
-</li>
-<li>
-<p>no_background : bool = False</p>
-</li>
-<li>
-<p>modal : bool = False</p>
-</li>
-<li>
-<p>popup : bool = False</p>
-</li>
-<li>
-<p>on_close : Callable = None
-Callback ran when window is closed</p>
-</li>
+Disable bringing window to front when taking focus. (e.g. clicking on it or programmatically giving it focus)</li>
+<li>no_close : bool = False
+Disable user closing the window by removing the close button.</li>
+<li>no_background : bool = False
+Sets Background and border alpha to transparent.</li>
+<li>modal : bool = False
+Fills area behind window according to the theme and disables user ability to interact with anything except the window.</li>
+<li>popup : bool = False
+Fills area behind window according to the theme, removes title bar, collapse and close. Window can be closed by selecting area in the background behind the window.</li>
+<li>on_close : Callable = None
+Callback ran when window is closed.</li>
 </ul></div>
 </dd>
 <dt id="dearpygui.core.cleanup_dearpygui"><code class="name flex">
@@ -5899,18 +5342,15 @@ Callback ran when window is closed</p>
 <hr>
 <ul>
 <li>label : str = None
-Overrides 'name' as label</li>
-<li>
-<p>id : int = &hellip;</p>
-</li>
-<li>
-<p>parent : int = 0
-Parent to add this item to. (runtime adding)</p>
-</li>
+Overrides 'name' as label.</li>
+<li>id : int = &hellip;
+Unique id used to programmatically refer to the item.If label is unused this will be the label.</li>
+<li>parent : int = 0
+Parent to add this item to. (runtime adding)</li>
 <li>before : int = 0
 This item will be displayed before the specified item in the parent.</li>
 <li>show : bool = True
-Attempt to render</li>
+Attempt to render widget.</li>
 <li>
 <p>color : List[int] = (255, 255, 255, 255)</p>
 </li>
@@ -5948,18 +5388,15 @@ Attempt to render</li>
 <hr>
 <ul>
 <li>label : str = None
-Overrides 'name' as label</li>
-<li>
-<p>id : int = &hellip;</p>
-</li>
-<li>
-<p>parent : int = 0
-Parent to add this item to. (runtime adding)</p>
-</li>
+Overrides 'name' as label.</li>
+<li>id : int = &hellip;
+Unique id used to programmatically refer to the item.If label is unused this will be the label.</li>
+<li>parent : int = 0
+Parent to add this item to. (runtime adding)</li>
 <li>before : int = 0
 This item will be displayed before the specified item in the parent.</li>
 <li>show : bool = True
-Attempt to render</li>
+Attempt to render widget.</li>
 <li>
 <p>color : List[int] = (255, 255, 255, 255)</p>
 </li>
@@ -5997,18 +5434,15 @@ Attempt to render</li>
 <hr>
 <ul>
 <li>label : str = None
-Overrides 'name' as label</li>
-<li>
-<p>id : int = &hellip;</p>
-</li>
-<li>
-<p>parent : int = 0
-Parent to add this item to. (runtime adding)</p>
-</li>
+Overrides 'name' as label.</li>
+<li>id : int = &hellip;
+Unique id used to programmatically refer to the item.If label is unused this will be the label.</li>
+<li>parent : int = 0
+Parent to add this item to. (runtime adding)</li>
 <li>before : int = 0
 This item will be displayed before the specified item in the parent.</li>
 <li>show : bool = True
-Attempt to render</li>
+Attempt to render widget.</li>
 <li>
 <p>color : List[int] = (255, 255, 255, 255)</p>
 </li>
@@ -6043,18 +5477,15 @@ Attempt to render</li>
 <hr>
 <ul>
 <li>label : str = None
-Overrides 'name' as label</li>
-<li>
-<p>id : int = &hellip;</p>
-</li>
-<li>
-<p>parent : int = 0
-Parent to add this item to. (runtime adding)</p>
-</li>
+Overrides 'name' as label.</li>
+<li>id : int = &hellip;
+Unique id used to programmatically refer to the item.If label is unused this will be the label.</li>
+<li>parent : int = 0
+Parent to add this item to. (runtime adding)</li>
 <li>before : int = 0
 This item will be displayed before the specified item in the parent.</li>
 <li>show : bool = True
-Attempt to render</li>
+Attempt to render widget.</li>
 <li>
 <p>color : List[int] = (255, 255, 255, 255)</p>
 </li>
@@ -6089,18 +5520,15 @@ Attempt to render</li>
 <hr>
 <ul>
 <li>label : str = None
-Overrides 'name' as label</li>
-<li>
-<p>id : int = &hellip;</p>
-</li>
-<li>
-<p>parent : int = 0
-Parent to add this item to. (runtime adding)</p>
-</li>
+Overrides 'name' as label.</li>
+<li>id : int = &hellip;
+Unique id used to programmatically refer to the item.If label is unused this will be the label.</li>
+<li>parent : int = 0
+Parent to add this item to. (runtime adding)</li>
 <li>before : int = 0
 This item will be displayed before the specified item in the parent.</li>
 <li>show : bool = True
-Attempt to render</li>
+Attempt to render widget.</li>
 <li>
 <p>color : List[int] = (255, 255, 255, 255)</p>
 </li>
@@ -6138,18 +5566,15 @@ Attempt to render</li>
 <hr>
 <ul>
 <li>label : str = None
-Overrides 'name' as label</li>
-<li>
-<p>id : int = &hellip;</p>
-</li>
-<li>
-<p>parent : int = 0
-Parent to add this item to. (runtime adding)</p>
-</li>
+Overrides 'name' as label.</li>
+<li>id : int = &hellip;
+Unique id used to programmatically refer to the item.If label is unused this will be the label.</li>
+<li>parent : int = 0
+Parent to add this item to. (runtime adding)</li>
 <li>before : int = 0
 This item will be displayed before the specified item in the parent.</li>
 <li>show : bool = True
-Attempt to render</li>
+Attempt to render widget.</li>
 <li>uv_min : List[float] = (0.0, 0.0)
 normalized texture coordinates</li>
 <li>uv_max : List[float] = (1.0, 1.0)
@@ -6177,18 +5602,15 @@ normalized texture coordinates</li>
 <hr>
 <ul>
 <li>label : str = None
-Overrides 'name' as label</li>
-<li>
-<p>id : int = &hellip;</p>
-</li>
-<li>
-<p>parent : int = 0
-Parent to add this item to. (runtime adding)</p>
-</li>
+Overrides 'name' as label.</li>
+<li>id : int = &hellip;
+Unique id used to programmatically refer to the item.If label is unused this will be the label.</li>
+<li>parent : int = 0
+Parent to add this item to. (runtime adding)</li>
 <li>before : int = 0
 This item will be displayed before the specified item in the parent.</li>
 <li>show : bool = True
-Attempt to render</li>
+Attempt to render widget.</li>
 <li>
 <p>color : List[int] = (255, 255, 255, 255)</p>
 </li>
@@ -6212,18 +5634,15 @@ Attempt to render</li>
 <hr>
 <ul>
 <li>label : str = None
-Overrides 'name' as label</li>
-<li>
-<p>id : int = &hellip;</p>
-</li>
-<li>
-<p>parent : int = 0
-Parent to add this item to. (runtime adding)</p>
-</li>
+Overrides 'name' as label.</li>
+<li>id : int = &hellip;
+Unique id used to programmatically refer to the item.If label is unused this will be the label.</li>
+<li>parent : int = 0
+Parent to add this item to. (runtime adding)</li>
 <li>before : int = 0
 This item will be displayed before the specified item in the parent.</li>
 <li>show : bool = True
-Attempt to render</li>
+Attempt to render widget.</li>
 <li>
 <p>color : List[int] = (255, 255, 255, 255)</p>
 </li>
@@ -6250,18 +5669,15 @@ Attempt to render</li>
 <hr>
 <ul>
 <li>label : str = None
-Overrides 'name' as label</li>
-<li>
-<p>id : int = &hellip;</p>
-</li>
-<li>
-<p>parent : int = 0
-Parent to add this item to. (runtime adding)</p>
-</li>
+Overrides 'name' as label.</li>
+<li>id : int = &hellip;
+Unique id used to programmatically refer to the item.If label is unused this will be the label.</li>
+<li>parent : int = 0
+Parent to add this item to. (runtime adding)</li>
 <li>before : int = 0
 This item will be displayed before the specified item in the parent.</li>
 <li>show : bool = True
-Attempt to render</li>
+Attempt to render widget.</li>
 <li>
 <p>closed : bool = False</p>
 </li>
@@ -6299,18 +5715,15 @@ Attempt to render</li>
 <hr>
 <ul>
 <li>label : str = None
-Overrides 'name' as label</li>
-<li>
-<p>id : int = &hellip;</p>
-</li>
-<li>
-<p>parent : int = 0
-Parent to add this item to. (runtime adding)</p>
-</li>
+Overrides 'name' as label.</li>
+<li>id : int = &hellip;
+Unique id used to programmatically refer to the item.If label is unused this will be the label.</li>
+<li>parent : int = 0
+Parent to add this item to. (runtime adding)</li>
 <li>before : int = 0
 This item will be displayed before the specified item in the parent.</li>
 <li>show : bool = True
-Attempt to render</li>
+Attempt to render widget.</li>
 <li>
 <p>color : List[int] = (255, 255, 255, 255)</p>
 </li>
@@ -6342,18 +5755,15 @@ Attempt to render</li>
 <hr>
 <ul>
 <li>label : str = None
-Overrides 'name' as label</li>
-<li>
-<p>id : int = &hellip;</p>
-</li>
-<li>
-<p>parent : int = 0
-Parent to add this item to. (runtime adding)</p>
-</li>
+Overrides 'name' as label.</li>
+<li>id : int = &hellip;
+Unique id used to programmatically refer to the item.If label is unused this will be the label.</li>
+<li>parent : int = 0
+Parent to add this item to. (runtime adding)</li>
 <li>before : int = 0
 This item will be displayed before the specified item in the parent.</li>
 <li>show : bool = True
-Attempt to render</li>
+Attempt to render widget.</li>
 <li>
 <p>color : List[int] = (255, 255, 255, 255)</p>
 </li>
@@ -6388,18 +5798,15 @@ Attempt to render</li>
 <hr>
 <ul>
 <li>label : str = None
-Overrides 'name' as label</li>
-<li>
-<p>id : int = &hellip;</p>
-</li>
-<li>
-<p>parent : int = 0
-Parent to add this item to. (runtime adding)</p>
-</li>
+Overrides 'name' as label.</li>
+<li>id : int = &hellip;
+Unique id used to programmatically refer to the item.If label is unused this will be the label.</li>
+<li>parent : int = 0
+Parent to add this item to. (runtime adding)</li>
 <li>before : int = 0
 This item will be displayed before the specified item in the parent.</li>
 <li>show : bool = True
-Attempt to render</li>
+Attempt to render widget.</li>
 <li>
 <p>color : List[int] = (255, 255, 255, 255)</p>
 </li>
@@ -6431,18 +5838,15 @@ Attempt to render</li>
 <hr>
 <ul>
 <li>label : str = None
-Overrides 'name' as label</li>
-<li>
-<p>id : int = &hellip;</p>
-</li>
-<li>
-<p>parent : int = 0
-Parent to add this item to. (runtime adding)</p>
-</li>
+Overrides 'name' as label.</li>
+<li>id : int = &hellip;
+Unique id used to programmatically refer to the item.If label is unused this will be the label.</li>
+<li>parent : int = 0
+Parent to add this item to. (runtime adding)</li>
 <li>before : int = 0
 This item will be displayed before the specified item in the parent.</li>
 <li>show : bool = True
-Attempt to render</li>
+Attempt to render widget.</li>
 <li>
 <p>color : List[int] = (255, 255, 255, 255)</p>
 </li>
