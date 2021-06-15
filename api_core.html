@@ -403,6 +403,33 @@ Attempt to render widget.</li>
 </li>
 </ul></div>
 </dd>
+<dt id="dearpygui.core.add_char_remap"><code class="name flex">
+<span>def <span class="ident">add_char_remap</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Undocumented function</p>
+<p>Return Type: int</p>
+<p>Required Arguments</p>
+<hr>
+<ul>
+<li>
+<p>source : int</p>
+</li>
+<li>
+<p>target : int</p>
+</li>
+</ul>
+<p>Keyword Arguments</p>
+<hr>
+<ul>
+<li>label : str = None
+Overrides 'name' as label.</li>
+<li>id : int = &hellip;
+Unique id used to programmatically refer to the item.If label is unused this will be the label.</li>
+<li>parent : int = 0
+Parent to add this item to. (runtime adding)</li>
+</ul></div>
+</dd>
 <dt id="dearpygui.core.add_checkbox"><code class="name flex">
 <span>def <span class="ident">add_checkbox</span></span>(<span>...)</span>
 </code></dt>
@@ -1787,6 +1814,77 @@ Unique id used to programmatically refer to the item.If label is unused this wil
 <li>parent : int = 0
 Parent to add this item to. (runtime adding)</li>
 <li>default_font : bool = False</li>
+</ul></div>
+</dd>
+<dt id="dearpygui.core.add_font_chars"><code class="name flex">
+<span>def <span class="ident">add_font_chars</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Undocumented function</p>
+<p>Return Type: int</p>
+<p>Required Arguments</p>
+<hr>
+<ul>
+<li>chars : List[int]</li>
+</ul>
+<p>Keyword Arguments</p>
+<hr>
+<ul>
+<li>label : str = None
+Overrides 'name' as label.</li>
+<li>id : int = &hellip;
+Unique id used to programmatically refer to the item.If label is unused this will be the label.</li>
+<li>parent : int = 0
+Parent to add this item to. (runtime adding)</li>
+</ul></div>
+</dd>
+<dt id="dearpygui.core.add_font_range"><code class="name flex">
+<span>def <span class="ident">add_font_range</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Undocumented function</p>
+<p>Return Type: int</p>
+<p>Required Arguments</p>
+<hr>
+<ul>
+<li>
+<p>first_char : int</p>
+</li>
+<li>
+<p>last_char : int</p>
+</li>
+</ul>
+<p>Keyword Arguments</p>
+<hr>
+<ul>
+<li>label : str = None
+Overrides 'name' as label.</li>
+<li>id : int = &hellip;
+Unique id used to programmatically refer to the item.If label is unused this will be the label.</li>
+<li>parent : int = 0
+Parent to add this item to. (runtime adding)</li>
+</ul></div>
+</dd>
+<dt id="dearpygui.core.add_font_range_hint"><code class="name flex">
+<span>def <span class="ident">add_font_range_hint</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Undocumented function</p>
+<p>Return Type: int</p>
+<p>Required Arguments</p>
+<hr>
+<ul>
+<li>hint : int</li>
+</ul>
+<p>Keyword Arguments</p>
+<hr>
+<ul>
+<li>label : str = None
+Overrides 'name' as label.</li>
+<li>id : int = &hellip;
+Unique id used to programmatically refer to the item.If label is unused this will be the label.</li>
+<li>parent : int = 0
+Parent to add this item to. (runtime adding)</li>
 </ul></div>
 </dd>
 <dt id="dearpygui.core.add_font_registry"><code class="name flex">
@@ -4779,8 +4877,8 @@ Attempt to render widget.</li>
 </li>
 </ul></div>
 </dd>
-<dt id="dearpygui.core.add_texture_container"><code class="name flex">
-<span>def <span class="ident">add_texture_container</span></span>(<span>...)</span>
+<dt id="dearpygui.core.add_texture_registry"><code class="name flex">
+<span>def <span class="ident">add_texture_registry</span></span>(<span>...)</span>
 </code></dt>
 <dd>
 <div class="desc"><p>Undocumented function</p>
@@ -6796,6 +6894,7 @@ add explicit dockspace over viewport</li>
 <li><code><a title="dearpygui.core.add_bar_series" href="#dearpygui.core.add_bar_series">add_bar_series</a></code></li>
 <li><code><a title="dearpygui.core.add_button" href="#dearpygui.core.add_button">add_button</a></code></li>
 <li><code><a title="dearpygui.core.add_candle_series" href="#dearpygui.core.add_candle_series">add_candle_series</a></code></li>
+<li><code><a title="dearpygui.core.add_char_remap" href="#dearpygui.core.add_char_remap">add_char_remap</a></code></li>
 <li><code><a title="dearpygui.core.add_checkbox" href="#dearpygui.core.add_checkbox">add_checkbox</a></code></li>
 <li><code><a title="dearpygui.core.add_child" href="#dearpygui.core.add_child">add_child</a></code></li>
 <li><code><a title="dearpygui.core.add_clicked_handler" href="#dearpygui.core.add_clicked_handler">add_clicked_handler</a></code></li>
@@ -6827,6 +6926,9 @@ add explicit dockspace over viewport</li>
 <li><code><a title="dearpygui.core.add_filter_set" href="#dearpygui.core.add_filter_set">add_filter_set</a></code></li>
 <li><code><a title="dearpygui.core.add_focus_handler" href="#dearpygui.core.add_focus_handler">add_focus_handler</a></code></li>
 <li><code><a title="dearpygui.core.add_font" href="#dearpygui.core.add_font">add_font</a></code></li>
+<li><code><a title="dearpygui.core.add_font_chars" href="#dearpygui.core.add_font_chars">add_font_chars</a></code></li>
+<li><code><a title="dearpygui.core.add_font_range" href="#dearpygui.core.add_font_range">add_font_range</a></code></li>
+<li><code><a title="dearpygui.core.add_font_range_hint" href="#dearpygui.core.add_font_range_hint">add_font_range_hint</a></code></li>
 <li><code><a title="dearpygui.core.add_font_registry" href="#dearpygui.core.add_font_registry">add_font_registry</a></code></li>
 <li><code><a title="dearpygui.core.add_group" href="#dearpygui.core.add_group">add_group</a></code></li>
 <li><code><a title="dearpygui.core.add_handler_registry" href="#dearpygui.core.add_handler_registry">add_handler_registry</a></code></li>
@@ -6896,7 +6998,7 @@ add explicit dockspace over viewport</li>
 <li><code><a title="dearpygui.core.add_table_row" href="#dearpygui.core.add_table_row">add_table_row</a></code></li>
 <li><code><a title="dearpygui.core.add_text" href="#dearpygui.core.add_text">add_text</a></code></li>
 <li><code><a title="dearpygui.core.add_text_point" href="#dearpygui.core.add_text_point">add_text_point</a></code></li>
-<li><code><a title="dearpygui.core.add_texture_container" href="#dearpygui.core.add_texture_container">add_texture_container</a></code></li>
+<li><code><a title="dearpygui.core.add_texture_registry" href="#dearpygui.core.add_texture_registry">add_texture_registry</a></code></li>
 <li><code><a title="dearpygui.core.add_theme" href="#dearpygui.core.add_theme">add_theme</a></code></li>
 <li><code><a title="dearpygui.core.add_theme_color" href="#dearpygui.core.add_theme_color">add_theme_color</a></code></li>
 <li><code><a title="dearpygui.core.add_theme_style" href="#dearpygui.core.add_theme_style">add_theme_style</a></code></li>

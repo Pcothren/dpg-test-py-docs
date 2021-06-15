@@ -66,6 +66,16 @@ def font_registry(*args, id:int=0, show: bool =True, label:str=None):
         internal_dpg.pop_container_stack()
 
 @contextmanager
+def font(*args, id:int=0, parent: int = 0, label:str=None, default_font:bool = False):
+   
+   try:
+        widget = internal_dpg.add_font(*args, id=id, parent=parent, label=label, default_font=default_font)
+        internal_dpg.push_container_stack(widget)
+        yield widget
+   finally:
+        internal_dpg.pop_container_stack()
+
+@contextmanager
 def clipper(*args, id:int=0, show: bool =True, parent: int=0, width: int = 0, before: int=0,
            indent:int=-1, delay_search: bool = False, label:str=None):
    
@@ -732,10 +742,10 @@ def tooltip(*args, label: str=None, id: int=0, show: bool = True, ) -&gt; int:
         internal_dpg.pop_container_stack()
 
 @contextmanager
-def texture_container(*args, show: bool = False, id:int=0, label:str=None):
+def texture_registry(*args, show: bool = False, id:int=0, label:str=None):
 
     try:
-        widget = internal_dpg.add_texture_container(*args, show=show, id=id, label=label)
+        widget = internal_dpg.add_texture_registry(*args, show=show, id=id, label=label)
         internal_dpg.push_container_stack(widget)
         yield widget
     finally:
@@ -1171,6 +1181,26 @@ def filter_set(*args, id:int=0, show: bool =True, parent: int=0, width: int = 0,
    try:
         widget = internal_dpg.add_filter_set(*args, id=id, show=show, parent=parent, width=width, before=before,
                                          indent=indent, delay_search=delay_search, label=label)
+        internal_dpg.push_container_stack(widget)
+        yield widget
+   finally:
+        internal_dpg.pop_container_stack()</code></pre>
+</details>
+</dd>
+<dt id="dearpygui.contexts.font"><code class="name flex">
+<span>def <span class="ident">font</span></span>(<span>*args, id: int = 0, parent: int = 0, label: str = None, default_font: bool = False)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@contextmanager
+def font(*args, id:int=0, parent: int = 0, label:str=None, default_font:bool = False):
+   
+   try:
+        widget = internal_dpg.add_font(*args, id=id, parent=parent, label=label, default_font=default_font)
         internal_dpg.push_container_stack(widget)
         yield widget
    finally:
@@ -2139,8 +2169,8 @@ def table_row(*args, id:int=0, show: bool = True, parent: int = 0, before: int =
         internal_dpg.pop_container_stack()</code></pre>
 </details>
 </dd>
-<dt id="dearpygui.contexts.texture_container"><code class="name flex">
-<span>def <span class="ident">texture_container</span></span>(<span>*args, show: bool = False, id: int = 0, label: str = None)</span>
+<dt id="dearpygui.contexts.texture_registry"><code class="name flex">
+<span>def <span class="ident">texture_registry</span></span>(<span>*args, show: bool = False, id: int = 0, label: str = None)</span>
 </code></dt>
 <dd>
 <div class="desc"></div>
@@ -2149,10 +2179,10 @@ def table_row(*args, id:int=0, show: bool = True, parent: int = 0, before: int =
 <span>Expand source code</span>
 </summary>
 <pre><code class="python">@contextmanager
-def texture_container(*args, show: bool = False, id:int=0, label:str=None):
+def texture_registry(*args, show: bool = False, id:int=0, label:str=None):
 
     try:
-        widget = internal_dpg.add_texture_container(*args, show=show, id=id, label=label)
+        widget = internal_dpg.add_texture_registry(*args, show=show, id=id, label=label)
         internal_dpg.push_container_stack(widget)
         yield widget
     finally:
@@ -2502,6 +2532,7 @@ def window(*args, label: str = None, id: int=0, width: int = 200, height: int = 
 <li><code><a title="dearpygui.contexts.drawlist" href="#dearpygui.contexts.drawlist">drawlist</a></code></li>
 <li><code><a title="dearpygui.contexts.file_dialog" href="#dearpygui.contexts.file_dialog">file_dialog</a></code></li>
 <li><code><a title="dearpygui.contexts.filter_set" href="#dearpygui.contexts.filter_set">filter_set</a></code></li>
+<li><code><a title="dearpygui.contexts.font" href="#dearpygui.contexts.font">font</a></code></li>
 <li><code><a title="dearpygui.contexts.font_registry" href="#dearpygui.contexts.font_registry">font_registry</a></code></li>
 <li><code><a title="dearpygui.contexts.group" href="#dearpygui.contexts.group">group</a></code></li>
 <li><code><a title="dearpygui.contexts.handler_registry" href="#dearpygui.contexts.handler_registry">handler_registry</a></code></li>
@@ -2518,7 +2549,7 @@ def window(*args, label: str = None, id: int=0, width: int = 200, height: int = 
 <li><code><a title="dearpygui.contexts.tab_bar" href="#dearpygui.contexts.tab_bar">tab_bar</a></code></li>
 <li><code><a title="dearpygui.contexts.table" href="#dearpygui.contexts.table">table</a></code></li>
 <li><code><a title="dearpygui.contexts.table_row" href="#dearpygui.contexts.table_row">table_row</a></code></li>
-<li><code><a title="dearpygui.contexts.texture_container" href="#dearpygui.contexts.texture_container">texture_container</a></code></li>
+<li><code><a title="dearpygui.contexts.texture_registry" href="#dearpygui.contexts.texture_registry">texture_registry</a></code></li>
 <li><code><a title="dearpygui.contexts.theme" href="#dearpygui.contexts.theme">theme</a></code></li>
 <li><code><a title="dearpygui.contexts.tooltip" href="#dearpygui.contexts.tooltip">tooltip</a></code></li>
 <li><code><a title="dearpygui.contexts.tree_node" href="#dearpygui.contexts.tree_node">tree_node</a></code></li>
